@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+<!-- Navigation bar-->
+<div class="navbar">
+    <a href="../index.html">
+        <h2>Croiss</h2>
+    </a>
+
+    <a  onclick="checkLogIn()">
+        <div class="cart">
+            <i class="bi bi-cart2"></i>
+            <div id="cartAmount" class="cartAmount">0</div>
+        </div>
+    </a>
+    <a href="../User/User.html">personal page</a>
+</div>
+<div class="shop" id="shop"></div>
+<div id="pagination">
+    <button id="prevPage" onclick="goToPreviousPage()">Previous</button>
+    <span>Page <span id="currentPage">1</span> of <span id="totalPages">1</span></span>
+    <button id="nextPage" onclick="goToNextPage()">Next</button>
+
+</div>
+
+
+<!-- Footer -->
+
+
+</body>
+<script src="../admin/src/product.js"></script>
+<script src="../ProductPage/productpage.js"></script>
+</html>

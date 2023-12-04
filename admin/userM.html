@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <link rel="stylesheet" href="userM.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <a href="adminM.html">
+        <h2>ADMIN MANAGEMENT</h2>
+    </a>
+    <a href="userM.html">
+        <h2>USER MANAGEMENT</h2>
+    </a>
+
+    <a href="productM.html">
+        <h2>PRODUCT MANAGEMENT</h2>
+    </a>
+
+    <a href="billM.html">
+        <h2>BILL MANAGEMENT</h2>
+    </a>
+
+    <a href="thongkeM.html">
+        <h2>THONG KE</h2>
+    </a>
+</div>
+        <h1>QUAN LY USER</h1>
+        <form class="add" id="addUsersForm">
+            <label for="Username">Gmail:</label>
+            <input type="text" id="Username" required>
+
+            <label for="Pass">Password:</label>
+            <input type="text" id="Pass" required>
+
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" required>
+
+            <label for="Address">Address:</label>
+            <input id="Address" required>
+
+            <label for="Phone">Phone number:</label>
+            <input type="text" id="Phone" required>
+
+            <button type="button" onclick="addUsers()">Add Product</button>
+        </form>
+        <div class="detail" id="shop"></div>
+
+</body>
+<script src="src/user.js"></script>
+<script src="../admin/userM.js"></script>
+
+</html>
