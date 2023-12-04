@@ -1,0 +1,433 @@
+/* The star means all the body part */
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navigation bar start */
+
+#present-page {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 0.15em;
+    text-underline-offset: 0.5em;
+
+}
+
+.nav-bar {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 6fr repeat(3, 1fr) repeat(2, 0.4fr);
+    background-color: white;
+    width: 100%;
+    height: 70px;
+
+    align-items: center;
+    justify-items: center;
+}
+
+#nav-bar-logo {
+    width: 3.5em;
+}
+
+#nav-bar-name {
+    width: 17em;
+    margin-left: 0.5em;
+}
+
+#nav-bar-name1 {
+    justify-self: left;
+}
+
+.nav-bar-text-button {
+    list-style: none;
+    color: #2f1f20;
+    text-decoration: none;
+
+    white-space: nowrap;
+    /*Stop text to break words*/
+}
+
+.nav-bar-text-button:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+    text-decoration-thickness: 0.15em;
+    text-underline-offset: 0.5em;
+}
+
+.nav-bar-icon-button img:hover {
+    filter: brightness(50%);
+}
+
+#nav-bar-cart {
+    width: 2em;
+}
+
+#nav-bar-login {
+    width: 2em;
+    margin-right: 1.8em;
+}
+
+/* Navigation bar end */
+
+
+/* Main image */
+#main-pic {
+    margin-top: 2em;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Middle start */
+
+.middle-container {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    background-color: #2f1f20;
+
+    margin-top: 8em;
+
+    width: 100%;
+    height: 15%;
+
+    align-items: center;
+
+    padding: 2em 0;
+
+}
+
+#middle-breads {
+    width: 100%;
+    height: auto;
+    margin-top: -3em;
+    justify-self: right;
+}
+
+#middle-text {
+    font-weight: lighter;
+    color: white;
+    margin-left: 1em;
+    font-size: 4em;
+}
+
+/* Middle end */
+
+
+/* Best Seller start */
+#best-seller-text {
+    font-weight: bolder;
+    font-size: 2.5em;
+    color: #2f1f20;
+    text-align: center;
+    margin-bottom: -0.5em;
+    padding: 2em 0em;
+}
+
+.best-seller-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5em;
+}
+
+.item {
+    display: grid;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.item-name-container {
+    display: flex;
+    background-color: #2f1f20;
+    width: 100%;
+    height: 3.5em;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.item-name {
+    white-space: nowrap;
+    font-size: 2em;
+    font-weight: lighter;
+    color: white;
+}
+
+.item-img {
+    margin-top: 1em;
+    width: 100%;
+}
+
+.item-price {
+    margin-top: 0.5em;
+    font-size: 2em;
+    text-align: center;
+    color: #2f1f20;
+}
+
+.item-buynow-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 7em;
+}
+
+.item-buynow {
+    object-fit: contain;
+    width: 50%;
+}
+
+.item-buynow:hover {
+    width: 55%;
+}
+
+/*Best seller responsive*/
+
+
+/* Best Seller end */
+
+/* Footer */
+
+.footer {
+    background-color: #2f1f20;
+    width: 100%;
+    height: auto;
+
+    margin-top: 1em;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    ;
+
+    justify-items: center;
+    align-items: center;
+
+    color: white;
+}
+
+#footer-logo {
+    width: 60%;
+}
+
+.footer-contact-box {
+    justify-self: left;
+}
+
+#footer-contact-title {
+    margin-bottom: 1em;
+    margin-left: 3em;
+    font-size: 1.5em;
+}
+
+.footer-icons {
+    width: 1.5em;
+}
+
+.footer-contact-box-info {
+
+    margin-top: 1em;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.footer-p-info {
+    margin-left: 1em;
+    font-weight: lighter;
+}
+
+
+/* Responsive */
+
+/*Nav-bar-responsive*/
+@media only screen and (max-width: 1028px) {
+    .nav-bar {
+        grid-template-columns: 0.25fr 1fr 0.5fr;
+    }
+
+    .nav-bar-icon-button {
+        display: none;
+    }
+
+    .nav-bar-text-button {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 476px) {
+    #nav-bar-name {
+        width: 80%;
+    }
+
+    #nav-bar-logo {
+        width: 70%;
+    }
+}
+
+/* middle name responsive */
+@media only screen and (max-width: 970px) {
+    .footer {
+        height: 15em;
+    }
+
+    #middle-text {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 561px) {
+    #middle-text {
+        font-size: 1.5em;
+    }
+
+    .middle-container {
+        margin-top: 3.5em;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    #middle-text {
+        font-size: 1em;
+    }
+}
+
+/*best seller responsive*/
+
+@media only screen and (max-width: 1129px) {
+    .best-seller-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .best-seller-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 4em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .item-name-container {
+        height: 4.5em;
+    }
+
+    .item-name {
+        font-size: 3em;
+    }
+
+    .item-price {
+        font-size: 3em;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .item-name {
+        font-size: 2.5em;
+    }
+
+    .item-price {
+        font-size: 2.5em;
+    }
+
+    #best-seller-text {
+        font-size: 2em;
+        padding: 1em 1em;
+        margin-bottom: -0.75em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .nav-bar {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 476px) {
+
+    .item-buynow-container {
+        padding: 1.5em;
+        height: 3em;
+    }
+
+    .item-buynow {
+        width: 90%;
+    }
+
+    .item-buynow:hover {
+        width: 100%;
+    }
+
+    .item-name {
+        font-size: 2em;
+    }
+
+    .item-price {
+        font-size: 1.65em;
+    }
+}
+
+/*Footer responsive*/
+
+@media only screen and (max-width: 870px) {
+    .footer {
+        height: 15em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .footer-icons {
+        width: 1em;
+    }
+
+    .footer-p-info {
+        font-size: 0.75em;
+    }
+
+    #footer-contact-title {
+        font-size: 1em;
+        margin-left: 5em;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+ 
+    .footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-contact-box {
+        margin-left: 2.5em;
+    }
+
+    #footer-logo {
+        display: none;
+    }
+
+    .footer-icons {
+        width: 1em;
+    }
+
+    .footer-p-info {
+        font-size: 0.75em;
+    }
+
+    #footer-contact-title {
+        font-size: 1em;
+        margin-left: 5em;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .footer-contact-box {
+        margin-left: 2em;
+    }
+}
