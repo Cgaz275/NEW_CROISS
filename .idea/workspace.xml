@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5d64414d-4da3-489c-9b82-2b274e6ebf9b" name="Changes" comment="CROISS TAI SINH">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Croiss-Bakery-main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Montserrat.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/About-us/about-us.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/About-us/about-us.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cart/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cart/cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cart/cartstyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-Black.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-BlackItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-Bold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-BoldItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-ExtraBold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-ExtraBoldItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-ExtraLight.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-ExtraLightItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-Italic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-Light.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-LightItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-Medium.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-MediumItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-Regular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-SemiBold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-SemiBoldItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-Thin.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-ThinItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat-VariableFont_wght.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/Montserrat.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-Black.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-BlackItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-Bold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-BoldItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-ExtraBold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-ExtraBoldItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-ExtraLight.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-ExtraLightItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-Italic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-Light.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-LightItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-Medium.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-MediumItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-Regular.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-SemiBold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-SemiBoldItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-Thin.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/MontserratAlternates-ThinItalic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/SIL Open Font License.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/font-montserrat.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-BlackItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-ExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-ExtraBoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-ExtraLight.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-ExtraLightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-MediumItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-SemiBoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Font/Montserrat/static/Montserrat-ThinItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/About-us/Three Igniters/Anh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/About-us/Three Igniters/Huy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/About-us/Three Igniters/Khánh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/About-us/Three Igniters/Three igniters.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/About-us/bread 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/About-us/bread.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/About-us/wheat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Cart/Banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Cart/X.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Cart/banner logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Cart/chocomuffin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Cart/lavabread.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Cart/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Cart/pixel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Best-seller/best seller 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Best-seller/best seller 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Best-seller/best seller 3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Best-seller/buy now button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Footer/email.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Footer/footer logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Footer/location.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Footer/phone-call.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Homepage main pic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Nav-bar/cart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Nav-bar/login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Nav-bar/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Nav-bar/name.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/Nav-bar/three-bars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Homepage/middle-breads.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Login/863363e6-95a1-48ab-b26b-ddf4db846db4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Login/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Products/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Products/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Products/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Products/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Products/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Products/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Products/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Products/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Products/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Products/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/Products/shopping.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login/sign-in-admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login/sign-in-admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login/sign-in-admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login/sign-in.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login/sign-in.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login/sign-in.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login/sign-up.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login/sign-up.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login/sign-up.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductPage/product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductPage/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductPage/productpage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/OrderHistory.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/OrderHistory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/OrderHistory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/User.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/User.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/adminM.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/adminM.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/adminM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/billM.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/billM.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/billM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/productM.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/productM.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/productM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/bill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/src/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/thongkeM.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/userM.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/userM.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/userM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2Yq0KGgbDikKw09gbegLkoDErww" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "openjdk-20",
+    "last_opened_file_path": "E:/[PROGRAMING]/java/Croiss-Bakery-main",
+    "run.code.analysis.last.selected.profile": "pProject Default"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\[PROGRAMING]\java\Croiss-Bakery-main\Login" />
+      <recent name="E:\[PROGRAMING]\java\Croiss-Bakery-main\User" />
+      <recent name="E:\[PROGRAMING]\java\Croiss-Bakery-main\admin\src" />
+      <recent name="E:\[PROGRAMING]\java\Croiss-Bakery-main\admin" />
+      <recent name="E:\[PROGRAMING]\java\Croiss-Bakery-main\Database" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\[PROGRAMING]\java\Croiss-Bakery-main\admin" />
+      <recent name="E:\[PROGRAMING]\java\Croiss-Bakery-main\admin\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d64414d-4da3-489c-9b82-2b274e6ebf9b" name="Changes" comment="" />
+      <created>1701237747795</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701237747795</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="CROISS TAI SINH" />
+    <option name="LAST_COMMIT_MESSAGE" value="CROISS TAI SINH" />
+  </component>
+</project>
