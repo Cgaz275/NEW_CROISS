@@ -1,16 +1,520 @@
+.mid {
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 3fr;
+
+  border: 4px solid #2f1f20;
+  margin: 5%;
+  border-radius: 10px;
+}
+
+
+/*LEFT NAV*/
+
+
+.mid .nav{
+  grid-row: 1/2;
+  grid-column: 1/2;
+
+  display: flex;
+  flex-direction: column;
+  margin: 6%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.mid nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mid nav li{
+  font-size: larger;
+  margin: 10%;
+  float: none; 
+  width: 100%;
+}
+
+.mid nav li a{
+  display: block; 
+  width: 100%; 
+  padding: 20px; 
+  border-left: 5px solid; 
+  position: relative; 
+  z-index: 2;
+  text-decoration: none;
+  color: #444;
+  box-sizing: border-box;  
+  -moz-box-sizing: border-box;  
+  -webkit-box-sizing: border-box; 
+}
+  
+nav li a:hover{ border-bottom: 0px; color: #fff;}
+nav li:first-child a{ border-left: 10px solid #2f1f20 }
+nav li:first-child a{ background: #33121576;} /*CURRENT*/
+nav li:nth-child(2) a{ border-left: 10px solid #2f1f20; }
+nav li:nth-child(3) a{ border-left: 10px solid #2f1f20; }
+nav li:last-child a{ border-left: 10px solid #2f1f20; }
+
+.mid nav li a:after { 
+  content: "";
+  height: 100%; 
+  left: 0; 
+  top: 0; 
+  width: 0px;  
+  position: absolute; 
+  transition: all 0.3s ease 0s; 
+  -webkit-transition: all 0.3s ease 0s; 
+  z-index: -1;
+}
+
+nav li a:hover:after{ width: 100%; }
+/*Xóa child hiện tại*/
+nav li:nth-child(2) a:after{ background: #33121576; }
+nav li:nth-child(3) a:after{ background: #33121576; }
+nav li:last-child a:after{ background: #33121576; }
+
+nav li a.current { 
+  background-color: #33121576;
+  color: #fff;
+}
+
+
+
+/*USER INFORMATION*/
+
+#user.detail {
+  padding-top: 4em;
+}
+
 .details {
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
+  grid-row: 1/3;
+  grid-column: 2/5;
+
+  display: flex;
+  flex-direction: column;
+  margin: 6%;
+  margin-top: 2%;
+}
+
+.details p {
+  margin-top: 0;
+  font-size: 250%;
+  font-weight: bolder;
+  margin-bottom: 5%;
+}
+
+.details input {
+  margin-bottom: 3em;
+
+  width: 100%;
+  height: 2em;
+  border-radius: 5px;
+
+  font-size:medium;
+}
+
+.details input[type = "text"] {
+  padding: 0.5em;
+}
+
+.details input[type = "number"] {
+  padding: 0.5em;
+}
+
+
+.res_detail button {
+  align-self: center;
+  width: 20%;
+  height: 3em;
+  border-radius: 10px;
+  background-color: #2f1f20a7;
+  font-size: larger;
+  font-weight: 200;
+  color: #fff;
+}
+
+.details span {
+  font-size: larger;
+  font-weight: 600;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .mid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav {
+    align-items: center;
+  }
+}
+
+
+
+
+/* The star means all the body part */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+/* ----------------------------------------Navigation bar start--------------------------------------- */
+
+#present-page {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.5em;
+
+}
+
+.nav-bar {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 6fr repeat(3, 1fr) repeat(2, 0.4fr);
+  background-color: white;
+  width: 100%;
+  height: 70px;
+
+  align-items: center;
+  justify-items: center;
+}
+
+#nav-bar-logo {
+  width: 3.5em;
+}
+
+#nav-bar-name {
+  width: 17em;
+  margin-left: 0.5em;
+}
+
+#nav-bar-name1 {
+  justify-self: left;
+}
+
+.nav-bar-text-button {
+  list-style: none;
+  color: #2f1f20;
+  text-decoration: none;
+
+  white-space: nowrap;
+  /*Stop text to break words*/
+}
+
+.nav-bar-text-button:hover {
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.5em;
+}
+
+.nav-bar-icon-button img:hover {
+  filter: brightness(50%);
+}
+
+#nav-bar-cart {
+  width: 2em;
+}
+
+#nav-bar-login {
+  width: 2em;
+  margin-right: 1.8em;
+}
+
+.three-bars {
+  display: none;
+}
+
+.sidebar {
+  display: none;
+}
+
+
+/* ----------------------------------------Navigation bar end--------------------------------------- */
+
+/*Nav-bar-responsive*/
+@media only screen and (max-width: 1028px) {
+  .nav-bar {
+      grid-template-columns: 0.25fr 1fr 0.2fr;
+  }
+
+  .nav-bar-icon-button {
+      display: none;
+  }
+
+  .nav-bar-text-button {
+      display: none;
+  }
+
+  .three-bars {
+      display: block;
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+  .nav-bar {
+      height: auto;
+  }
+
+  #the-three {
+      margin-top: 2em;
+  }
+}
+
+@media only screen and (max-width: 476px) {
+  #nav-bar-name {
+      width: 80%;
+  }
+
+  #nav-bar-logo {
+      width: 70%;
+  }
+
+  
+}
+
+/*----------Nav-bar three bars start------------*/
+
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 2em;
+  height: auto;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: .5s;
 }
 
-.details:hover {
-  background-color: #f0f0f0;
+.bars {
+  width: 85%;
+  height: 4px;
+  background-color: #2f1f20;
+  border-radius: 4px;
 }
 
-.split
-{
+#bar2 {
+  transition-duration: .8s;
+}
+
+#bar1,#bar3 {
+  width: 85%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: .5s;
+  transform: rotate(180deg);
+}
+
+/*Nav-bar three bar sidebar*/
+
+.sidebar {
+
+  z-index: 10;
+  
+  display: flexbox;
+  flex-direction: column;
+
+  position: fixed;
+
+  background-color: #2f1f20;
+  color: white;
+
+  width: 15em;
+  height: 100vh;
+
+}
+
+.sidebar ul {
+  box-sizing: border-box;
+}
+
+.sidebar ul li {
+  padding-top: 4em;
+  padding-bottom: 0;
+  padding: 2em ;
+}
+
+.sidebar ul li:hover  {
+  background-color: white;
+  border: 1px solid #2f1f20;
+  font-weight: bold;
+  color: #2f1f20;
+}
+
+.sidebar ul li:hover a {
+  font-weight: bold;
+  color: #2f1f20;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+#sidebar-exit:hover {
+  opacity: 0.5;
+}
+
+#sidebar-exit {
+  padding-left: 12em;
+  padding-top: 1em;
+  width: 8%;
+}
+
+
+/*-------------------------------------------------Nav-bar three bars end----------------------------------*/
+
+/*-------------------------------------------------Footer start----------------------------------*/
+
+/* Footer */
+
+.footer {
+background-color: #2f1f20;
+width: 100%;
+height: auto;
+
+margin-top: 1em;
+
 display: grid;
-grid-template-columns: repeat(2, 1fr);
+grid-template-columns: 1fr 2fr;
+
+justify-items: center;
+align-items: center;
+
+color: white;
 }
+
+#footer-logo {
+width: 60%;
+}
+
+.footer-contact-box {
+justify-self: left;
+}
+
+#footer-contact-title {
+margin-bottom: 1em;
+margin-left: 3em;
+font-size: 1.5em;
+}
+
+.footer-icons {
+width: 1.5em;
+}
+
+.footer-contact-box-info {
+
+margin-top: 1em;
+
+display: flex;
+flex-direction: row;
+
+justify-items: center;
+align-items: center;
+}
+
+.footer-p-info {
+margin-left: 1em;
+font-weight: lighter;
+}
+
+
+/*Footer repsonsive*/
+
+@media only screen and (max-width: 870px) {
+.footer {
+    height: 15em;
+}
+}
+
+@media only screen and (max-width: 700px) {
+.footer-icons {
+    width: 1em;
+}
+
+.footer-p-info {
+    font-size: 0.75em;
+}
+
+#footer-contact-title {
+    font-size: 1em;
+    margin-left: 5em;
+}
+}
+
+@media only screen and (max-width: 375px) {
+
+.footer {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.footer-contact-box {
+    margin-left: 2.5em;
+}
+
+#footer-logo {
+    display: none;
+}
+
+.footer-icons {
+    width: 1em;
+}
+
+.footer-p-info {
+    font-size: 0.75em;
+}
+
+#footer-contact-title {
+    font-size: 1em;
+    margin-left: 5em;
+}
+}
+
+@media only screen and (max-width: 300px) {
+.footer-contact-box {
+    margin-left: 2em;
+}
+}
+
+
+/*-------------------------------------------------Footer end----------------------------------*/
