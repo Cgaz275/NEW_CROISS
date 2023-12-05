@@ -4,7 +4,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 2fr 1fr;
-    margin-top: 18vh;
+    margin-top: 15vh;
     
 }
 
@@ -121,6 +121,10 @@ input[type=checkbox] + label {
     .sign-in {
         margin-top: 5vh;
     }
+
+    .mid {
+      margin-top: 5vh;
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -133,7 +137,14 @@ input[type=checkbox] + label {
     .sign-in {
         margin-top: 5vh;
     }
+
+    .mid {
+      margin-top: 2vh;
+    }
 }
+
+
+
 
 
 /* The star means all the body part */
