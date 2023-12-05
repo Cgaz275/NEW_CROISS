@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link rel="stylesheet" href="adminM.css">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="productM.css">
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href="/Images/Homepage/Nav-bar/logo.png">
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-
 </head>
-
 <body>
-
-
-
-
 <div class = "grid-container">
     <header class="header">
         <div class="menu-icon" onclick="openSidebar()">
@@ -64,13 +56,33 @@
             </li>
         </ul>
     </aside>
-    <!-- End Sidebar -->
-    <div class="main-container" id="admin"></div>
+    <div class = "main-container">
+        <h2>Add Users</h2>
+
+        <form id="addUsersForm">
+            <label for="Username">Username:</label><br>
+            <input style="width:50%" type="text" id="Username" required><br><br>
+
+            <label for="Pass">Password:</label><br>
+            <input style="width:50%" type="password" id="Pass" required><br><br>
+
+            <label for="Name">Name:</label><br>
+            <input style="width:50%" type="text" id="Name" required><br><br>
+
+            <label for="Address">Address:</label><br>
+            <input style="width:50%" type="text" id="Address" required><br><br>
+
+            <label for="Phone">Phone:</label><br>
+            <input style="width:50%" type="tel" id="Phone" required><br><br>
+
+            <button style="width:50%" type="button" onclick="addUsers()">Add User</button>
+        </form>
+
+
+    </div>
 </div>
 
-
 </body>
-<script src="../admin/src/admin.js"></script>
-<script src="adminM.js"></script>
-
+<script src="src/user.js"></script>
+<script src="../admin/userM.js"></script>
 </html>

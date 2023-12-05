@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link rel="stylesheet" href="adminM.css">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="productM.css">
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href="/Images/Homepage/Nav-bar/logo.png">
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-
 </head>
-
 <body>
-
-
-
-
 <div class = "grid-container">
     <header class="header">
         <div class="menu-icon" onclick="openSidebar()">
@@ -64,13 +56,39 @@
             </li>
         </ul>
     </aside>
-    <!-- End Sidebar -->
-    <div class="main-container" id="admin"></div>
+    <div class = "main-container">
+
+        <div class="form">
+        <form id="addProductForm">
+            <label for="productName">Product Name:</label><br>
+            <input style="width:50%" type="text" id="productName" required><br><br>
+
+                <label for="productPrice">Product Price:</label><br>
+            <input style="width:50%" type="text" id="productPrice" required><br><br>
+
+                    <label for="productDesc">Product Description:</label><br>
+            <input style="width:50%" type="text" id="productDesc" required></textarea><br><br>
+
+                        <label for="productCategory">Choose a category:</label><br>
+           <select style="width:50%" name="category" id="productCategory">
+                <option value="Cookies">Cookies</option>
+                <option value="Bread">Bread</option>
+                <option value="Cake">Cake</option>
+            </select><br><br>
+
+                            <label for="productImg">Product Image URL:</label><br>
+            <input style="width:50%" type="text" id="productImg" required><br><br>
+
+           <button style="width:50%" type="button" onclick="addProduct()">Add Product</button><br><br>
+
+        </form>
+    </div>
+
+
+    </div>
 </div>
 
-
 </body>
-<script src="../admin/src/admin.js"></script>
-<script src="adminM.js"></script>
-
+<script src="../admin/src/product.js"></script>
+<script src="productM.js"></script>
 </html>
