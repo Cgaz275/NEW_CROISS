@@ -22,4 +22,5 @@ function checkLogInC(){
 
 function logOut(){
    localStorage.removeItem("currentUser");
+   location.assign("Login/sign-in.html");
 }
