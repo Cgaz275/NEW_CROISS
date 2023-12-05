@@ -88,6 +88,15 @@ a {
   color: #2f1f20;
   border-radius: 4px;
   padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item img {
+  width: 80%;
 }
 
 .details {
@@ -234,7 +243,7 @@ a {
 
 .search-bar {
 
-  padding-top: 7em;
+  padding-top:7em;
   box-sizing: border-box;
   padding-left: 2em;
   padding-right: 2em;
@@ -258,6 +267,14 @@ a {
   height: 3em;
 }
 
+.search-bar input[type=text] {
+  padding-right: 30px;
+  background-image: url('/Images/Products/search-icon.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 20px 20px;
+}
+
 .search-bar input:hover {
   border:#2f1f20 solid 2px;
 }
@@ -268,7 +285,7 @@ a {
 }
 
 .search-bar input::placeholder {
-  padding-left: 2%
+  padding-left: 2%;
 }
 
 .suggest {

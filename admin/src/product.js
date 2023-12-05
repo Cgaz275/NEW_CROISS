@@ -5,7 +5,7 @@ let shopItemsData = [
     price: 1.2,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Muffin",
-    img: "images/img-1.jpg",
+    img: "/Images/Products/1.png",
   },
   {
     id: "xyzh",
@@ -13,7 +13,7 @@ let shopItemsData = [
     price: 2.5,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
-    img: "images/img-2.jpg",
+    img: "/Images/Products/2.png",
   },
   {
     id: "ujfh",
@@ -21,7 +21,7 @@ let shopItemsData = [
     price: 1.25,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Cookies",
-    img: "images/img-3.jpg",
+    img: "/Images/Products/3.png",
   },
   {
     id: "oqis",
@@ -29,7 +29,7 @@ let shopItemsData = [
     price: 4.5,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/4.png",
   },
   {
     id: "mdns",
@@ -37,7 +37,7 @@ let shopItemsData = [
     price: 6,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/5.png",
   },
   {
     id: "qweo",
@@ -45,7 +45,7 @@ let shopItemsData = [
     price: 6.7,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Cake",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/6.png",
   },
   {
     id: "gnms",
@@ -53,7 +53,7 @@ let shopItemsData = [
     price: 5.2,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/7.png",
   },
   {
     id: "qwuh",
@@ -61,7 +61,7 @@ let shopItemsData = [
     price: 1.3,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/8.png",
   },
   {
     id: "ibch",
@@ -69,7 +69,7 @@ let shopItemsData = [
     price: 5.4,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/9.png",
   },
   {
     id: "jjjm",
@@ -77,7 +77,7 @@ let shopItemsData = [
     price: 4.5,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Cake",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/10.png",
   },
   {
     id: "kisjf",
@@ -85,7 +85,7 @@ let shopItemsData = [
     price: 2.1,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Cake",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/11.png",
   },
   {
     id: "qqwu",
@@ -93,7 +93,7 @@ let shopItemsData = [
     price: 3,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Muffin",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/12.png",
   },
   {
     id: "msad",
@@ -101,7 +101,7 @@ let shopItemsData = [
     price: 4,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/13.png",
   },
   {
     id: "oran",
@@ -109,7 +109,7 @@ let shopItemsData = [
     price: 3.2,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/14.png",
   },
   {
     id: "psdaj",
@@ -117,7 +117,7 @@ let shopItemsData = [
     price: 2.2,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/15.png",
   },
   {
     id: "proSB",
@@ -125,7 +125,7 @@ let shopItemsData = [
     price: 3.1,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
-    img: "images/img-4.jpg",
+    img: "/Images/Products/16.png",
   },
 ];
 
