@@ -2,7 +2,7 @@ let shopItemsData = [
   {
     id: "abcd",
     name: "Choco Muffin",
-    price: 1.2,
+    price: 1,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Muffin",
     img: "/Images/Products/1.png",
@@ -10,7 +10,7 @@ let shopItemsData = [
   {
     id: "xyzh",
     name: "Lava Bread",
-    price: 2.5,
+    price: 2,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
     img: "/Images/Products/2.png",
@@ -18,7 +18,7 @@ let shopItemsData = [
   {
     id: "ujfh",
     name: "French Bread",
-    price: 1.25,
+    price: 1,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
     img: "/Images/Products/3.png",
@@ -26,7 +26,7 @@ let shopItemsData = [
   {
     id: "oqis",
     name: "Berry Sandwich Loaf",
-    price: 4.5,
+    price: 4,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
     img: "/Images/Products/4.png",
@@ -42,7 +42,7 @@ let shopItemsData = [
   {
     id: "qweo",
     name: "Cheese Cake",
-    price: 6.7,
+    price: 6,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Cake",
     img: "/Images/Products/6.png",
@@ -58,7 +58,7 @@ let shopItemsData = [
   {
     id: "qwuh",
     name: "Cream Cake",
-    price: 1.3,
+    price: 1,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
     img: "/Images/Products/8.png",
@@ -66,7 +66,7 @@ let shopItemsData = [
   {
     id: "ibch",
     name: "Almond Bread Loaf",
-    price: 5.4,
+    price: 5,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
     img: "/Images/Products/9.png",
@@ -74,7 +74,7 @@ let shopItemsData = [
   {
     id: "jjjm",
     name: "Butter Cake",
-    price: 4.5,
+    price: 4,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Cake",
     img: "/Images/Products/10.png",
@@ -82,7 +82,7 @@ let shopItemsData = [
   {
     id: "kisjf",
     name: "Honey Pancake",
-    price: 2.1,
+    price: 2,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Cake",
     img: "/Images/Products/11.png",
@@ -106,7 +106,7 @@ let shopItemsData = [
   {
     id: "oran",
     name: "Florence Oval",
-    price: 3.2,
+    price: 3,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
     img: "/Images/Products/14.png",
@@ -114,7 +114,7 @@ let shopItemsData = [
   {
     id: "psdaj",
     name: "Original Cookie",
-    price: 2.2,
+    price: 2,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
     img: "/Images/Products/15.png",
@@ -122,7 +122,7 @@ let shopItemsData = [
   {
     id: "proSB",
     name: "Snow Bagel",
-    price: 3.1,
+    price: 3,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     category: "Bread",
     img: "/Images/Products/16.png",
