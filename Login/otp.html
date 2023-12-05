@@ -7,6 +7,8 @@
     <title>Croiss's Bakery</title>
     <link rel="stylesheet" href="otp.css">
     <script src="otp.js"></script>
+    <script src="/index.js"></script>
+    <link rel="stylesheet" href="/navbar_footer/navbar-footer.css">
 
     <!-- font-family : 'Montserrat', sans-serif; -->
 
@@ -16,68 +18,66 @@
 
 <body>
 
-        <!---------------------------------- Navigation bar start ---------------------------------------->
+     <!---------------------------------- Navigation bar start ---------------------------------------->
 
-        <div class="sidebar">
+     <div class="sidebar">
 
-            <img id="sidebar-exit" onclick="close_sidebar ()" src="/Images/Homepage/Nav-bar/sidebar-exit.png">
-    
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/ProductPage/product.html">Products</a></li>
-                <li><a href="/About-us/about-us.html">About Us</a></li>
-                <li><a href="/Cart/cart.html">Cart</a></li>
-                <li><a href="/Login/sign-in.html">Login</a></li>
-            </ul>
-        </div>
-    
-        <div class="nav-bar">
-            <a href="/index.html"><img id="nav-bar-logo" src="/Images/Homepage/Nav-bar/logo.png" alt="Croiss'Bakery logo"></a>
-            <a id="nav-bar-name1" href="/index.html"><img id="nav-bar-name" src="/Images/Homepage/Nav-bar/name.png"
-                    alt="Croiss'bakery"></a>
-            <a id="present-page" class="nav-bar-text-button" href="/index.html">Home</a>
-            <a class="nav-bar-text-button" href="/ProductPage/product.html">Products</a>
-            <a class="nav-bar-text-button" href="About-us/about-us.html">About Us</a>
-            <a class="nav-bar-icon-button" href="/Cart/cart.html"><img id="nav-bar-cart" src="/Images/Homepage/Nav-bar/cart.png"
-                    alt="Cart"></a>
-            <a href="sign-in.html" class="nav-bar-icon-button" ><img id="nav-bar-login" src="/Images/Homepage/Nav-bar/login.png"
+        <img id="sidebar-exit" onclick="close_sidebar ()" src="/Images/Homepage/Nav-bar/sidebar-exit.png">
+
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/ProductPage/product.html">Products</a></li>
+            <li><a href="/About-us/about-us.html">About Us</a></li>
+            <li><a href="/Cart/cart.html">Cart</a></li>
+            <li><a href="/Login/sign-in.html">Login</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-bar">
+        <a href="/index.html"><img id="nav-bar-logo" src="/Images/Homepage/Nav-bar/logo.png" alt="Croiss'Bakery logo"></a>
+        <a id="nav-bar-name1" href="/index.html"><img id="nav-bar-name" src="/Images/Homepage/Nav-bar/name.png"
+                alt="Croiss'bakery"></a>
+        <a class="nav-bar-text-button" href="/index.html">Home</a>
+        <a class="nav-bar-text-button" href="/ProductPage/product.html">Products</a>
+        <a class="nav-bar-text-button" href="/About-us/about-us.html">About Us</a>
+        <a onclick="checkLogInC()"class="nav-bar-icon-button"><img id="nav-bar-cart" src="/Images/Homepage/Nav-bar/cart.png"
+                alt="Cart"></a>
+        <a onclick="checkLogIn()" class="nav-bar-icon-button" ><img id="nav-bar-login" src="/Images/Homepage/Nav-bar/login.png"
                 alt="Login"></a>
-    
-            <!--Three bars-->
-            <div class="three-bars">
-                <input type="checkbox" id="checkbox" onclick="showSidebar()">
-                <label for="checkbox" class="toggle">
-                    <div class="bars" id="bar1"></div>
-                    <div class="bars" id="bar2"></div>
-                    <div class="bars" id="bar3"></div>
-                </label>
-            </div>
+        <a onclick="logOut()" class="nav-bar-icon-button" ><img id="nav-bar-logout" src="/Images/Homepage/Nav-bar/logout.png"
+                    alt="Log out"></a>        
+
+        <!--Three bars-->
+        <div class="three-bars">
+            <input type="checkbox" id="checkbox" onclick="showSidebar()">
+            <label for="checkbox" class="toggle">
+                <div class="bars" id="bar1"></div>
+                <div class="bars" id="bar2"></div>
+                <div class="bars" id="bar3"></div>
+            </label>
         </div>
-    
-        <!----------------Navbar script for responsive---------------->
-    
-        <script>
-            function showSidebar() {
-                var sidebar = document.querySelector('.sidebar');
-                sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block'; 
-            }
-    
-            function close_sidebar () {
-                showSidebar ();
-            }
-        </script>
-    
-        <!---------------------------------- Navigation bar end ---------------------------------------->
+    </div>
+
+    <!----------------Navbar script for responsive---------------->
+
+    <script>
+        function showSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block'; 
+        }
+
+        function close_sidebar () {
+            showSidebar ();
+        }
+    </script>
+
+    <!---------------------------------- Navigation bar end ---------------------------------------->
 
 
+    <img id = "croiss_bakery_pic" src = ".././Images/Login/863363e6-95a1-48ab-b26b-ddf4db846db4.jpg">
     
     <!-- Sign Up-->
     <div class = "mid ">
-        
-        <div class = "pic">
-            <img id = "croiss_bakery_pic" src = ".././Images/Login/863363e6-95a1-48ab-b26b-ddf4db846db4.jpg">
-            <img id = "croiss_bakery_logo" src  = ".././Images/Homepage/Footer/footer logo.png">
-        </div>
     
         <div class = "forgot">
             <h1>GET NEW PASSWORD</h1>
@@ -98,8 +98,10 @@
                 <i class="fas fa-eye" onclick="changeSituation2()" id="eye2"></i>
                 <span id="pass2Error" style="color: red;"></span>
             </div>
-            <button onclick="checkForm('sign-in.html')">CONFIRM</button>
+            <button id="confirming" onclick="checkForm('sign-in.html')">CONFIRM</button>
         </div>
+
+    </div>
     
     
         <!--------------------------------------------- Footer -------------------------------------------->
@@ -122,8 +124,6 @@
                 </div>
             </div>
         </div>
-
-    </div>
 
 </body>
 
