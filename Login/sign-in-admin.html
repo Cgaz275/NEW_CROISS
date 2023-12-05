@@ -2,12 +2,13 @@
 <html lang="en">
 
 <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="sign-in-admin.css">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Croiss's Bakery</title>
-    <link rel="stylesheet" href="sign-in.css">
+    <link rel="stylesheet" href="sign-in-admin.css">
 
     <!-- font-family : 'Montserrat', sans-serif; -->
 
@@ -16,17 +17,104 @@
 </head>
 
 <body>
-<!-- Sign IN -->
-<div class = "sign-in">
-    <h1>SIGN IN</h1>
-    <p>Username</p>
-    <input type="text" placeholder = "Username" autofocus autocomplete="off" id="username">
-    <p>Password</p>
-    <input type="password" placeholder = "Password" autocomplete="off" id="password">
-    <i class="fas fa-eye" onclick="changeSituation()" id="eye"></i>
-    <button onclick="return checkForm()" id = "button">SIGN IN</button>
 
-</div>
+    <!---------------------------------- Navigation bar start ---------------------------------------->
+
+    <div class="sidebar">
+
+        <img id="sidebar-exit" onclick="close_sidebar ()" src="/Images/Homepage/Nav-bar/sidebar-exit.png">
+
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/ProductPage/product.html">Products</a></li>
+            <li><a href="/About-us/about-us.html">About Us</a></li>
+            <li><a href="/Cart/cart.html">Cart</a></li>
+            <li><a href="/Login/sign-in.html">Login</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-bar">
+        <a href="/index.html"><img id="nav-bar-logo" src="/Images/Homepage/Nav-bar/logo.png" alt="Croiss'Bakery logo"></a>
+        <a id="nav-bar-name1" href="/index.html"><img id="nav-bar-name" src="/Images/Homepage/Nav-bar/name.png"
+                alt="Croiss'bakery"></a>
+        <a id="present-page" class="nav-bar-text-button" href="/index.html">Home</a>
+        <a class="nav-bar-text-button" href="/ProductPage/product.html">Products</a>
+        <a class="nav-bar-text-button" href="About-us/about-us.html">About Us</a>
+        <a class="nav-bar-icon-button" href="/Cart/cart.html"><img id="nav-bar-cart" src="/Images/Homepage/Nav-bar/cart.png"
+                alt="Cart"></a>
+        <a class="nav-bar-icon-button" href="/Login/sign-in.html"><img id="nav-bar-login" src="/Images/Homepage/Nav-bar/login.png"
+                alt="Login"></a>
+
+        <!--Three bars-->
+        <div class="three-bars">
+            <input type="checkbox" id="checkbox" onclick="showSidebar()">
+            <label for="checkbox" class="toggle">
+                <div class="bars" id="bar1"></div>
+                <div class="bars" id="bar2"></div>
+                <div class="bars" id="bar3"></div>
+            </label>
+        </div>
+    </div>
+
+    <!----------------Navbar script for responsive---------------->
+
+    <script>
+        function showSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block'; 
+        }
+
+        function close_sidebar () {
+            showSidebar ();
+        }
+    </script>
+
+    <!---------------------------------- Navigation bar end ---------------------------------------->
+
+
+    <!-- Sign IN -->
+    <div class = "mid">
+        <div class = "pic">
+            <img id = "croiss_bakery_pic" src = ".././Images/Login/863363e6-95a1-48ab-b26b-ddf4db846db4.jpg">
+            <img id = "croiss_bakery_logo" src  = ".././Images/Homepage/Footer/footer logo.png">
+        </div>
+        <div class = "sign-in">
+            <h1>SIGN IN</h1>
+            <div class = "sign">
+                <p>Username</p>
+                <input type="text" placeholder = "Username" autofocus autocomplete="off" id="username">
+            </div>
+            <div class = "pass">
+                <p>Password</p>
+                <input type="password" placeholder = "Password" autocomplete="off" id="password">
+                <i class="fas fa-eye" onclick="changeSituation()" id="eye"></i>
+            </div>
+            <button onclick="return checkForm()" id = "button">SIGN IN</button>
+        </div>
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        <img id="footer-logo" src="/Images/Homepage/Footer/footer logo.png" alt="Croiss'Bakery logo">
+        <div class="footer-contact-box">
+            <p id="footer-contact-title">Contact Us</p>
+            <div class="footer-contact-box-info">
+                <img class="footer-icons" src="/Images/Homepage/Footer/location.png" alt="Location icon">
+                <p class="footer-p-info">Vietnam, Ho Chi Minh city, SGU</p>
+            </div>
+            <div class="footer-contact-box-info">
+                <img class="footer-icons" src="/Images/Homepage/Footer/phone-call.png" alt="Phone call icon">
+                <p class="footer-p-info">023923XXX</p>
+            </div>
+            <div class="footer-contact-box-info">
+                <img class="footer-icons" src="/Images/Homepage/Footer/email.png" alt="Email icon">
+                <p class="footer-p-info">Croiss'Bakery@gmail.com</p>
+            </div>
+        </div>
+    </div>
 
 <script>
 
