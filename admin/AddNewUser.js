@@ -21,18 +21,17 @@ let generateUser = () => {
       let { username, pass, name, address, phone } = x;
       let search = basket.find((x) => x.id === id) || [];
       return `
-        <div>
+
         <div class="details">
           <div class = "colum"><p>${username}</p></div>
           <div class = "colum"><p>${pass}</p></div>
           <div class = "colum"><p>${name}</p></div>
           <div class = "colum"><p>${address}</p></div>
           <div class = "colum"><p>${phone}</p></div>
-             <div class = "colum"><button class="astext" onclick="editUser('${username}')" ><i class="fa fa-pencil-square-o"></i></button>
-             <button class="astext" onclick="removeUser('${username}')"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
+             <div class = "colum"><button onclick="editUser('${username}')" ><i class="fa fa-pencil-square-o"></i></button>
+             <button onclick="removeUser('${username}')"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
         </div>
          <div id="${username}-edit" class="edit-details">
-         </div>
 
     `;
     })
@@ -95,19 +94,19 @@ function editUser(username) {   isInEditMode = true;
   let form = document.createElement('div');
   form.id = 'editForm';
   form.innerHTML = `
-   <label for="editedPassword">Password:</label><br>
-   <input style="width:50%" type="text" id="editedPassword" value="${userDetails.pass}" ><br><br>
+   <label for="editedPassword">Password:</label>
+   <input type="text" id="editedPassword" value="${userDetails.pass}" ><br>
 
-    <label for="editedName">Name:</label><br>
-    <input style="width:50%" type="text" id="editedName" value="${userDetails.name}" ><br><br>
+    <label for="editedName">Name:</label>
+    <input type="text" id="editedName" value="${userDetails.name}" ><br>
 
-    <label for="editedAddress">Address:</label><br>
-    <input style="width:50%" type="text" id="editedAddress" value="${userDetails.address}"><br><br>
+    <label for="editedAddress">Address:</label>
+    <input type="text" id="editedAddress" value="${userDetails.address}"><br>
 
-    <label for="editedPhone">Phone:</label><br>
-    <input style="width:50%" type="text" id="editedPhone" value="${userDetails.phone}"><br><br>
+    <label for="editedPhone">Phone:</label>
+    <input type="text" id="editedPhone" value="${userDetails.phone}"><br>
 
-    <button style="width:50%" onclick="updateUserDetails('${username}')">Update</button>
+    <button onclick="updateUserDetails('${username}')">Update</button>
   `;
   // Append the form to the details box
 document.getElementById(`${username}-edit`).appendChild(form);

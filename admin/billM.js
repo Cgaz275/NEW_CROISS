@@ -27,6 +27,7 @@ console.log(storedBillIDArray);
 
 let generateShop = () => {
 
+
   return (  shop.innerHTML = storedBillIDArray
               .map((bill) => {
                 let { orderID } = bill;
@@ -42,8 +43,8 @@ let generateShop = () => {
                   .map((order) => {
                     return `
                       <div class="order-details">
-                        <p>id: ${order.id}</p>
-                        <h3>Quantity: ${order.quantity}</h3>
+                        <p>id: ${order.id} </p>
+                        <p>Quantity: ${order.quantity}</p>
                       </div>
                     `;
                   })
@@ -60,14 +61,17 @@ let generateShop = () => {
                 return `
                   <div class="details">
                     <h3>Bill ID: ${orderID}</h3>
-                    <h4>User Name: ${uniqueUsername}</h4>
+                    <p>User Name: ${uniqueUsername}</p>
                     <p>Address: ${uniqueAddress}</p>
                     <p>Payment Method: ${uniquePaymentMethod}</p>
                     <p>Shipped: ${uniqueShippingStatus ? "Yes" : "No"}</p>
-                    <p>Order Timestamp: ${orderTimestamp}</p>
+                    <p>Order Timestamp: ${orderTimestamp}</p><br>
+                    <h2>Ordered food</h2>
                     ${orderHTML}
                     <button onclick="editShippingStatus('${orderID}')">Change Shipping Status</button>
                                                 </div>
+                      <div id="ordersContainer" style="display: none;"></div>
+
                   </div>
                 `;
               })
@@ -107,4 +111,25 @@ let update = (id) => {
   localStorage.setItem('data', JSON.stringify(basket));
 };
 
+
+// SIDEBAR TOGGLE //
+var sidebarOpen = false;
+var sidebar = document.getElementById("sidebar");
+
+function openSidebar() {
+    if(!sidebarOpen) {
+        sidebar.classList.add("sidebar-responsive");
+        sidebarOpen = true;
+    }
+}
+
+function closeSidebar() {
+    if(sidebarOpen) {
+        sidebar.classList.remove("sidebar-responsive");
+        sidebarOpen = false;
+    }
+}
+// SIDEBAR TOGGLE //
+const showOrdersButton = document.getElementById("showOrdersButton");
+const ordersContainer = document.getElementById("ordersContainer"); // Replace with the actual ID of your container
 

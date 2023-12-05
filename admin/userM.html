@@ -5,54 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing Store</title>
+    <title>User Management</title>
     <link rel="stylesheet" href="userM.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/Images/Homepage/Nav-bar/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+<div class = "grid-container">
+    <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+            <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+            <a href="/Login/sign-in-admin.html"><span class="material-icons-outlined">logout</span></a>
+        </div>
+        <div class="header-right">
+            <a href="adminM.html"><span class="material-icons-outlined">account_circle</span></a>
+        </div>
+    </header>
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <div class="sidebar-title">
+            <div class="sidebar-brand">
+                <span class="material-icons-outlined">inventory</span>Croiss Dashboard
+            </div>
+            <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
 
-<div class="navbar">
-    <a href="adminM.html">
-        <h2>ADMIN MANAGEMENT</h2>
-    </a>
-    <a href="userM.html">
-        <h2>USER MANAGEMENT</h2>
-    </a>
+        <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+                <a href="#" >
+                    <span class="material-icons-outlined">dashboard</span> Dashboard
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="productM.html" >
+                    <span class="material-icons-outlined">bakery_dining</span> Foods
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="userM.html">
+                    <span class="material-icons-outlined">people</span> Customer
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="billM.html" >
+                    <span class="material-icons-outlined">shopping_cart</span> Orders
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <!-- End Sidebar -->
+        <div class="main-container">
+            <a href="AddNewUser.html"><span class="material-icons-outlined">add_box</span> Add new Users</a>
+            <div class="detailss">
+                <div class = "colum"><p>ID</p></div>
+                <div class = "colum"><p>Password</p></div>
+                <div class = "colum"><p>Name</p></div>
+                <div class = "colum"><p>Address</p></div>
+                <div class = "colum"><p>Phone Number</p></div>
+                <div class = "colum"><p>Edit</p></div>
+            </div>
+            <div id="shop"></div>
+        </div>
 
-    <a href="productM.html">
-        <h2>PRODUCT MANAGEMENT</h2>
-    </a>
 
-    <a href="billM.html">
-        <h2>BILL MANAGEMENT</h2>
-    </a>
-
-    <a href="thongkeM.html">
-        <h2>THONG KE</h2>
-    </a>
 </div>
-        <h1>QUAN LY USER</h1>
-        <form class="add" id="addUsersForm">
-            <label for="Username">Gmail:</label>
-            <input type="text" id="Username" required>
-
-            <label for="Pass">Password:</label>
-            <input type="text" id="Pass" required>
-
-            <label for="Name">Name:</label>
-            <input type="text" id="Name" required>
-
-            <label for="Address">Address:</label>
-            <input id="Address" required>
-
-            <label for="Phone">Phone number:</label>
-            <input type="text" id="Phone" required>
-
-            <button type="button" onclick="addUsers()">Add Product</button>
-        </form>
-        <div class="detail" id="shop"></div>
-
 </body>
 <script src="src/user.js"></script>
 <script src="../admin/userM.js"></script>

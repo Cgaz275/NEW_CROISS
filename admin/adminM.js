@@ -22,16 +22,12 @@ let generateAdmin = () => {
       let search = basket.find((x) => x.id === id) || [];
       return `
         <div class="details">
+        <h1>Admin Information</h1>
          <h3> username : ${username}</h3>
-         <div id="${username}-details" class="details-content" style="display:none;">
           <h3>Password : ${pass}</h3>
           <p>Name : ${name}</p>
           <p>Address : ${address}</p>
           <p>Phone number : ${phone}</p>
-
-          </div>
- <button onclick="toggleDetails('${username}')">Toggle Details</button>
-
         </div>
 
 
@@ -44,11 +40,24 @@ let generateAdmin = () => {
 generateAdmin();
  //Define a new product object
 
-function toggleDetails(username) {
-  let detailsDiv = document.getElementById(`${username}-details`);
-  detailsDiv.style.display = detailsDiv.style.display === 'none' ? 'block' : 'none';
+// SIDEBAR TOGGLE //
+var sidebarOpen = false;
+var sidebar = document.getElementById("sidebar");
+
+function openSidebar() {
+    if(!sidebarOpen) {
+        sidebar.classList.add("sidebar-responsive");
+        sidebarOpen = true;
+    }
 }
 
+function closeSidebar() {
+    if(sidebarOpen) {
+        sidebar.classList.remove("sidebar-responsive");
+        sidebarOpen = false;
+    }
+}
+// SIDEBAR TOGGLE //
 
 
 

@@ -78,6 +78,7 @@ let goToPreviousPage = () => {
     currentPage--;
     showPage();
     updatePaginationButtons();
+
   }
 };
 
@@ -88,6 +89,7 @@ let goToNextPage = () => {
     currentPage++;
     showPage();
     updatePaginationButtons();
+
   }
 };
 
@@ -103,6 +105,7 @@ let filterByCategory = (category) => {
 
 
 let increment = (id) => {
+    updatePaginationButtons();
   let selectedItem = id;
   let search = basket.find((x) => x.id === selectedItem.id);
 
@@ -121,6 +124,7 @@ let increment = (id) => {
   localStorage.setItem('cart', JSON.stringify(basket));
 };
 let decrement = (id) => {
+updatePaginationButtons();
   let selectedItem = id;
   let search = basket.find((x) => x.id === selectedItem.id);
 

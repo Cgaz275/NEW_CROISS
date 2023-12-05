@@ -26,9 +26,9 @@ let generateShop = () => {
              <div class = "colum"><p>${price}</p></div>
              <div class = "colum"><p>${desc}</p></div>
              <div class = "colum"><p>${category}</p></div>
-             <div class = "colum"><img width="50%" src=${img}></div>
-                <div class = "colum"><button class="astext" onclick="editProduct('${id}')" ><i class="fa fa-pencil-square-o"></i></button><br><br>
-                    <button class="astext" onclick="removeProduct('${id}')"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
+             <div class = "colum"><img width="100%" src=${img}></div>
+                <div class = "colum"><button onclick="editProduct('${id}')" ><i class="fa fa-pencil-square-o"></i></button><br><br>
+                    <button onclick="removeProduct('${id}')"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
              </div>
              <div id="${id}-edit" class="edit-details">
              </div>
@@ -99,27 +99,27 @@ function editProduct(id) {
     let form = document.createElement('div');
     form.id = 'editForm';
     form.innerHTML = `
-                <label  for="editedName">Name:</label><br>
-                <input style="width:50%" type="text" id="editedName" value="${productDetails.name}" ><br><br>
+        <label for="editedName">Name:</label>
+                <input type="text" id="editedName" value="${productDetails.name}" ><br>
 
-                <label for="editedPrice">Price:</label><br>
-                <input style="width:50%" type="number" id="editedPrice" value="${productDetails.price}" ><br><br>
+                <label for="editedPrice">Price:</label>
+                <input type="number" id="editedPrice" value="${productDetails.price}" ><br>
 
-                <label for="editedDesc">Description:</label><br>
-                <input style="width:50%" type="text" id="editedDesc" value="${productDetails.desc}"><br><br>
+                <label for="editedDesc">Description:</label>
+                <input type="text" id="editedDesc" value="${productDetails.desc}"><br>
 
 
-                   <label for="editedCategory">Choose a category:</label><br>
-                   <select style="width:50%" name="category" id="editedCategory">
+                   <label for="editedCategory">Choose a category:</label>
+                   <select name="category" id="editedCategory">
                    <option value="Cookies">Cookies</option>
                    <option value="Bread">Bread</option>
                    <option value="Cake">Cake</option>
-                   </select><br><br>
+                   </select>
 
-                <label for="editedImg">Image:</label><br>
-                <input style="width:50%" type="text" id="editedImg" value="${productDetails.img}"><br><br>
+                <label for="editedImg">Image:</label>
+                <input type="text" id="editedImg" value="${productDetails.img}"><br>
 
-                <button style="width:50%" onclick="updateProductDetails('${id}')">Update</button>
+                <button onclick="updateProductDetails('${id}')">Update</button>
     `;
     // Append the form to the details box
     document.getElementById(`${id}-edit`).appendChild(form);
