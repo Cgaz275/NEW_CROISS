@@ -4,72 +4,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Navigation bar start */
-
-#present-page {
-    font-weight: bold;
-    text-decoration: underline;
-    text-decoration-thickness: 0.15em;
-    text-underline-offset: 0.5em;
-
-}
-
-.nav-bar {
-    position: fixed;
-    display: grid;
-    grid-template-columns: 1fr 6fr repeat(3, 1fr) repeat(2, 0.4fr);
-    background-color: white;
-    width: 100%;
-    height: 70px;
-
-    align-items: center;
-    justify-items: center;
-}
-
-#nav-bar-logo {
-    width: 3.5em;
-}
-
-#nav-bar-name {
-    width: 17em;
-    margin-left: 0.5em;
-}
-
-#nav-bar-name1 {
-    justify-self: left;
-}
-
-.nav-bar-text-button {
-    list-style: none;
-    color: #2f1f20;
-    text-decoration: none;
-
-    white-space: nowrap;
-    /*Stop text to break words*/
-}
-
-.nav-bar-text-button:hover {
-    font-weight: bolder;
-    text-decoration: underline;
-    text-decoration-thickness: 0.15em;
-    text-underline-offset: 0.5em;
-}
-
-.nav-bar-icon-button img:hover {
-    filter: brightness(50%);
-}
-
-#nav-bar-cart {
-    width: 2em;
-}
-
-#nav-bar-login {
-    width: 2em;
-    margin-right: 1.8em;
-}
-
-/* Navigation bar end */
-
 
 /* Main image */
 #main-pic {
@@ -130,6 +64,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.5em;
+    padding-bottom: 2em;
 }
 
 .item {
@@ -192,86 +127,9 @@
 
 /* Best Seller end */
 
-/* Footer */
-
-.footer {
-    background-color: #2f1f20;
-    width: 100%;
-    height: auto;
-
-    margin-top: 1em;
-
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    ;
-
-    justify-items: center;
-    align-items: center;
-
-    color: white;
-}
-
-#footer-logo {
-    width: 60%;
-}
-
-.footer-contact-box {
-    justify-self: left;
-}
-
-#footer-contact-title {
-    margin-bottom: 1em;
-    margin-left: 3em;
-    font-size: 1.5em;
-}
-
-.footer-icons {
-    width: 1.5em;
-}
-
-.footer-contact-box-info {
-
-    margin-top: 1em;
-
-    display: flex;
-    flex-direction: row;
-
-    justify-items: center;
-    align-items: center;
-}
-
-.footer-p-info {
-    margin-left: 1em;
-    font-weight: lighter;
-}
-
 
 /* Responsive */
 
-/*Nav-bar-responsive*/
-@media only screen and (max-width: 1028px) {
-    .nav-bar {
-        grid-template-columns: 0.25fr 1fr 0.5fr;
-    }
-
-    .nav-bar-icon-button {
-        display: none;
-    }
-
-    .nav-bar-text-button {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 476px) {
-    #nav-bar-name {
-        width: 80%;
-    }
-
-    #nav-bar-logo {
-        width: 70%;
-    }
-}
 
 /* middle name responsive */
 @media only screen and (max-width: 970px) {
@@ -375,59 +233,3 @@
     }
 }
 
-/*Footer responsive*/
-
-@media only screen and (max-width: 870px) {
-    .footer {
-        height: 15em;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .footer-icons {
-        width: 1em;
-    }
-
-    .footer-p-info {
-        font-size: 0.75em;
-    }
-
-    #footer-contact-title {
-        font-size: 1em;
-        margin-left: 5em;
-    }
-}
-
-@media only screen and (max-width: 375px) {
- 
-    .footer {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .footer-contact-box {
-        margin-left: 2.5em;
-    }
-
-    #footer-logo {
-        display: none;
-    }
-
-    .footer-icons {
-        width: 1em;
-    }
-
-    .footer-p-info {
-        font-size: 0.75em;
-    }
-
-    #footer-contact-title {
-        font-size: 1em;
-        margin-left: 5em;
-    }
-}
-
-@media only screen and (max-width: 300px) {
-    .footer-contact-box {
-        margin-left: 2em;
-    }
-}

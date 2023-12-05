@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5d64414d-4da3-489c-9b82-2b274e6ebf9b" name="Changes" comment="CROISS TAI SINH">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/AddNewProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/AddNewProduct.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/AddNewUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/AddNewUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/adminM.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/adminM.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/billM.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/billM.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/productM.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/productM.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/userM.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/userM.html" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,17 +49,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Khanh",
-    "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "last_opened_file_path": "E:/[PROGRAMING]/NEWCroiss",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/[PROGRAMING]/java/Croiss-Bakery-main&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\[PROGRAMING]\NEWCroiss\admin" />
@@ -89,13 +85,21 @@
     </task>
     <task id="LOCAL-00001" summary="CROISS TAI SINH">
       <option name="closed" value="true" />
-      <created>1701778041104</created>
+      <created>1701783324907</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1701778041104</updated>
+      <updated>1701783324907</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="CROISS TAI SINH">
+      <option name="closed" value="true" />
+      <created>1701784877840</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701784877840</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

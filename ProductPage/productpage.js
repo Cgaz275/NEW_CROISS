@@ -103,6 +103,7 @@ let filterByCategory = (category) => {
   showPage(currentPage, searchTerm, category);
 };
 
+
 let increment = (id) => {
     updatePaginationButtons();
   let selectedItem = id;
@@ -188,15 +189,44 @@ function generateUniqueId() {
 }
 generateShop();
 
-function checkLogIn(){
+// function checkLogIn(){
 
-    let currentUser = localStorage.getItem("currentUser");
-    console.log(currentUser);
-    if(currentUser){
-       location.assign("../Cart/cart.html");
-    }else{
-       location.assign("../Login/sign-in.html");
-    }
-}
+//     let currentUser = localStorage.getItem("currentUser");
+//     console.log(currentUser);
+//     if(currentUser){
+//        location.assign("../Cart/cart.html");
+//     }else{
+//        location.assign("../Login/sign-in.html");
+//     }
+// }
 
 showPage();
+
+/**------------------------------------- */
+
+
+function checkLogIn(){
+
+  let currentUser = localStorage.getItem("currentUser");
+  console.log(currentUser);
+  if(currentUser){
+     location.assign("User/User.html");
+  }else{
+     location.assign("Login/sign-in.html");
+  }
+}
+function checkLogInC(){
+
+ let currentUser = localStorage.getItem("currentUser");
+ console.log(currentUser);
+ if(currentUser){
+    location.assign("/Cart/cart.html");
+ }else{
+    location.assign("/Login/sign-in.html");
+ }
+}
+
+function logOut(){
+ localStorage.removeItem("currentUser");
+ location.assign("/Login/sign-in.html");
+}

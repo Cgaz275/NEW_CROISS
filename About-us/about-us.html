@@ -7,6 +7,7 @@
     <title>Croiss's Bakery</title>
     <link rel="stylesheet" href="about-us.css">
     <link rel="icon" href="../Images/Homepage/Nav-bar/logo.png">
+    <link rel="stylesheet" href="/navbar_footer/navbar-footer.css"> 
 
     <!-- font-family : 'Montserrat', sans-serif; -->
 
@@ -14,20 +15,59 @@
 
 <body>
 
-    <!-- Navigation bar-->
-    <div class="nav-bar">
-        <a href="../index.html"><img id="nav-bar-logo" src="../Images/Homepage/Nav-bar/logo.png"
-                alt="Croiss'Bakery logo"></a>
-        <a id="nav-bar-name1" href="../index.html"><img id="nav-bar-name" src="../Images/Homepage/Nav-bar/name.png"
-                alt="Croiss'bakery"></a>
-        <a class="nav-bar-text-button" href="../index.html">Home</a>
-        <a class="nav-bar-text-button" href="../ProductPage/product.html">Products</a>
-        <a id="present-page" class="nav-bar-text-button" href="about-us.html">About Us</a>
-        <a class="nav-bar-icon-button" href="../Cart/cart.html"><img id="nav-bar-cart" src="../Images/Homepage/Nav-bar/cart.png"
-                alt="Cart"></a>
-        <a class="nav-bar-icon-button" href="../Login/sign-in.html"><img id="nav-bar-login" src="../Images/Homepage/Nav-bar/login.png"
-                alt="Login"></a>
+   
+    <!---------------------------------- Navigation bar start ---------------------------------------->
+
+    <div class="sidebar">
+
+        <img id="sidebar-exit" onclick="close_sidebar ()" src="/Images/Homepage/Nav-bar/sidebar-exit.png">
+
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/ProductPage/product.html">Products</a></li>
+            <li><a href="/About-us/about-us.html">About Us</a></li>
+            <li><a href="/Cart/cart.html">Cart</a></li>
+            <li><a href="/Login/sign-in.html">Login</a></li>
+        </ul>
     </div>
+
+    <div class="nav-bar">
+        <a href="/index.html"><img id="nav-bar-logo" src="/Images/Homepage/Nav-bar/logo.png" alt="Croiss'Bakery logo"></a>
+        <a id="nav-bar-name1" href="/index.html"><img id="nav-bar-name" src="/Images/Homepage/Nav-bar/name.png"
+                alt="Croiss'bakery"></a>
+        <a class="nav-bar-text-button" href="/index.html">Home</a>
+        <a class="nav-bar-text-button" href="/ProductPage/product.html">Products</a>
+        <a id="present-page" class="nav-bar-text-button" href="/About-us/about-us.html">About Us</a>
+        <a class="nav-bar-icon-button" href="/Cart/cart.html"><img id="nav-bar-cart" src="/Images/Homepage/Nav-bar/cart.png"
+                alt="Cart"></a>
+        <a class="nav-bar-icon-button" href="/User/User.html"><img id="nav-bar-login" src="/Images/Homepage/Nav-bar/login.png"
+                alt="Login"></a>
+
+        <!--Three bars-->
+        <div class="three-bars">
+            <input type="checkbox" id="checkbox" onclick="showSidebar()">
+            <label for="checkbox" class="toggle">
+                <div class="bars" id="bar1"></div>
+                <div class="bars" id="bar2"></div>
+                <div class="bars" id="bar3"></div>
+            </label>
+        </div>
+    </div>
+
+    <!----------------Navbar script for responsive---------------->
+
+    <script>
+        function showSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block'; 
+        }
+
+        function close_sidebar () {
+            showSidebar ();
+        }
+    </script>
+
+    <!---------------------------------- Navigation bar end ---------------------------------------->
 
     <!--Main pic-->
     <img id="the-three" src="../Images/About-us/Three Igniters/Three igniters.png">

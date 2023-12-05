@@ -14,18 +14,78 @@ if (currentUserData) {
 
   let generateUser = () => {
     return (user.innerHTML = `
-        <div class="details">
-            <h3>Username: ${username}</h3>
-            <p>Password: ${pass}</p>
-            <p>Name: ${name}</p>
-            <p>Address: ${address}</p>
-            <p>Phone number: ${phone}</p>
+      <div class="mid">
+        <div class = "nav">
+          <nav>
+          <ul>
+            <li><a href="" class = "current">User Information</a></li>
+            <li><a href="../User/OrderHistory.html">Order History</a></li>
+          </ul>
+          </nav>
         </div>
-        <a href="../User/OrderHistory.html">Order History</a
+
+        <div class = "res_detail">
+          <div class="details">
+            <p>User Information</p>
+            <span>Username:</span> <input type="text" value="${username}" readonly>           
+            <span>Name:</span> <input type="text" id="nameInput" value="${name}">
+            <span>Address:</span> <input type="text" id="addressInput" value="${address}">
+            <span>Phone number:</span> <input type="number" value="${phone}" readonly>
+            <button>Save changes</button>
+          </div>
+        </div>
+
+      </div>
     `);
   };
 
   generateUser();
 } else {
   console.log("User not found");
+}
+
+let nameInput = document.getElementById("nameInput");
+
+nameInput.addEventListener("input", (event) => {
+  // Lắng nghe sự kiện khi người dùng nhập vào ô tên
+  currentUserData.name = event.target.value;
+  // Lưu lại dữ liệu đã thay đổi vào localStorage
+  localStorage.setItem("shopUsersData", JSON.stringify(newshopUsersData));
+});
+
+let addressInput = document.getElementById("addressInput");
+
+addressInput.addEventListener("input", (event) => {
+  // Lắng nghe sự kiện khi người dùng nhập vào ô địa chỉ
+  currentUserData.address = event.target.value;
+  // Lưu lại dữ liệu đã thay đổi vào localStorage
+  localStorage.setItem("shopUsersData", JSON.stringify(newshopUsersData));
+});
+
+
+
+function checkLogIn(){
+
+  let currentUser = localStorage.getItem("currentUser");
+  console.log(currentUser);
+  if(currentUser){
+     location.assign("/User/User.html");
+  }else{
+     location.assign("/Login/sign-in.html");
+  }
+}
+function checkLogInC(){
+
+ let currentUser = localStorage.getItem("currentUser");
+ console.log(currentUser);
+ if(currentUser){
+    location.assign("/Cart/cart.html");
+ }else{
+    location.assign("/Login/sign-in.html");
+ }
+}
+
+function logOut(){
+ localStorage.removeItem("currentUser");
+ location.assign("/Login/sign-in.html");
 }
