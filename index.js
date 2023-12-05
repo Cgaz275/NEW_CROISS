@@ -1,4 +1,3 @@
-
 function checkLogIn(){
 
    let currentUser = localStorage.getItem("currentUser");
@@ -8,9 +7,9 @@ function checkLogIn(){
    }else{
       location.assign("Login/sign-in.html");
    }
-}
-function checkLogInC(){
-
+ }
+ function checkLogInC(){
+ 
   let currentUser = localStorage.getItem("currentUser");
   console.log(currentUser);
   if(currentUser){
@@ -18,9 +17,9 @@ function checkLogInC(){
   }else{
      location.assign("Login/sign-in.html");
   }
-}
-
-function logOut(){
+ }
+ 
+ function logOut(){
   localStorage.removeItem("currentUser");
   location.assign("Login/sign-in.html");
-}
+ }
