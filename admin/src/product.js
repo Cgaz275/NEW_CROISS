@@ -20,7 +20,7 @@ let shopItemsData = [
     name: "French Bread",
     price: 1.25,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-    category: "Cookies",
+    category: "Bread",
     img: "/Images/Products/3.png",
   },
   {
