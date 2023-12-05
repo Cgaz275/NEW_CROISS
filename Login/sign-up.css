@@ -72,6 +72,42 @@
 
 /* Navigation bar end */
 
+
+/*Nav-bar-responsive*/
+@media only screen and (max-width: 1028px) {
+    .nav-bar {
+        grid-template-columns: 0.25fr 1fr 0.5fr;
+    }
+
+    .nav-bar-icon-button {
+        display: none;
+    }
+
+    .nav-bar-text-button {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .nav-bar {
+        height: auto;
+    }
+
+    #the-three {
+        margin-top: 2em;
+    }
+}
+
+@media only screen and (max-width: 476px) {
+    #nav-bar-name {
+        width: 80%;
+    }
+
+    #nav-bar-logo {
+        width: 70%;
+    }
+}
+
 /* Footer */
 
 .footer {
@@ -135,18 +171,171 @@
 #croiss_bakery_logo {
     width: 20%;
     height: 20%;
-    z-index: 400;
+    z-index: 400;   
+}
+
+
+
+/* Footer */
+
+.footer {
+    grid-row: 4/5;
+    grid-column: 1/4;
+
+    background-color: #2f1f20;
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    justify-items: center;
+    align-items: center;
+
+    color: white;
+}
+
+#footer-logo {
+    width: 60%;
+}
+
+.footer-contact-box {
+    justify-self: left;
+}
+
+#footer-contact-title {
+    margin-bottom: 1em;
+    margin-left: 3em;
+    font-size: 1.5em;
+}
+
+.footer-icons {
+    width: 1.5em;
+}
+
+.footer-contact-box-info {
+
+    margin-top: 1em;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.footer-p-info {
+    margin-left: 1em;
+    font-weight: lighter;
+}
+
+#croiss_bakery_pic {
+    width: 100%;
+    height: 40%;
+    z-index: 100;
+    position: absolute;
+}
+
+#croiss_bakery_logo {
+    width: 20%;
+    height: 20%;
+    z-index: 400;   
+}
+
+/*Footer responsive*/
+
+@media only screen and (max-width: 870px) {
+    .footer {
+        height: 15em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .footer-icons {
+        width: 1em;
+    }
+
+    .footer-p-info {
+        font-size: 0.75em;
+    }
+
+    #footer-contact-title {
+        font-size: 1em;
+        margin-left: 5em;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+ 
+    .footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-contact-box {
+        margin-left: 2.5em;
+    }
+
+    #footer-logo {
+        display: none;
+    }
+
+    .footer-icons {
+        width: 1em;
+    }
+
+    .footer-p-info {
+        font-size: 0.75em;
+    }
+
+    #footer-contact-title {
+        font-size: 1em;
+        margin-left: 5em;
+    }
+}
+
+/*End Footer*/
+
+
+
+/*Mid*/
+
+.mid {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 1fr 2fr 1fr;
+
+}
+
+.pic {
+    position: relative;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
     
 }
 
-t,a {
+#croiss_bakery_pic {
+    z-index: 1;
+    width: 100%;
+    height: auto; /*Để responsive, kết hợp với sign up span*/
+}
+
+#croiss_bakery_logo {
+    position: absolute; 
+    z-index: 10000;
     align-items: center;
+
+    margin-top: 1em;
+    width: 20%;
+    height: auto;
 }
 
 a {
     font-weight: 600;
     text-decoration: none;
     color: #2f1f20;
+    font-size: larger;
 }
 
 a:hover {
@@ -154,56 +343,75 @@ a:hover {
 }
 
 .sign-up {
-    padding: 40px;
-    width: 400px;
-    height: 590px;
-    border: 5px solid #2f1f20;
-    text-align: center;
-    margin-top: 70px;
-    position: relative;
-    left: 30%;
+    box-sizing: border-box;
+    grid-column: 2/3;
+    grid-row: 2/3;
 
-    padding: 20px;
-
-    z-index: 999;
-    margin-bottom: 50px;
-}
-
-.sign-up p {
-    text-align: left;
-    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left:10vw;
+    margin-right: 10vw;
+    margin-top: 11vh;
     
-}
+    border: 7px solid #2f1f20;
+    padding: 5rem;
 
-.fa-eye, .fa-eye-slash{
-    position: relative;
-    left: -25px;
-    cursor: pointer;
-}
-
-#pass1, #pass2 {
-    position: relative;
-    left: 11px;
-}
-
-h1 {
-    padding-bottom: 20px;
-
+    justify-content: space-between; /* Đặt khoảng cách giữa các phần tử */
+    gap: 2rem;
 }
 
 input {
-    width: 350px;
-    height: 30px;
-    margin-bottom: 20px;
-    border: 3px solid #2f1f20;
+    position: relative;
+    width: 27em;
+    height: 2em;
+    border: 0.25em solid #2f1f20;
+    
 }
 
 button {
     width: 120px;
     height: 40px;
-    margin-bottom: 20px;
     background-color: #2f1f20;
     color: white;
     border-radius: 20px;
     font-size: larger;
 }
+
+.password, .confirm_password {
+    position: relative;
+}
+
+.fa-eye, .fa-eye-slash {
+    position: absolute;
+    cursor: pointer;
+    margin-top: 0.6em;
+    left: 21em;
+}
+
+.sign-up span {
+    display: block;
+}
+
+
+
+/*RESPONSIVE CHO SIGN-UP*/
+@media only screen and (max-width: 1439px) {
+    .sign-up {
+        margin-top: 30%;
+    }
+}
+
+@media only screen and (max-width: 1425px) {
+    .sign-up {
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (max-width: 1101px) {
+    .sign-up {
+        margin-top: 0%;
+    }
+}
+

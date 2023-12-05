@@ -14,14 +14,28 @@ if (currentUserData) {
 
   let generateUser = () => {
     return (user.innerHTML = `
-        <div class="details">
-            <h3>Username: ${username}</h3>
-            <p>Password: ${pass}</p>
-            <p>Name: ${name}</p>
-            <p>Address: ${address}</p>
-            <p>Phone number: ${phone}</p>
+      <div class="mid">
+        <div class = "nav">
+          <nav>
+          <ul>
+            <li><a href="" class = "current">User Information</a></li>
+            <li><a href="../User/OrderHistory.html">Order History</a></li>
+          </ul>
+          </nav>
         </div>
-        <a href="../User/OrderHistory.html">Order History</a
+
+        <div class = "res_detail">
+          <div class="details">
+            <p>User Information</p>
+            <span>Username:</span> <input type="text" value="${username}" readonly>           
+            <span>Name:</span> <input type="text" id="nameInput" value="${name}">
+            <span>Address:</span> <input type="text" value="${address}">
+            <span>Phone number:</span> <input type="number" value="${phone}">
+            <button>Save changes</button>
+          </div>
+        </div>
+
+      </div>
     `);
   };
 

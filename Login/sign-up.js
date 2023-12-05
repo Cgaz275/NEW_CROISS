@@ -88,7 +88,7 @@ let newshopUsersData  = JSON.parse(localStorage.getItem("shopUsersData")) || [];
             }
 
             if(p.value !== "") {
-                if(p.value.length < 11) {
+                if(p.value.length < 10) {
                     phoneError.textContent = "Please enter valid phone number!";
                     p.focus();
                     checkIncorrect = true;

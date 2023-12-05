@@ -30,36 +30,47 @@
     </div>
 
     <!-- Sign Up-->
-
-    <div class = "pic">
-        <img id = "croiss_bakery_pic" src = ".././Images/Login/863363e6-95a1-48ab-b26b-ddf4db846db4.jpg">
-        <img id = "croiss_bakery_logo" src  = ".././Images/Login/logo.jpg">
-    </div>
-
-    <div class = "sign-up">
-        <h1>SIGN UP</h1>
-        <p>Username</p>
-        <input type="text" placeholder = "Username" autofocus autocomplete="off" id="username">
-        <span id="usernameError" style="color: red;"></span>
-        <p>Address</p>
-        <input type="text" placeholder = "Address" autocomplete="off" id="address">
-        <span id="addressError" style="color: red;"></span>
-        <p>Phone Number</p>
-        <input type="text" placeholder = "000-0000-0000" autocomplete="off" id="phone">
-        <span id="phoneError" style="color: red;"></span>
-        <p>Password</p>
-        <input type="password" placeholder = "Password" autocomplete="off" id="pass1">
-        <i class="fas fa-eye" onclick="changeSituation1()" id="eye1"></i>
-        <span id="pass1Error" style="color: red;"></span>
-        <p>Confirm Password</p>
-        <input type="password" placeholder="Confirm Password" autocomplete="off" id="pass2">
-        <i class="fas fa-eye" onclick="changeSituation2()" id="eye2"></i>
-        <span id="pass2Error" style="color: red;"></span>
-        <p></p>
-        <button onclick="checkForm()">SIGN UP</button>
-        <p></p>
-        <t id = "text">Have an account?</t> <a href="sign-in.html">LOGIN HERE</a>
-    </div>
+    <div class = "mid ">
+        
+        <div class = "pic">
+            <img id = "croiss_bakery_pic" src = ".././Images/Login/863363e6-95a1-48ab-b26b-ddf4db846db4.jpg">
+            <img id = "croiss_bakery_logo" src  = ".././Images/Homepage/Footer/footer logo.png">
+        </div>
+    
+        <div class = "sign-up">
+            <h1>SIGN UP</h1>
+            <div class = "username">
+                <p>Username</p>
+                <input type="text" placeholder = "Username" autofocus autocomplete="off" id="username">
+                <span id="usernameError" style="color: red;"></span>
+            </div>
+            <div class = "address">
+                <p>Address</p>
+                <input type="text" placeholder = "Address" autocomplete="off" id="address">
+                <span id="addressError" style="color: red;"></span>
+            </div>
+            <div class = "phonenumber">
+                <p>Phone Number</p>
+                <input type="text" placeholder = "000-0000-0000" autocomplete="off" id="phone">
+                <span id="phoneError" style="color: red;"></span>
+            </div>
+            <div class = "password">
+                <p>Password</p>
+                <input type="password" placeholder = "Password" autocomplete="off" id="pass1">
+                <i class="fas fa-eye" onclick="changeSituation1()" id="eye1"></i>
+                <span id="pass1Error" style="color: red;"></span>
+            </div>
+            <div class = "confirm_password">
+                <p>Confirm Password</p>
+                <input type="password" placeholder="Confirm Password" autocomplete="off" id="pass2">
+                <i class="fas fa-eye" onclick="changeSituation2()" id="eye2"></i>
+                <span id="pass2Error" style="color: red;"></span>
+            </div>    
+            <button onclick="checkForm()">SIGN UP</button>
+            <div class = "have_account">
+                <t id = "text">Have an account?</t> <a href="sign-in.html">LOGIN HERE</a>
+            </div>
+        </div>
 
 
     <script src="../Login/sign-up.js"></script>

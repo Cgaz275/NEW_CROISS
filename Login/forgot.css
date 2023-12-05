@@ -73,8 +73,6 @@
 /* Navigation bar end */
 
 
-
-
 /*Nav-bar-responsive*/
 @media only screen and (max-width: 1028px) {
     .nav-bar {
@@ -110,11 +108,71 @@
     }
 }
 
-/* Navigation bar end */
+/* Footer */
 
+.footer {
+    background-color: #2f1f20;
+    width: 100%;
+    height: auto;
 
+    margin-top: 100px;
 
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    ;
 
+    justify-items: center;
+    align-items: center;
+
+    color: white;
+}
+
+#footer-logo {
+    width: 60%;
+}
+
+.footer-contact-box {
+    justify-self: left;
+}
+
+#footer-contact-title {
+    margin-bottom: 1em;
+    margin-left: 3em;
+    font-size: 1.5em;
+}
+
+.footer-icons {
+    width: 1.5em;
+}
+
+.footer-contact-box-info {
+
+    margin-top: 1em;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.footer-p-info {
+    margin-left: 1em;
+    font-weight: lighter;
+}
+
+#croiss_bakery_pic {
+    width: 100%;
+    height: 40%;
+    z-index: 100;
+    position: absolute;
+}
+
+#croiss_bakery_logo {
+    width: 20%;
+    height: 20%;
+    z-index: 400;   
+}
 
 
 
@@ -239,14 +297,11 @@
 
 
 
-
-
-
 /*Mid*/
 
 .mid {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
     grid-template-columns: 1fr 2fr 1fr;
 
 }
@@ -263,7 +318,7 @@
 #croiss_bakery_pic {
     z-index: 1;
     width: 100%;
-    height: auto /*Để responsive, kết hợp với sign up span*/
+    height: auto; /*Để responsive, kết hợp với sign up span*/
 }
 
 #croiss_bakery_logo {
@@ -276,8 +331,6 @@
     height: auto;
 }
 
-
-
 a {
     font-weight: 600;
     text-decoration: none;
@@ -289,9 +342,10 @@ a:hover {
     text-decoration: underline;
 }
 
-.sign-in {
+.forgot {
+    box-sizing: border-box;
     grid-column: 2/3;
-    grid-row: 2/4;
+    grid-row: 2/3;
 
     display: flex;
     flex-direction: column;
@@ -299,14 +353,13 @@ a:hover {
     align-items: center;
     margin-left:10vw;
     margin-right: 10vw;
-    margin-top: 15vh;
-    margin-bottom: 9vh;
+    margin-top: 30vh;
     
     border: 7px solid #2f1f20;
-    padding: 2rem;
+    padding: 3em;
 
     justify-content: space-between; /* Đặt khoảng cách giữa các phần tử */
-    gap: 1em;
+    gap: 2em;
 }
 
 input {
@@ -314,6 +367,7 @@ input {
     width: 27em;
     height: 2em;
     border: 0.25em solid #2f1f20;
+    
 }
 
 button {
@@ -325,7 +379,7 @@ button {
     font-size: larger;
 }
 
-.pass {
+.new_password, .confirm_password {
     position: relative;
 }
 
@@ -336,93 +390,39 @@ button {
     left: 21em;
 }
 
-
-input[type=checkbox] + label {
+.sign-up span {
     display: block;
-    margin: 0.2em;
-    cursor: pointer;
-    padding: 0.2em;
-}
-
-input[type=checkbox] {
-    display: none;
-}
-
-input[type=checkbox] + label:before {
-    content: "🍰 ";
-    border: 0.1em solid #000;
-    border-radius: 0.2em;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    padding-left: 0.2em;
-    padding-bottom: 0.3em;
-    margin-right: 0.2em;
-    vertical-align: bottom;
-    color: transparent;
-    transition: .2s;
-}
-
-input[type=checkbox] + label:active:before {
-    transform: scale(0);
-}
-
-input[type=checkbox]:checked + label:before {
-    background-color: #2f1f20;
-    border-color: #2f1f20;
-    color: #fff;
-}
-  
-.forgot {
-    font-size: smaller;
-    margin-right: 7em;
-}
-
-.meo {
-    display: flex;
-    justify-content: space-between; /* Đặt khoảng cách giữa các phần tử */
-    align-items: center; /* Căn giữa theo chiều dọc */
-}
-
-.forgot,
-.remember {
-    flex: 1; /* Phần tử sẽ chiếm hết không gian có sẵn */
-    white-space: nowrap;
 }
 
 
 
+/*RESPONSIVE CHO FORGOT*/
+@media only screen and (max-width: 1650px) {
+    .forgot {
+        margin-top: 25vh;
+    }
+}
 
+@media only screen and (max-width: 1415px) {
+    .forgot {
+        margin-top: 20vh;
+    }
+}
 
+@media only screen and (max-width: 1160px) {
+    .forgot {
+        margin-top: 15vh;
+    }
+}
 
-
-@media only screen and (max-width: 1240px) {
-    .sign-in {
+@media only screen and (max-width: 856px) {
+    .forgot {
         margin-top: 10vh;
     }
 }
 
-
-@media only screen and (max-width: 1046px) {
-    .sign-in {
-        margin-top: 4vh;
-    }
-}
-
-@media only screen and (max-width: 862px) {
-    .sign-in {
+@media only screen and (max-width: 611px) {
+    .forgot {
         margin-top: 5vh;
-    }
-}
-
-@media only screen and (max-width: 750px) {
-    .sign-in {
-        margin-top: 2vh;
-    }
-}
-
-@media only screen and (max-width: 560px) {
-    .sign-in {
-        margin-top: 0vh;
     }
 }
