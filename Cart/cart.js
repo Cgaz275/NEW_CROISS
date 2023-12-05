@@ -187,15 +187,29 @@ let TotalAmount = () => {
       .reduce((x, y) => x + y, 0);
     // console.log(amount);
     label.innerHTML = `
-    <h2>Total Bill : $ ${amount}</h2>
-    <button class="checkout" onclick="checkOut()">Checkout</button>
-    <button onclick="clearCart()" class="removeAll">Clear Cart</button>
+    <h2 id="total-head" >Total Bill : $ ${amount}</h2>
+
+    <div class="action-option">
+
+      <button class="action-button checkout" onclick="checkOut()">Checkout</button>
+      <button onclick="clearCart()" class="action-button removeAll">Clear Cart</button>
+
+    </div>
+
     <div class="radio">
+
+    <div class="payment-option">
     <input type="radio" id="cash" name="paymentmethod" value="CASH" checked />
     <label for="cash"> In cash (COD)</label></br>
+    </div>
+
+    <div class="payment-option">
     <input type="radio" id="nocash" name="paymentmethod" value="NOCASH" />
     <label for="nocash"> Visa / Mastercard</label></br>
     </div>
+
+    </div>
+
     <div>
         <label for="address"> Shipped address</label></br>
         <input type="text" id="address" value="${userAddress}" />
