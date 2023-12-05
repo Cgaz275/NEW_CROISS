@@ -101,6 +101,7 @@ let filterByCategory = (category) => {
   showPage(currentPage, searchTerm, category);
 };
 
+
 let increment = (id) => {
   let selectedItem = id;
   let search = basket.find((x) => x.id === selectedItem.id);
