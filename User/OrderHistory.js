@@ -66,16 +66,17 @@ let generateShop = () => {
                  let orderTimestamp = orders.length > 0 ? orders[0].timestamp || '' : '';
 
                 return `
-                  <div class="details">
-                    <h3>Bill ID: ${orderID}</h3>
-                    <h4>User Name: ${uniqueUsername}</h4>
-                    <p>Address: ${uniqueAddress}</p>
-                    <p>Payment Method: ${uniquePaymentMethod}</p>
-                    <p>Shipped: ${uniqueShippingStatus ? "Yes" : "No"}</p>
-                    <p>Order Timestamp: ${orderTimestamp}</p>
-                    ${orderHTML}
-
-                  </div>
+                      <div class="details">
+                          <div class = "history">
+                            <span>Bill ID:${orderID}<span> 
+                            <span>User Name: ${uniqueUsername}</span>
+                            <span>Address: ${uniqueAddress}</span>
+                            <span>Payment Method: ${uniquePaymentMethod}</span>
+                            <span>Shipped: ${uniqueShippingStatus ? "Yes" : "No"}</span>
+                            <span>Order Timestamp: ${orderTimestamp}</span>
+                            ${orderHTML}
+                          </div>
+                      </div>
                 `;
               })
               .join("")
