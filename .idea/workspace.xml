@@ -5,28 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d64414d-4da3-489c-9b82-2b274e6ebf9b" name="Changes" comment="CROISS TAI SINH">
-      <change afterPath="$PROJECT_DIR$/admin/AddNewProduct.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/AddNewProduct.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/AddNewProduct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/AddNewUser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/AddNewUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProductPage/productpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProductPage/productpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/adminM.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/adminM.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/AddNewProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/AddNewProduct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/AddNewUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/AddNewUser.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/adminM.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/adminM.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/adminM.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/adminM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/billM.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/billM.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/billM.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/billM.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/billM.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/billM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/productM.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/productM.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/productM.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/productM.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/productM.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/productM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/userM.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/userM.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/userM.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/userM.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/userM.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/userM.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +27,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;anthonysimonIsCoding&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f8fdb9bd-0370-4d4d-96e5-879768cc1256" />
+        <option name="url" value="https://github.com/Cgaz275/NEW_CROISS.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,7 +61,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Khanh",
     "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "last_opened_file_path": "E:/[PROGRAMING]/NEWCroiss/admin",
+    "last_opened_file_path": "E:/[PROGRAMING]/NEWCroiss",
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
@@ -88,6 +87,15 @@
       <option name="presentableId" value="Default" />
       <updated>1701237747795</updated>
     </task>
+    <task id="LOCAL-00001" summary="CROISS TAI SINH">
+      <option name="closed" value="true" />
+      <created>1701778041104</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701778041104</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
