@@ -18,8 +18,9 @@
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/ProductPage/product.html">Products</a></li>
                 <li><a href="/About-us/about-us.html">About Us</a></li>
-                <li><a href="/Cart/cart.html">Cart</a></li>
-                <li><a href="/Login/sign-in.html">Login</a></li>
+                <li><a onclick="checkLogInC()" href="/Cart/cart.html">Cart</a></li>
+                <li><a onclick="checkLogIn()" href="/Login/sign-in.html">Login</a></li>
+                <li><a onclick="logOut()" href="/index.html">Logout</a></li>
             </ul>
         </div>
     
@@ -32,7 +33,7 @@
             <a class="nav-bar-text-button" href="/About-us/about-us.html">About Us</a>
             <a onclick="checkLogInC()"class="nav-bar-icon-button"><img id="nav-bar-cart" src="/Images/Homepage/Nav-bar/cart.png"
                         alt="Cart"></a>
-            <a onclick="checkLogIn()" class="nav-bar-icon-button" ><img id="nav-bar-login" src="/Images/Homepage/Nav-bar/login.png"
+            <a id="present-icon-page" onclick="checkLogIn()" class="nav-bar-icon-button" ><img id="nav-bar-login" src="/Images/Homepage/Nav-bar/login.png"
                         alt="Login"></a>
             <a onclick="logOut()" class="nav-bar-icon-button" ><img id="nav-bar-logout" src="/Images/Homepage/Nav-bar/logout.png"
                         alt="Log out"></a>        

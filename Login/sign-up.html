@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Croiss's Bakery</title>
     <link rel="stylesheet" href="sign-up.css">
-    <!-- <link rel="stylesheet" href="/navbar_footer/navbar-footer.css"> -->
+    <link rel="stylesheet" href="/navbar_footer/navbar-footer.css">
 
     <!-- font-family : 'Montserrat', sans-serif; -->
 
@@ -28,7 +28,9 @@
                 <li><a href="/ProductPage/product.html">Products</a></li>
                 <li><a href="/About-us/about-us.html">About Us</a></li>
                 <li><a href="/Cart/cart.html">Cart</a></li>
-                <li><a href="/Login/sign-in.html">Login</a></li>
+                <!-- <li><a onclick="checkLogInC()" href="/Cart/cart.html">Cart</a></li> -->
+                <li><a onclick="checkLogIn()" href="/Login/sign-in.html">Login</a></li>
+                <!-- <li><a onclick="logOut()" href="/index.html"></a></li> -->
             </ul>
         </div>
     
@@ -43,7 +45,7 @@
                     alt="Cart"></a>
             <!-- <a onclick="checkLogInC()"class="nav-bar-icon-button"><img id="nav-bar-cart" src="/Images/Homepage/Nav-bar/cart.png"
                     alt="Cart"></a> -->
-            <a onclick="checkLogIn()" class="nav-bar-icon-button" ><img id="nav-bar-login" src="/Images/Homepage/Nav-bar/login.png"
+            <a id="present-icon-page" onclick="checkLogIn()" class="nav-bar-icon-button" ><img id="nav-bar-login" src="/Images/Homepage/Nav-bar/login.png"
                     alt="Login"></a>
     
             <!--Three bars-->
@@ -72,13 +74,11 @@
     
         <!---------------------------------- Navigation bar end ---------------------------------------->
 
+        <img id = "croiss_bakery_pic" src = ".././Images/Login/863363e6-95a1-48ab-b26b-ddf4db846db4.jpg">
+
     <!-- Sign Up-->
     <div class = "mid ">
         
-        <div class = "pic">
-            <img id = "croiss_bakery_pic" src = ".././Images/Login/863363e6-95a1-48ab-b26b-ddf4db846db4.jpg">
-            <img id = "croiss_bakery_logo" src  = ".././Images/Homepage/Footer/footer logo.png">
-        </div>
     
         <div class = "sign-up">
             <h1>SIGN UP</h1>
@@ -114,6 +114,8 @@
                 <t id = "text">Have an account?</t> <a href="sign-in.html">LOGIN HERE</a>
             </div>
         </div>
+
+    </div>
 
 
     <script src="../Login/sign-up.js"></script>
