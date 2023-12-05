@@ -48,16 +48,22 @@ let generateCartItems = () => {
         let search = newshopItemsData.find((y) => y.id === id) || [];
         return `
       <div class="cart-item">
+
         <img width="100" src=${search.img} alt="" />
         <div class="details">
 
+        <div class="title-x-container">
+        
           <div class="title-price-x">
-              <h4 class="title-price">
-                <p>${search.name}</p>
-                <p class="cart-item-price">$ ${search.price}</p>
-              </h4>
-              <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
+            <p class="title-price">
+            <p id="item-name" >${search.name}</p>
+            <p class="cart-item-price">$ ${search.price}</p>
+            </p>
           </div>
+
+        </div>
+
+          <div class="buttons-container">
 
           <div class="buttons">
               <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
@@ -65,8 +71,12 @@ let generateCartItems = () => {
               <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
           </div>
 
-          <h3>$ ${item * search.price}</h3>
+          </div>
+
+          <p id="total-item-price" >Total: $ ${item * search.price}</p>
+        
         </div>
+        <i id="item-remove" onclick="removeItem(${id})" class="bi bi-x-lg"></i>
       </div>
       `;
       })
@@ -210,7 +220,7 @@ let TotalAmount = () => {
 
     </div>
 
-    <div>
+    <div class="ship-adress">
         <label for="address"> Shipped address</label></br>
         <input type="text" id="address" value="${userAddress}" />
     </div>
