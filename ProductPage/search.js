@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 1.2,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Muffin",
-            img: "/Images/Products/1.png",
+            img: "../Images/Products/1.png",
           },
           {
             id: "xyzh",
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 2.5,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Bread",
-            img: "/Images/Products/2.png",
+            img: "../Images/Products/2.png",
           },
           {
             id: "ujfh",
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 1.25,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Bread",
-            img: "/Images/Products/3.png",
+            img: "../Images/Products/3.png",
           },
           {
             id: "oqis",
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 4.5,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Bread",
-            img: "/Images/Products/4.png",
+            img: "../Images/Products/4.png",
           },
           {
             id: "mdns",
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 6,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Bread",
-            img: "/Images/Products/5.png",
+            img: "../Images/Products/5.png",
           },
           {
             id: "qweo",
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 6.7,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Cake",
-            img: "/Images/Products/6.png",
+            img: "../Images/Products/6.png",
           },
           {
             id: "gnms",
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 5.2,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Bread",
-            img: "/Images/Products/7.png",
+            img: "../Images/Products/7.png",
           },
           {
             id: "qwuh",
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 1.3,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Bread",
-            img: "/Images/Products/8.png",
+            img: "../Images/Products/8.png",
           },
           {
             id: "ibch",
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 5.4,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Bread",
-            img: "/Images/Products/9.png",
+            img: "../Images/Products/9.png",
           },
           {
             id: "jjjm",
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 4.5,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Cake",
-            img: "/Images/Products/10.png",
+            img: "../Images/Products/10.png",
           },
           {
             id: "kisjf",
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 2.1,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Cake",
-            img: "/Images/Products/11.png",
+            img: "../Images/Products/11.png",
           },
           {
             id: "qqwu",
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 3,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Muffin",
-            img: "/Images/Products/12.png",
+            img: "../Images/Products/12.png",
           },
           {
             id: "msad",
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 4,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Bread",
-            img: "/Images/Products/13.png",
+            img: "../Images/Products/13.png",
           },
           {
             id: "oran",
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 3.2,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Bread",
-            img: "/Images/Products/14.png",
+            img: "../Images/Products/14.png",
           },
           {
             id: "psdaj",
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 2.2,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Bread",
-            img: "/Images/Products/15.png",
+            img: "../Images/Products/15.png",
           },
           {
             id: "proSB",
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: 3.1,
             desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             category: "Bread",
-            img: "/Images/Products/16.png",
+            img: "../Images/Products/16.png",
           },
     ];
 
