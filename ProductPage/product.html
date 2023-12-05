@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="product.css">
     <link rel="stylesheet" href="/navbar_footer/navbar-footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="/ProductPage/search.js"></script>
 </head>
 <body>
 
@@ -79,21 +80,24 @@
 
     <!---------------------------------- Navigation bar end ---------------------------------------->
 
-    <div class="box">
-        
+    <div class="box"></div>
+
+    <!--Search box-->
+    <div class="search-bar">
+        <input id="searchInput" placeholder="search for...">
+        <ul class="suggest" id="suggestions"></ul>
+      </div>
+
+    <!------------------------------------>
+
+    <div class="shop" id="shop"></div>
+
+    <div class="paging" id="pagination">
+        <button id="prevPage" onclick="goToPreviousPage()">Previous</button>
+        <span> Page <span id="currentPage">1</span> of <span id="totalPages">1</span></span>
+        <button id="nextPage" onclick="goToNextPage()">Next</button>
+
     </div>
-
-<!------------------------------------>
-
-<div class="shop" id="shop"></div>
-
-<div class="paging" id="pagination">
-    <button id="prevPage" onclick="goToPreviousPage()">Previous</button>
-    <span> Page <span id="currentPage">1</span> of <span id="totalPages">1</span></span>
-    <button id="nextPage" onclick="goToNextPage()">Next</button>
-
-</div>
-
 
  <!--------------------------------------------- Footer -------------------------------------------->
 
