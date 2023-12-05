@@ -89,6 +89,7 @@ a {
 .item {
   box-sizing: border-box;
   border: 2px solid #2f1f20;
+  color: #2f1f20;
   border-radius: 4px;
   padding: 1em;
 }
@@ -268,6 +269,10 @@ a {
 
 .search-bar input:focus {
   outline: none;
+}
+
+.search-bar input::placeholder {
+  padding-left: 2%
 }
 
 .suggest {
