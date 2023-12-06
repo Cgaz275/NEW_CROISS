@@ -112,14 +112,6 @@ let shopItemsData = [
     img: ".././Images/Products/14.png",
   },
   {
-    id: "psdaj",
-    name: "Original Cookie",
-    price: 2,
-    desc: "Classic cookie goodness that delights with every bite",
-    category: "Bread",
-    img: ".././Images/Products/15.png",
-  },
-  {
     id: "proSB",
     name: "Snow Bagel",
     price: 3,
