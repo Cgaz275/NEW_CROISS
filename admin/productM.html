@@ -3,57 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing Store</title>
+    <title>Product Management</title>
     <link rel="stylesheet" href="productM.css">
-
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../Images/Homepage/Nav-bar/logo.png">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../index.js"></script>
 </head>
 <body>
-<div class="navbar">
-    <a href="adminM.html">
-        <h2>ADMIN MANAGEMENT</h2>
-    </a>
-    <a href="userM.html">
-        <h2>USER MANAGEMENT</h2>
-    </a>
 
-    <a href="productM.html">
-        <h2>PRODUCT MANAGEMENT</h2>
-    </a>
+<div class = "grid-container">
+    <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+            <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+            <a href="../Login/sign-in-admin.html"><span class="material-icons-outlined">logout</span></a>
+        </div>
+        <div class="header-right">
+            <a href="adminM.html"><span class="material-icons-outlined">account_circle</span></a>
+        </div>
+    </header>
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <div class="sidebar-title">
+            <div class="sidebar-brand">
+                <span class="material-icons-outlined">inventory</span>Croiss Dashboard
+            </div>
+            <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
 
-    <a href="billM.html">
-        <h2>BILL MANAGEMENT</h2>
-    </a>
-
-    <a href="thongkeM.html">
-        <h2>THONG KE</h2>
-    </a>
+        <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+                <a href="#" >
+                    <span class="material-icons-outlined">dashboard</span> Dashboard
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="productM.html" >
+                    <span class="material-icons-outlined">bakery_dining</span> Foods
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="userM.html">
+                    <span class="material-icons-outlined">people</span> Customer
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="billM.html" >
+                    <span class="material-icons-outlined">shopping_cart</span> Orders
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <!-- End Sidebar -->
+    <div class ="main-container">
+        <a href="AddNewProduct.html"><span class="material-icons-outlined">add_box</span> Add new Product</a>
+        <div class="detailss">
+            <div class = "colum"><p>ID</p></div>
+            <div class = "colum"><p>Name</p></div>
+            <div class = "colum"><p>Price</p></div>
+            <div class = "colum"><p>Description</p></div>
+            <div class = "colum"><p>Category</p></div>
+            <div class = "colum"><p>Image</p></div>
+            <div class = "colum"><p>Edit</p></div>
+        </div>
+        <div id="shop"></div>
+    </div>
 
 </div>
-<form id="addProductForm">
-    <label for="productName">Product Name:</label>
-    <input type="text" id="productName" required>
-
-    <label for="productPrice">Product Price:</label>
-    <input type="text" id="productPrice" required>
-
-    <label for="productDesc">Product Description:</label>
-    <textarea id="productDesc" required></textarea>
-
-    <label for="productCategory">Choose a category:</label>
-    <select name="category" id="productCategory">
-        <option value="Cookies">Cookies</option>
-        <option value="Bread">Bread</option>
-        <option value="Cake">Cake</option>
-    </select>
-
-    <label for="productImg">Product Image URL:</label>
-    <input type="text" id="productImg" required>
-
-    <button type="button" onclick="addProduct()">Add Product</button>
-
-</form>
-
-<div class="detail" id="shop"></div>
 </body>
 <script src="../admin/src/product.js"></script>
 <script src="productM.js"></script>

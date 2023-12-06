@@ -21,25 +21,26 @@ let generateUser = () => {
       let { username, pass, name, address, phone } = x;
       let search = basket.find((x) => x.id === id) || [];
       return `
+        <div>
         <div class="details">
-         <h3> Username : ${username}</h3>
-         <div id="${username}-details" class="details-content" style="display:none;">
-          <h3>Password : ${pass}</h3>
-          <p>Name : ${name}</p>
-          <p>Address : ${address}</p>
-          <p>Phone number : ${phone}</p>
-             <button onclick="editUser('${username}')" >Edit</button>
-          </div>
- <button onclick="toggleDetails('${username}')">Toggle Details</button>
- <button onclick="removeUser('${username}')">Remove</button>
+          <div class = "colum"><p>${username}</p></div>
+          <div class = "colum"><p>${pass}</p></div>
+          <div class = "colum"><p>${name}</p></div>
+          <div class = "colum"><p>${address}</p></div>
+          <div class = "colum"><p>${phone}</p></div>
+             <div class = "colum"><button class="astext" onclick="editUser('${username}')" ><i class="fa fa-pencil-square-o"></i></button></div>
+            
         </div>
-
+         <div id="${username}-edit" class="edit-details">
+         </div>
 
     `;
     })
 
     .join(""));
 };
+
+//  <button class="astext" onclick="removeUser('${username}')"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
 
 generateUser();
 // Define a new product object
@@ -96,22 +97,22 @@ function editUser(username) {   isInEditMode = true;
   let form = document.createElement('div');
   form.id = 'editForm';
   form.innerHTML = `
-   <label for="editedPassword">Password:</label>
-   <input type="text" id="editedPassword" value="${userDetails.pass}" ><br>
+   <label for="editedPassword">Password:</label><br>
+   <input style="width:50%" type="text" id="editedPassword" value="${userDetails.pass}" ><br><br>
 
-    <label for="editedName">Name:</label>
-    <input type="text" id="editedName" value="${userDetails.name}" ><br>
+    <label for="editedName">Name:</label><br>
+    <input style="width:50%" type="text" id="editedName" value="${userDetails.name}" ><br><br>
 
-    <label for="editedAddress">Address:</label>
-    <input type="text" id="editedAddress" value="${userDetails.address}"><br>
+    <label for="editedAddress">Address:</label><br>
+    <input style="width:50%" type="text" id="editedAddress" value="${userDetails.address}"><br><br>
 
-    <label for="editedPhone">Phone:</label>
-    <input type="text" id="editedPhone" value="${userDetails.phone}"><br>
+    <label for="editedPhone">Phone:</label><br>
+    <input style="width:50%" type="text" id="editedPhone" value="${userDetails.phone}"><br><br>
 
-    <button onclick="updateUserDetails('${username}')">Update</button>
+    <button style="width:50%" onclick="updateUserDetails('${username}')">Update</button>
   `;
   // Append the form to the details box
-document.getElementById(`${username}-details`).appendChild(form);
+document.getElementById(`${username}-edit`).appendChild(form);
 
     // Stop the event propagation to prevent it from closing the details box
 
@@ -146,18 +147,64 @@ function updateUserDetails(username) {
 
 generateUser();
 
-function removeUser(username) {
-  // Find the index of the user in the array
-  let userIndex = newshopUsersData.findIndex((x) => x.username === username);
+// function removeUser(username) {
+//   // Find the index of the user in the array
+//   let userIndex = newshopUsersData.findIndex((x) => x.username === username);
 
-  // If the user is found, remove it from the array
-  if (userIndex !== -1) {
-    newshopUsersData.splice(userIndex, 1);
+//   // If the user is found, remove it from the array
+//   if (userIndex !== -1) {
+//     newshopUsersData.splice(userIndex, 1);
 
-    // Update local storage
-    localStorage.setItem('shopUsersData', JSON.stringify(newshopUsersData));
+//     // Update local storage
+//     localStorage.setItem('shopUsersData', JSON.stringify(newshopUsersData));
 
-    // Re-generate the user list in the UI
-    generateUser();
-  }
+//     // Re-generate the user list in the UI
+//     generateUser();
+//   }
+// }
+// SIDEBAR TOGGLE //
+var sidebarOpen = false;
+var sidebar = document.getElementById("sidebar");
+
+function openSidebar() {
+    if(!sidebarOpen) {
+        sidebar.classList.add("sidebar-responsive");
+        sidebarOpen = true;
+    }
 }
+
+function closeSidebar() {
+    if(sidebarOpen) {
+        sidebar.classList.remove("sidebar-responsive");
+        sidebarOpen = false;
+    }
+}
+// SIDEBAR TOGGLE //
+
+/**---------------------------------------------------------- */
+
+// function checkLogIn(){
+
+//   let currentUser = localStorage.getItem("currentUser");
+//   console.log(currentUser);
+//   if(currentUser){
+//      location.assign("/User/User.html");
+//   }else{
+//      location.assign("/Login/sign-in.html");
+//   }
+// }
+// function checkLogInC(){
+
+//  let currentUser = localStorage.getItem("currentUser");
+//  console.log(currentUser);
+//  if(currentUser){
+//     location.assign("/Cart/cart.html");
+//  }else{
+//     location.assign("/Login/sign-in.html");
+//  }
+// }
+
+// function logOut(){
+//  localStorage.removeItem("currentUser");
+//  location.assign("/Login/sign-in.html");
+// }

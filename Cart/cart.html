@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="stylesheet" href="cartstyle.css">
-    <link rel="stylesheet" href="/navbar_footer/navbar-footer.css">
+    <link rel="stylesheet" href="../navbar_footer/navbar-footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <!-- font-family : 'Montserrat', sans-serif; -->
 
     <link rel="icon" href="../Images/Homepage/Nav-bar/logo.png">
+    <!-- <script src="../index.js"></script> -->
 </head>
 <body>
 <!-- Navigation bar-->
@@ -31,28 +32,33 @@
 
 <div class="sidebar">
 
-    <img id="sidebar-exit" onclick="close_sidebar ()" src="/Images/Homepage/Nav-bar/sidebar-exit.png">
+    <img id="sidebar-exit" onclick="close_sidebar ()" src="../Images/Homepage/Nav-bar/sidebar-exit.png">
 
     <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/ProductPage/product.html">Products</a></li>
-        <li><a href="/About-us/about-us.html">About Us</a></li>
-        <li><a href="/Cart/cart.html">Cart</a></li>
-        <li><a href="/Login/sign-in.html">Login</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../ProductPage/product.html">Products</a></li>
+        <li><a href="../About-us/about-us.html">About Us</a></li>
+        <li><a onclick="checkLogInC()">Cart</a></li>
+        <li><a onclick="checkLogIn()">Login</a></li>
+        <!-- <li><a onclick="logOut()" href="../index.html">Logout</a></li> -->
     </ul>
 </div>
 
 <div class="nav-bar">
-    <a href="/index.html"><img id="nav-bar-logo" src="/Images/Homepage/Nav-bar/logo.png" alt="Croiss'Bakery logo"></a>
-    <a id="nav-bar-name1" href="/index.html"><img id="nav-bar-name" src="/Images/Homepage/Nav-bar/name.png"
+    <a href="../index.html"><img id="nav-bar-logo" src="../Images/Homepage/Nav-bar/logo.png" alt="Croiss'Bakery logo"></a>
+    <a id="nav-bar-name1" href="../index.html"><img id="nav-bar-name" src="../Images/Homepage/Nav-bar/name.png"
             alt="Croiss'bakery"></a>
-    <a id="present-page" class="nav-bar-text-button" href="/index.html">Home</a>
-    <a class="nav-bar-text-button" href="/ProductPage/product.html">Products</a>
-    <a class="nav-bar-text-button" href="/About-us/about-us.html">About Us</a>
-    <a class="nav-bar-icon-button" href="/Cart/cart.html"><img id="nav-bar-cart" src="/Images/Homepage/Nav-bar/cart.png"
-            alt="Cart"> <div id="cartAmount" class="cartAmount">0</div></a>
-    <a class="nav-bar-icon-button" href="/User/User.html"><img id="nav-bar-login" src="/Images/Homepage/Nav-bar/login.png"
-            alt="Login"></a>
+    <a class="nav-bar-text-button" href="../index.html">Home</a>
+    <a class="nav-bar-text-button" href="../ProductPage/product.html">Products</a>
+    <a class="nav-bar-text-button" href="../About-us/about-us.html">About Us</a>
+   
+    <a id="present-icon-page" onclick="checkLogInC()"class="nav-bar-icon-button"><img id="nav-bar-cart" src="../Images/Homepage/Nav-bar/cart.png"
+                alt="Cart"><div id="cartAmount" class="cartAmount">0</div></a>
+    <a onclick="checkLogIn()" class="nav-bar-icon-button" ><img id="nav-bar-login" src="../Images/Homepage/Nav-bar/login.png"
+                alt="Login"></a>
+    <!-- <a onclick="logOut()" class="nav-bar-icon-button"><img id="nav-bar-logout" src="../Images/Homepage/Nav-bar/logout.png"
+                    alt="Logout"></a>         -->
+    
 
     <!--Three bars-->
     <div class="three-bars">
@@ -93,19 +99,19 @@
     <!--------------------------------------------- Footer -------------------------------------------->
 
     <div class="footer">
-        <img id="footer-logo" src="/Images/Homepage/Footer/footer logo.png" alt="Croiss'Bakery logo">
+        <img id="footer-logo" src="../Images/Homepage/Footer/footer logo.png" alt="Croiss'Bakery logo">
         <div class="footer-contact-box">
             <p id="footer-contact-title">Contact Us</p>
             <div class="footer-contact-box-info">
-                <img class="footer-icons" src="/Images/Homepage/Footer/location.png" alt="Location icon">
+                <img class="footer-icons" src="../Images/Homepage/Footer/location.png" alt="Location icon">
                 <p class="footer-p-info">Vietnam, Ho Chi Minh city, SGU</p>
             </div>
             <div class="footer-contact-box-info">
-                <img class="footer-icons" src="/Images/Homepage/Footer/phone-call.png" alt="Phone call icon">
+                <img class="footer-icons" src="../Images/Homepage/Footer/phone-call.png" alt="Phone call icon">
                 <p class="footer-p-info">023923XXX</p>
             </div>
             <div class="footer-contact-box-info">
-                <img class="footer-icons" src="/Images/Homepage/Footer/email.png" alt="Email icon">
+                <img class="footer-icons" src="../Images/Homepage/Footer/email.png" alt="Email icon">
                 <p class="footer-p-info">Croiss'Bakery@gmail.com</p>
             </div>
         </div>

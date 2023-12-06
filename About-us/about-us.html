@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Croiss's Bakery</title>
-    <link rel="stylesheet" href="about-us.css">
+    <link rel="stylesheet" href="../About-us/about-us.css">
     <link rel="icon" href="../Images/Homepage/Nav-bar/logo.png">
-    <link rel="stylesheet" href="/navbar_footer/navbar-footer.css"> 
+    <link rel="stylesheet" href="../navbar_footer/navbar-footer.css"> 
+    <!-- <script src="../index.js"></script> -->
 
     <!-- font-family : 'Montserrat', sans-serif; -->
 
@@ -23,26 +24,30 @@
         <img id="sidebar-exit" onclick="close_sidebar ()" src="/Images/Homepage/Nav-bar/sidebar-exit.png">
 
         <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/ProductPage/product.html">Products</a></li>
-            <li><a href="/About-us/about-us.html">About Us</a></li>
-            <li><a href="/Cart/cart.html">Cart</a></li>
-            <li><a href="/Login/sign-in.html">Login</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../ProductPage/product.html">Products</a></li>
+            <li><a href="About-us/about-us.html">About Us</a></li>
+            <li><a onclick="checkLogInC()" href="../Cart/cart.html">Cart</a></li>
+            <li><a onclick="checkLogIn()" href="../Login/sign-in.html">Login</a></li>
+            <!-- <li><a onclick="logOut()" href="../index.html">Logout</a></li> -->
         </ul>
     </div>
 
     <div class="nav-bar">
-        <a href="/index.html"><img id="nav-bar-logo" src="/Images/Homepage/Nav-bar/logo.png" alt="Croiss'Bakery logo"></a>
-        <a id="nav-bar-name1" href="/index.html"><img id="nav-bar-name" src="/Images/Homepage/Nav-bar/name.png"
+        <a href="../index.html"><img id="nav-bar-logo" src="../Images/Homepage/Nav-bar/logo.png" alt="Croiss'Bakery logo"></a>
+        <a id="nav-bar-name1" href="../index.html"><img id="nav-bar-name" src="../Images/Homepage/Nav-bar/name.png"
                 alt="Croiss'bakery"></a>
-        <a class="nav-bar-text-button" href="/index.html">Home</a>
-        <a class="nav-bar-text-button" href="/ProductPage/product.html">Products</a>
-        <a id="present-page" class="nav-bar-text-button" href="/About-us/about-us.html">About Us</a>
-        <a class="nav-bar-icon-button" href="/Cart/cart.html"><img id="nav-bar-cart" src="/Images/Homepage/Nav-bar/cart.png"
-                alt="Cart"></a>
-        <a class="nav-bar-icon-button" href="/User/User.html"><img id="nav-bar-login" src="/Images/Homepage/Nav-bar/login.png"
-                alt="Login"></a>
-
+        <a class="nav-bar-text-button" href="../index.html">Home</a>
+        <a class="nav-bar-text-button" href="../ProductPage/product.html">Products</a>
+        <a id="present-page" class="nav-bar-text-button" href="../About-us/about-us.html">About Us</a>
+    
+        <a onclick="checkLogInC()"class="nav-bar-icon-button"><img id="nav-bar-cart" src="../Images/Homepage/Nav-bar/cart.png"
+                    alt="Cart"></a>
+        <a onclick="checkLogIn()" class="nav-bar-icon-button" ><img id="nav-bar-login" src="../Images/Homepage/Nav-bar/login.png"
+                    alt="Login"></a>
+        <!-- <a onclick="logOut()" class="nav-bar-icon-button" ><img id="nav-bar-logout" src="../Images/Homepage/Nav-bar/logout.png"
+                    alt="Log out"></a>         -->
+        
         <!--Three bars-->
         <div class="three-bars">
             <input type="checkbox" id="checkbox" onclick="showSidebar()">
@@ -122,6 +127,34 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function checkLogIn(){
+
+    let currentUser = localStorage.getItem("currentUser");
+    console.log(currentUser);
+    if(currentUser){
+    location.assign("../User/User.html");
+    }else{
+    location.assign("../Login/sign-in.html");
+    }
+    }
+    function checkLogInC(){
+
+    let currentUser = localStorage.getItem("currentUser");
+    console.log(currentUser);
+    if(currentUser){
+    location.assign("../Cart/cart.html");
+    }else{
+    location.assign("../Login/sign-in.html");
+    }
+    }
+
+    function logOut(){
+    localStorage.removeItem("currentUser");
+    location.assign("../Login/sign-in.html");
+    }
+    </script>
 
 </body>
 

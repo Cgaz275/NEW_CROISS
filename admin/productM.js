@@ -19,31 +19,39 @@ let generateShop = () => {
       let { id, name, price, desc, category, img } = x;
       let search = basket.find((x) => x.id === id) || [];
       return `
-    <div class="details">
-            <h3> id : ${id}</h3>
-            <div id="${id}-details" class="details-content" style="display:none;">
-             <h3>name : ${name}</h3>
-             <p>price: ${price}</p>
-             <p>desc : ${desc}</p>
-             <p>category : ${category}</p>
-             <p>img : ${img}</p>
-                <button onclick="editProduct('${id}')" >Edit</button>
+
+      <div id="confirmationBox" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); z-index: 999; display: none;">
+        <p>Are you sure that you want to delete this item?</p>
+        <button onclick="cancelDelete()">No</button>
+        <button onclick="confirmDelete('${id}')">Yes</button>
+        </div>
+        
+            <div class = "edit">
+            <div id="${id}-details" class="details">
+            <div class = "colum"><p>${id}</p></div>
+             <div class = "colum"><p>${name}</p></div>
+             <div class = "colum"><p>${price}</p></div>
+             <div class = "colum"><p>${desc}</p></div>
+             <div class = "colum"><p>${category}</p></div>
+             <div class = "colum"><img width="50%" src=${img}></div>
+                <div class = "colum"><button class="astext" onclick="editProduct('${id}')" ><i class="fa fa-pencil-square-o"></i></button><br><br>
+                <button class="astext" onclick="removeProductConfirmation('${id}')">
+                <i class="fa fa-trash" aria-hidden="true"></i></button></div>              
              </div>
-    <button onclick="toggleDetails('${id}')">Toggle Details</button>
-    <button onclick="removeProduct('${id}')">Remove</button>
-           </div>
+             <div id="${id}-edit" class="edit-details">
+             </div>
+
     `;
     })
 
     .join(""));
 };
 
+//<i class="fa fa-trash" aria-hidden="true"></i>
+
 generateShop();
 // Define a new product object
-function toggleDetails(id) {
-  let detailsDiv = document.getElementById(`${id}-details`);
-  detailsDiv.style.display = detailsDiv.style.display === 'none' ? 'block' : 'none';
-}
+
 
 
 let update = (id) => {
@@ -101,30 +109,30 @@ function editProduct(id) {
     let form = document.createElement('div');
     form.id = 'editForm';
     form.innerHTML = `
-         <label for="editedName">Name:</label>
-                <input type="text" id="editedName" value="${productDetails.name}" ><br>
+                <label  for="editedName">Name:</label><br>
+                <input style="width:50%" type="text" id="editedName" value="${productDetails.name}" ><br><br>
 
-                <label for="editedPrice">Price:</label>
-                <input type="number" id="editedPrice" value="${productDetails.price}" ><br>
+                <label for="editedPrice">Price:</label><br>
+                <input style="width:50%" type="number" id="editedPrice" value="${productDetails.price}" ><br><br>
 
-                <label for="editedDesc">Description:</label>
-                <input type="text" id="editedDesc" value="${productDetails.desc}"><br>
+                <label for="editedDesc">Description:</label><br>
+                <input style="width:50%" type="text" id="editedDesc" value="${productDetails.desc}"><br><br>
 
 
-                   <label for="editedCategory">Choose a category:</label>
-                   <select name="category" id="editedCategory">
+                   <label for="editedCategory">Choose a category:</label><br>
+                   <select style="width:50%" name="category" id="editedCategory">
                    <option value="Cookies">Cookies</option>
                    <option value="Bread">Bread</option>
                    <option value="Cake">Cake</option>
-                   </select>
+                   </select><br><br>
 
-                <label for="editedImg">Image:</label>
-                <input type="text" id="editedImg" value="${productDetails.img}"><br>
+                <label for="editedImg">Image:</label><br>
+                <input style="width:50%" type="text" id="editedImg" value="${productDetails.img}"><br><br>
 
-                <button onclick="updateProductDetails('${id}')">Update</button>
+                <button style="width:50%" onclick="updateProductDetails('${id}')">Update</button>
     `;
     // Append the form to the details box
-    document.getElementById(`${id}-details`).appendChild(form);
+    document.getElementById(`${id}-edit`).appendChild(form);
 }
 
 function updateProductDetails(id) {
@@ -134,6 +142,12 @@ function updateProductDetails(id) {
     const editedDesc = document.getElementById('editedDesc').value;
     const editedCategory = document.getElementById('editedCategory').value;
     const editedImg = document.getElementById('editedImg').value;
+
+    // Input validation
+    if (!editedName || isNaN(editedPrice)) {
+        alert('Please enter valid data.');
+        return;
+    }
 
     // Update the corresponding product's details in the array
     let updatedProductIndex = newshopItemsData.findIndex((x) => x.id === id);
@@ -149,11 +163,10 @@ function updateProductDetails(id) {
     // Re-generate the product list
     generateShop();
 
+    // Clear the details box
+
     // Remove the form
-    let form = document.getElementById('editForm');
-    if (form) {
-        form.remove();
-    }
+
 }
 
 generateShop();
@@ -173,3 +186,72 @@ function removeProduct(id) {
          generateShop();
      }
  }
+
+ //-----------------------------------------------chatgpt--------------------------------------
+
+    // Đưa các hàm xác nhận xóa ra khỏi hàm removeProductConfirmation
+    function cancelDelete() {
+    const confirmationBox = document.getElementById('confirmationBox');
+    confirmationBox.style.display = 'none';
+  }
+  
+  function confirmDelete(id) {
+    removeProduct(id);
+    const confirmationBox = document.getElementById('confirmationBox');
+    confirmationBox.style.display = 'none';
+  }
+  
+  function removeProductConfirmation(id) {
+    const confirmationBox = document.getElementById('confirmationBox');
+    confirmationBox.style.display = 'block';
+    // Chuyển hàm confirmDelete(id) và cancelDelete() ra khỏi hàm này để có thể truy cập từ bất kỳ nơi nào trong mã của bạn
+  }
+ //-----------------------------------------------chatgpt--------------------------------------
+
+
+ // SIDEBAR TOGGLE //
+ var sidebarOpen = false;
+ var sidebar = document.getElementById("sidebar");
+
+ function openSidebar() {
+     if(!sidebarOpen) {
+         sidebar.classList.add("sidebar-responsive");
+         sidebarOpen = true;
+     }
+ }
+
+ function closeSidebar() {
+     if(sidebarOpen) {
+         sidebar.classList.remove("sidebar-responsive");
+         sidebarOpen = false;
+     }
+ }
+ // SIDEBAR TOGGLE //
+
+ //---------------------------------------------------
+
+//  function checkLogIn(){
+
+//     let currentUser = localStorage.getItem("currentUser");
+//     console.log(currentUser);
+//     if(currentUser){
+//        location.assign("/User/User.html");
+//     }else{
+//        location.assign("/Login/sign-in.html");
+//     }
+// }
+// function checkLogInC(){
+
+//    let currentUser = localStorage.getItem("currentUser");
+//    console.log(currentUser);
+//    if(currentUser){
+//       location.assign("/Cart/cart.html");
+//    }else{
+//       location.assign("/Login/sign-in.html");
+//    }
+// }
+
+// function logOut(){
+//    localStorage.removeItem("currentUser");
+//    location.assign("/Login/sign-in.html");
+// }

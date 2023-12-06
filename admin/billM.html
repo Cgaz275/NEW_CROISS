@@ -2,32 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <title>Clothing Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bill Management</title>
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="billM.css">
+    <script src="/index.js"></script>
+    
 </head>
 <body>
-<div class="navbar">
-    <a href="adminM.html">
-        <h2>ADMIN MANAGEMENT</h2>
-    </a>
-    <a href="userM.html">
-        <h2>USER MANAGEMENT</h2>
-    </a>
+<!-- Header -->
 
-    <a href="productM.html">
-        <h2>PRODUCT MANAGEMENT</h2>
-    </a>
+<div class = "grid-container">
+    <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+            <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+            <a href="../Login/sign-in-admin.html"><span class="material-icons-outlined">logout</span></a>
+        </div>
+        <div class="header-right">
+            <a href="adminM.html"><span class="material-icons-outlined">account_circle</span></a>
+        </div>
+    </header>
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <div class="sidebar-title">
+            <div class="sidebar-brand">
+                <span class="material-icons-outlined">inventory</span>Croiss Dashboard
+            </div>
+            <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
 
-    <a href="billM.html">
-        <h2>BILL MANAGEMENT</h2>
-    </a>
+        <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+                <a href="#" >
+                    <span class="material-icons-outlined">dashboard</span> Dashboard
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="productM.html" >
+                        <span class="material-icons-outlined">bakery_dining</span> Foods
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="userM.html">
+                    <span class="material-icons-outlined">people</span> Customer
+                </a>
+            </li>
+            <li class="sidebar-list-item">
+                <a href="billM.html" >
+                    <span class="material-icons-outlined">shopping_cart</span> Orders
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <!-- End Sidebar -->
+<div class="main-container" id="shop"></div>
 
-    <a href="thongkeM.html">
-        <h2>THONG KE</h2>
-    </a>
 </div>
-<div class="detail" id="shop"></div>
 </body>
 <script src="../admin/src/bill.js"></script>
 <script src="billM.js"></script>

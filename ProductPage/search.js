@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('searchInput');
     const suggestions = document.getElementById('suggestions');
     const filterButtons = document.querySelectorAll('.item-filter button');
-
   
     suggestions.innerHTML = '';
 
@@ -14,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const matchedProducts = shopItemsData.filter(product =>
             product.name.toLowerCase().includes(inputText) || product.category.toLowerCase().includes(inputText)
         );
+
+        // Lưu kết quả tìm kiếm để sử dụng trên các trang
+        localStorage.setItem('searchResult', JSON.stringify(matchedProducts));
 
         suggestions.innerHTML = '';
 

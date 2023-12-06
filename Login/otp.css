@@ -1,0 +1,140 @@
+/* The star means all the body part */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .nav-bar {
+    z-index: 100;
+  }
+ 
+  /*----------------------------------------------------------*/
+
+
+/*Mid*/
+#confirming:hover {
+opacity: 0.8;
+}
+.mid {
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+    /* margin-top: 12vh; */
+
+}
+/* 
+.pic {
+    position: relative;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#croiss_bakery_pic {
+    z-index: 1;
+    width: 100%;
+    height: auto; /*Để responsive, kết hợp với sign up span*/
+
+#croiss_bakery_logo {
+    position: absolute; 
+    z-index: 10000;
+    align-items: center;
+
+    margin-top: 1em;
+    width: 20%;
+    height: auto;
+} */
+
+a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #2f1f20;
+    font-size: larger;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.forgot {
+    white-space: nowrap;
+    color: #2f1f20;
+    box-sizing: border-box;
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    /* margin-left:10vw;
+    margin-right: 10vw; */
+    margin-top: 2em;
+    margin-bottom: 2em;
+    
+    border: 7px solid #2f1f20;
+    padding: 3em;
+
+    justify-content: space-between; /* Đặt khoảng cách giữa các phần tử */
+    gap: 2em;
+}
+
+input {
+    position: relative;
+    width: 27em;
+    height: 2em;
+    border: 0.25em solid #2f1f20;
+    
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    background-color: #2f1f20;
+    color: white;
+    border-radius: 20px;
+    font-size: larger;
+}
+
+.new_password, .confirm_password {
+    position: relative;
+}
+
+.fa-eye, .fa-eye-slash {
+    position: absolute;
+    cursor: pointer;
+    margin-top: 0.6em;
+    left: 21em;
+}
+
+.forgot span {
+    display: block;
+}
+
+
+
+/*RESPONSIVE CHO FORGOT*/
+
+/* @media only screen and (max-width: 856px) {
+    .forgot {
+        margin-top: 10vh;
+    }
+} */
+
+@media only screen and (max-width: 541px) {
+  .forgot {
+    box-sizing: border-box;
+  }
+  .mid {
+    box-sizing: border-box;
+    padding: 2em;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+

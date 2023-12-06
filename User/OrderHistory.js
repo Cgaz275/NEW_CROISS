@@ -1,10 +1,12 @@
 let shop = document.getElementById("shop");
 
+// let basket = JSON.parse(localStorage.getItem("data")) || [];
+
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let orderList  = JSON.parse(localStorage.getItem("orderList")) || [];
 
-let newshopItemsData  = JSON.parse(localStorage.getItem("shopItemsData")) || [];
+let shopItemsData  = JSON.parse(localStorage.getItem("shopItemsData")) || [];
 
 let currentUser = localStorage.getItem("currentUser");
 
@@ -15,7 +17,6 @@ orderList.forEach((order) => {
     if(order.username === currentUser){
         orderListID.add(order.orderid);
     }
-
 
 });
 
@@ -44,14 +45,15 @@ let generateShop = () => {
 
                 // Find items in the basket with the matching orderID
                 let itemsInOrder = basket.filter((item) => item.orderid === orderID);
-
+              
                 // Generate HTML for each order
                 let orderHTML = orders
                   .map((order) => {
                     return `
                       <div class="order-details">
-                        <p>id: ${order.id}</p>
-                        <h3>Quantity: ${order.quantity}</h3>
+                        
+                        <p>ID: ${order.id}</p>
+                        <h4>Quantity: ${order.quantity}</h4>
                       </div>
                     `;
                   })
@@ -62,20 +64,23 @@ let generateShop = () => {
                 let uniqueUsername = orders.length > 0 ? orders[0].username : '';
                 let uniqueAddress = orders.length > 0 ? orders[0].address || '' : '';
                 let uniquePaymentMethod = orders.length > 0 ? orders[0].paymentMethod || '' : '';
-                 let uniqueShippingStatus = orders.some((order) => order.shippingStatus);
-                 let orderTimestamp = orders.length > 0 ? orders[0].timestamp || '' : '';
+                let uniqueShippingStatus = orders.some((order) => order.shippingStatus);
+                let orderTimestamp = orders.length > 0 ? orders[0].timestamp || '' : '';
 
                 return `
-                  <div class="details">
-                    <h3>Bill ID: ${orderID}</h3>
-                    <h4>User Name: ${uniqueUsername}</h4>
-                    <p>Address: ${uniqueAddress}</p>
-                    <p>Payment Method: ${uniquePaymentMethod}</p>
-                    <p>Shipped: ${uniqueShippingStatus ? "Yes" : "No"}</p>
-                    <p>Order Timestamp: ${orderTimestamp}</p>
-                    ${orderHTML}
+                      <div class="details">
+                          <div class = "history">
 
-                  </div>
+                            <span>Bill ID: ${orderID}<span> 
+                            <span>User Name: ${uniqueUsername}</span>
+                            <span>Address: ${uniqueAddress}</span>
+                            <span>Payment Method: ${uniquePaymentMethod}</span>
+                            <span>Shipped: ${uniqueShippingStatus ? "Yes" : "No"}</span>
+                            <span>Order Timestamp: ${orderTimestamp}</span>
+
+                            ${orderHTML}
+                          </div>
+                      </div>
                 `;
               })
               .join("")
@@ -83,3 +88,29 @@ let generateShop = () => {
 };
 
 generateShop();
+
+function checkLogIn(){
+
+  let currentUser = localStorage.getItem("currentUser");
+  console.log(currentUser);
+  if(currentUser){
+     location.assign("../User/User.html");
+  }else{
+     location.assign("../Login/sign-in.html");
+  }
+}
+function checkLogInC(){
+
+ let currentUser = localStorage.getItem("currentUser");
+ console.log(currentUser);
+ if(currentUser){
+    location.assign("../Cart/cart.html");
+ }else{
+    location.assign("../Login/sign-in.html");
+ }
+}
+
+function logOut(){
+ localStorage.removeItem("currentUser");
+ location.assign("../Login/sign-in.html");
+}
