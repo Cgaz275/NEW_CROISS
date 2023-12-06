@@ -155,8 +155,8 @@ let showPage = () => {
               </div>
             </div>
 
-            <div class="more-detail">
-            <a onclick="chooseProduct(${id})" href="ProductDetail.html">More Details</a>
+           <div class="more-detail">
+              <a onclick="chooseProduct(${id})" href="ProductDetail.html">More Details</a>
             </div>
 
           </div>
@@ -164,6 +164,7 @@ let showPage = () => {
         </div>   
               `;
       })
+    
       .join('');
 
   updatePaginationButtons(totalPages);
@@ -363,3 +364,5 @@ let chooseProduct = (id) => {
   localStorage.setItem('currentProduct', JSON.stringify(currentProduct));
 
   };
+
+
