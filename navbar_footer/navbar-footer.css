@@ -76,6 +76,7 @@
 }
 
 #nav-bar-logout {
+  /* display: none; */
   width: 2em;
   /* padding-right: 4em; */
 }

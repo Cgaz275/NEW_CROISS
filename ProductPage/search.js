@@ -1,138 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('searchInput');
     const suggestions = document.getElementById('suggestions');
-
-    const newshopItemsData = [
-        {
-            id: "abcd",
-            name: "Choco Muffin",
-            price: 1.2,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Muffin",
-            img: "../Images/Products/1.png",
-          },
-          {
-            id: "xyzh",
-            name: "Lava Bread",
-            price: 2.5,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Bread",
-            img: "../Images/Products/2.png",
-          },
-          {
-            id: "ujfh",
-            name: "French Bread",
-            price: 1.25,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Bread",
-            img: "../Images/Products/3.png",
-          },
-          {
-            id: "oqis",
-            name: "Berry Sandwich Loaf",
-            price: 4.5,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Bread",
-            img: "../Images/Products/4.png",
-          },
-          {
-            id: "mdns",
-            name: "Butter Cheese Bread",
-            price: 6,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Bread",
-            img: "../Images/Products/5.png",
-          },
-          {
-            id: "qweo",
-            name: "Cheese Cake",
-            price: 6.7,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Cake",
-            img: "../Images/Products/6.png",
-          },
-          {
-            id: "gnms",
-            name: "Brown Sugar Bread",
-            price: 5.2,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Bread",
-            img: "../Images/Products/7.png",
-          },
-          {
-            id: "qwuh",
-            name: "Cream Cake",
-            price: 1.3,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Bread",
-            img: "../Images/Products/8.png",
-          },
-          {
-            id: "ibch",
-            name: "Almond Bread Loaf",
-            price: 5.4,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Bread",
-            img: "../Images/Products/9.png",
-          },
-          {
-            id: "jjjm",
-            name: "Butter Cake",
-            price: 4.5,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Cake",
-            img: "../Images/Products/10.png",
-          },
-          {
-            id: "kisjf",
-            name: "Honey Pancake",
-            price: 2.1,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Cake",
-            img: "../Images/Products/11.png",
-          },
-          {
-            id: "qqwu",
-            name: "Berry Muffin",
-            price: 3,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Muffin",
-            img: "../Images/Products/12.png",
-          },
-          {
-            id: "msad",
-            name: "Croissant",
-            price: 4,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Bread",
-            img: "../Images/Products/13.png",
-          },
-          {
-            id: "oran",
-            name: "Florence Oval",
-            price: 3.2,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Bread",
-            img: "../Images/Products/14.png",
-          },
-          {
-            id: "psdaj",
-            name: "Original Cookie",
-            price: 2.2,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Bread",
-            img: "../Images/Products/15.png",
-          },
-          {
-            id: "proSB",
-            name: "Snow Bagel",
-            price: 3.1,
-            desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-            category: "Bread",
-            img: "../Images/Products/16.png",
-          },
-    ];
-
+  
     suggestions.innerHTML = '';
 
     // Hàm xử lý khi người dùng nhập vào ô tìm kiếm
@@ -143,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const matchedProducts = shopItemsData.filter(product =>
             product.name.toLowerCase().includes(inputText) || product.category.toLowerCase().includes(inputText)
         );
+
+        // Lưu kết quả tìm kiếm để sử dụng trên các trang
+        localStorage.setItem('searchResult', JSON.stringify(matchedProducts));
 
         suggestions.innerHTML = '';
 

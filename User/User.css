@@ -179,3 +179,9 @@ nav li a.current {
 .nav-bar {
   z-index: 100;
 }
+
+/*---------------------------*/
+
+#nav-bar-logout {
+  display: block;
+}

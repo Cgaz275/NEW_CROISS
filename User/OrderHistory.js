@@ -6,7 +6,7 @@ let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let orderList  = JSON.parse(localStorage.getItem("orderList")) || [];
 
-let newshopItemsData  = JSON.parse(localStorage.getItem("shopItemsData")) || [];
+let shopItemsData  = JSON.parse(localStorage.getItem("shopItemsData")) || [];
 
 let currentUser = localStorage.getItem("currentUser");
 
@@ -45,13 +45,13 @@ let generateShop = () => {
 
                 // Find items in the basket with the matching orderID
                 let itemsInOrder = basket.filter((item) => item.orderid === orderID);
-
+              
                 // Generate HTML for each order
                 let orderHTML = orders
                   .map((order) => {
                     return `
                       <div class="order-details">
-                    
+                        
                         <p>ID: ${order.id}</p>
                         <h4>Quantity: ${order.quantity}</h4>
                       </div>
