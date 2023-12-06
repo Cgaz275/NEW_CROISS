@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../About-us/about-us.css">
     <link rel="icon" href="../Images/Homepage/Nav-bar/logo.png">
     <link rel="stylesheet" href="../navbar_footer/navbar-footer.css"> 
-    <script src="../index.js"></script>
+    <!-- <script src="../index.js"></script> -->
 
     <!-- font-family : 'Montserrat', sans-serif; -->
 
@@ -127,6 +127,34 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function checkLogIn(){
+
+    let currentUser = localStorage.getItem("currentUser");
+    console.log(currentUser);
+    if(currentUser){
+    location.assign("../User/User.html");
+    }else{
+    location.assign("../Login/sign-in.html");
+    }
+    }
+    function checkLogInC(){
+
+    let currentUser = localStorage.getItem("currentUser");
+    console.log(currentUser);
+    if(currentUser){
+    location.assign("../Cart/cart.html");
+    }else{
+    location.assign("../Login/sign-in.html");
+    }
+    }
+
+    function logOut(){
+    localStorage.removeItem("currentUser");
+    location.assign("../Login/sign-in.html");
+    }
+    </script>
 
 </body>
 
