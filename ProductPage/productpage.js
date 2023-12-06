@@ -79,13 +79,15 @@ let generateShop = (currentPage) => {
 };
 
 
-function reset () {
-  
+
+// You may need additional logic to handle pagination controls and switch between pages.
+function reset () { 
   localStorage.removeItem('searchResult');
 }
 
 let showPage = () => {
     const searchResult = JSON.parse(localStorage.getItem('searchResult')) || [];
+
 
     if (searchResult.length > 0) {
         generateShop(currentPage);
@@ -98,6 +100,16 @@ let showPage = () => {
 };
 
 let currentPage = 1;
+
+
+// Hàm hiển thị sản phẩm dựa trên trang hiện tại
+// let showPage = () => {
+//   generateShop(currentPage);
+//     updatePaginationButtons();
+
+// };
+
+// Hàm cập nhật trạng thái của nút phân trang
 
 let updatePaginationButtons = () => {
     const totalPages = Math.ceil(newshopItemsData.length / 6);
