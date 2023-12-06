@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../ProductPage/ProductDetail.css">
+    <link rel="stylesheet" href="../navbar_footer/navbar-footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+     <!-- Thêm dòng này để nhúng search.js -->
+    <!-- <script src="../index.js"></script> -->
+</head>
+<body>
+
+<!-- Navigation bar-->
+<!-- <div class="navbar">
+    <a href="../index.html">
+        <h2>Croiss</h2>
+    </a>
+
+    <a  onclick="checkLogIn()">
+        <div class="cart">
+            <i class="bi bi-cart2"></i>
+            <div id="cartAmount" class="cartAmount">0</div>
+        </div>
+    </a>
+    <a href="../User/User.html">personal page</a>
+</div> -->
+
+
+    <!---------------------------------- Navigation bar start ---------------------------------------->
+
+    <div class="sidebar">
+
+        <img id="sidebar-exit" onclick="close_sidebar ()" src="../Images/Homepage/Nav-bar/sidebar-exit.png">
+
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../ProductPage/product.html">Products</a></li>
+            <li><a href="../About-us/about-us.html">About Us</a></li>
+            <li><a onclick="checkLogInC()" href="../Cart/cart.html">Cart</a></li>
+            <li><a onclick="checkLogIn()" href="../Login/sign-in.html">Login</a></li>
+            <!-- <li><a onclick="logOut()" href="../index.html">Logout</a></li> -->
+        </ul>
+    </div>
+
+    <div class="nav-bar">
+        <a href="../index.html"><img id="nav-bar-logo" src="../Images/Homepage/Nav-bar/logo.png" alt="Croiss'Bakery logo"></a>
+        <a id="nav-bar-name1" href="../index.html"><img id="nav-bar-name" src="../Images/Homepage/Nav-bar/name.png"
+                alt="Croiss'bakery"></a>
+        <a class="nav-bar-text-button" href="../index.html">Home</a>
+        <a onclick="reset()" id="present-page" class="nav-bar-text-button" href="../ProductPage/product.html">Products</a>
+        <a class="nav-bar-text-button" href="../About-us/about-us.html">About Us</a>
+        <a onclick="checkLogInC()"class="nav-bar-icon-button"><img id="nav-bar-cart" src="../Images/Homepage/Nav-bar/cart.png"
+            alt="Cart"><div id="cartAmount" class="cartAmount">0</div></a>
+        <a onclick="checkLogIn()" class="nav-bar-icon-button" ><img id="nav-bar-login" src="../Images/Homepage/Nav-bar/login.png"
+                alt="Login"></a>
+        <!-- <a onclick="logOut()" class="nav-bar-icon-button" ><img id="nav-bar-login" src="../Images/Homepage/Nav-bar/logout.png"
+                alt="Log out"></a>        
+        -->
+    
+        <!--Three bars-->
+        <div class="three-bars">
+            <input type="checkbox" id="checkbox" onclick="showSidebar()">
+            <label for="checkbox" class="toggle">
+                <div class="bars" id="bar1"></div>
+                <div class="bars" id="bar2"></div>
+                <div class="bars" id="bar3"></div>
+            </label>
+        </div>
+    </div>
+
+    <!----------------Navbar script for responsive---------------->
+
+    <script>
+        function showSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block'; 
+        }
+
+        function close_sidebar () {
+            showSidebar ();
+        }
+    </script>
+
+    <!---------------------------------- Navigation bar end ---------------------------------------->
+
+
+    <div class="shop" id="shop"></div>
+    <div class="small-container single-product">
+        <div class="flex">
+            <div class="col-2">
+                <img id="product-image" width="100%" src="" >
+            </div>
+            <div class="col-2">
+                <p style="font-size: 2em;" id="category-detail" class="padding-text">Category</p>
+                <h1 style="font-size: 3em ;"  id="product-name" class="padding-text">Product name</h1>
+                <h4 style="font-size: 2em ;"class="padding-text">$<span id="product-price"></span></h4>
+                <button class="remove-btn" ><a class="bt" class="padding-text" style="font-size: 1em ; " id="add-cart" onclick="addToCart()">Add to Cart</a></button>
+                <button class="remove-btn" ><a class="bt" class="padding-text" style="font-size: 1em ; display: none;" id="remove-cart" onclick="removeFromCart()" >Remove from cart</a></button>
+                <p id="product-detail" class="padding-text" style="font-size: 1em ;"></p>
+            </div>
+        </div>
+    </div>
+    
+ 
+ <!--------------------------------------------- Footer -------------------------------------------->
+
+ <div class="footer">
+    <img id="footer-logo" src="../Images/Homepage/Footer/footer logo.png" alt="Croiss'Bakery logo">
+    <div class="footer-contact-box">
+        <p id="footer-contact-title">Contact Us</p>
+        <div class="footer-contact-box-info">
+            <img class="footer-icons" src="../Images/Homepage/Footer/location.png" alt="Location icon">
+            <p class="footer-p-info">Vietnam, Ho Chi Minh city, SGU</p>
+        </div>
+        <div class="footer-contact-box-info">
+            <img class="footer-icons" src="../Images/Homepage/Footer/phone-call.png" alt="Phone call icon">
+            <p class="footer-p-info">023923XXX</p>
+        </div>
+        <div class="footer-contact-box-info">
+            <img class="footer-icons" src="../Images/Homepage/Footer/email.png" alt="Email icon">
+            <p class="footer-p-info">Croiss'Bakery@gmail.com</p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="../admin/src/product.js"></script>
+<script src="../ProductPage/ProductDetail.js"></script>
+</html>

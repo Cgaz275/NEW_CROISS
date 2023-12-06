@@ -22,6 +22,7 @@ let generateShop = (currentPage) => {
               let { id, name, price, desc, img } = x;
               let search = basket.find((x) => x.id === id) || [];
               return `
+            <a onclick="chooseProduct(${id})" href="ProductDetail.html">
               <div id=product-id-${id} class="item">
               <img width="220" src=${img} alt="">
               <div class="details">
@@ -29,7 +30,7 @@ let generateShop = (currentPage) => {
                 <p>${desc}</p>
                 <div class="price-quantity">
                   <h2>$ ${price} </h2>
-                  <div class="buttons">
+                  <div class="buttons" style="display: none">
                     <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
                     <div id=${id} class="quantity">
                       ${search.item === undefined ? 0 : search.item}
@@ -39,6 +40,7 @@ let generateShop = (currentPage) => {
                 </div>
               </div>
             </div>
+            </a>    
               `;
           })
           .join(""));
@@ -52,6 +54,7 @@ let generateShop = (currentPage) => {
           let { id, name, price, desc, img } = x;
           let search = basket.find((x) => x.id === id) || [];
           return `
+          <a onclick="chooseProduct(${id})" href="ProductDetail.html" >
           <div id=product-id-${id} class="item">
           <img width="220" src=${img} alt="">
           <div class="details">
@@ -59,7 +62,7 @@ let generateShop = (currentPage) => {
             <p>${desc}</p>
             <div class="price-quantity">
               <h2>$ ${price} </h2>
-              <div class="buttons">
+              <div class="buttons" style="display: none">
                 <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
                 <div id=${id} class="quantity">
                   ${search.item === undefined ? 0 : search.item}
@@ -69,10 +72,17 @@ let generateShop = (currentPage) => {
             </div>
           </div>
         </div>
+        </a>
           `;
       })
       .join(""));
 };
+
+
+function reset () {
+  
+  localStorage.removeItem('searchResult');
+}
 
 let showPage = () => {
     const searchResult = JSON.parse(localStorage.getItem('searchResult')) || [];
@@ -235,28 +245,48 @@ showPage();
 /**------------------------------------- */
 
 
-// function checkLogIn(){
+function checkLogIn(){
 
-//   let currentUser = localStorage.getItem("currentUser");
-//   console.log(currentUser);
-//   if(currentUser){
-//      location.assign("User/User.html");
-//   }else{
-//      location.assign("Login/sign-in.html");
-//   }
-// }
-// function checkLogInC(){
+  let currentUser = localStorage.getItem("currentUser");
+  console.log(currentUser);
+  if(currentUser){
+     location.assign("../User/User.html");
+  }else{
+     location.assign("../Login/sign-in.html");
+  }
+}
+function checkLogInC(){
 
-//  let currentUser = localStorage.getItem("currentUser");
-//  console.log(currentUser);
-//  if(currentUser){
-//     location.assign("/Cart/cart.html");
-//  }else{
-//     location.assign("/Login/sign-in.html");
-//  }
-// }
+ let currentUser = localStorage.getItem("currentUser");
+ console.log(currentUser);
+ if(currentUser){
+    location.assign("../Cart/cart.html");
+ }else{
+    location.assign("../Login/sign-in.html");
+ }
+}
 
-// function logOut(){
-//  localStorage.removeItem("currentUser");
-//  location.assign("/Login/sign-in.html");
-// }
+function logOut(){
+ localStorage.removeItem("currentUser");
+ location.assign("../Login/sign-in.html");
+}
+
+
+
+let chooseProduct = (id) => {
+
+  let selectedItem = id;
+  let search = newshopItemsData.find((x) => x.id === selectedItem.id);
+  
+  const currentProduct = {
+    id: search.id,
+    name: search.name,
+    price: search.price,
+    desc: search.desc,
+    category: search.category,
+    img: search.img,
+  };
+
+  localStorage.setItem('currentProduct', JSON.stringify(currentProduct));
+
+  };
