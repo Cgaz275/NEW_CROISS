@@ -109,27 +109,29 @@ function editProduct(id) {
     let form = document.createElement('div');
     form.id = 'editForm';
     form.innerHTML = `
-                <label  for="editedName">Name:</label><br>
-                <input style="width:50%" type="text" id="editedName" value="${productDetails.name}" ><br><br>
+    <div style="text-align:right"><label  for="editedName">Name:</label>
+                <input style="width:10%" type="text" id="editedName" value="${productDetails.name}" ><br><br></div>
 
-                <label for="editedPrice">Price:</label><br>
-                <input style="width:50%" type="number" id="editedPrice" value="${productDetails.price}" ><br><br>
+                <div style="text-align:right"><label for="editedPrice">Price:</label>
+                <input style="width:10%" type="number" id="editedPrice" value="${productDetails.price}" ><br><br></div>
 
-                <label for="editedDesc">Description:</label><br>
-                <input style="width:50%" type="text" id="editedDesc" value="${productDetails.desc}"><br><br>
+                <div style="text-align:right"><label for="editedDesc">Description:</label>
+                <input style="width:10%" type="text" id="editedDesc" value="${productDetails.desc}"><br><br></div>
 
 
-                   <label for="editedCategory">Choose a category:</label><br>
-                   <select style="width:50%" name="category" id="editedCategory">
+                <div style="text-align:right"><label for="editedCategory">Choose a category:</label>
+                   <select style="width:10%" name="category" id="editedCategory">
                    <option value="Cookies">Cookies</option>
                    <option value="Bread">Bread</option>
                    <option value="Cake">Cake</option>
-                   </select><br><br>
+                   </select><br><br></div>
+                   <div style="text-align:right"><form action="/action_page.php">
+                   <input type="file" id="myFile" name="filename">
+                 </form></div>
+                   <div style="display:none"><label for="editedImg">Image:</label>
+                <input style="width:10%" type="text" id="editedImg" value="${productDetails.img}"><br><br></div>
 
-                <label for="editedImg">Image:</label><br>
-                <input style="width:50%" type="text" id="editedImg" value="${productDetails.img}"><br><br>
-
-                <button style="width:50%" onclick="updateProductDetails('${id}')">Update</button>
+                <div style="text-align:right"><button style="width:20%" onclick="updateProductDetails('${id}')">Update</button></div>
     `;
     // Append the form to the details box
     document.getElementById(`${id}-edit`).appendChild(form);

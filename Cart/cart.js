@@ -191,7 +191,7 @@ let TotalAmount = () => {
       .map((x) => {
         let { item, id } = x;
         let search = newshopItemsData.find((y) => y.id === id) || [];
-
+        
         return item * search.price;
       })
       .reduce((x, y) => x + y, 0);

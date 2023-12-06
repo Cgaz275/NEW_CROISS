@@ -23,16 +23,32 @@ let generateUser = () => {
       return `
         <div>
         <div class="details">
-          <div class = "colum"><p>${username}</p></div>
-          <div class = "colum"><p>${pass}</p></div>
-          <div class = "colum"><p>${name}</p></div>
-          <div class = "colum"><p>${address}</p></div>
-          <div class = "colum"><p>${phone}</p></div>
-             <div class = "colum"><button class="astext" onclick="editUser('${username}')" ><i class="fa fa-pencil-square-o"></i></button></div>
-            
+        <table>
+        <tr>
+        <td style="width:23%"><p>${username}</p></td>
+        <td style="width:23%"><p>${name}</p></td>
+        <td style="width:23%"><p>${address}</p></td>
+        <td style="width:15%"><p>${phone}</p></td>
+        
+        <td style="width:11%"><button class="astext" onclick="editUser('${username}')" ><i class="fa fa-pencil-square-o"></i></button></div></td>
+        <td style="5%"> <p><div class="toggler">
+        <input id="toggler-1" name="toggler-1" type="checkbox" value="1">
+        <label for="toggler-1">
+            <svg class="toggler-on" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                <polyline class="path check" points="100.2,40.2 51.5,88.8 29.8,67.5"></polyline>
+            </svg>
+            <svg class="toggler-off" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                <line class="path line" x1="34.4" y1="34.4" x2="95.8" y2="95.8"></line>
+                <line class="path line" x1="95.8" y1="34.4" x2="34.4" y2="95.8"></line>
+            </svg>
+        </label></div></p></td>
+        </tr>
+        </table>
+        
+          
+      </div>
         </div>
-         <div id="${username}-edit" class="edit-details">
-         </div>
+         <div id="${username}-edit" class="edit-details"></div>
 
     `;
     })
@@ -97,19 +113,19 @@ function editUser(username) {   isInEditMode = true;
   let form = document.createElement('div');
   form.id = 'editForm';
   form.innerHTML = `
-   <label for="editedPassword">Password:</label><br>
-   <input style="width:50%" type="text" id="editedPassword" value="${userDetails.pass}" ><br><br>
+  <div style="text-align:right"><label for="editedPassword">Password:</label>
+   <input style="width:10%" type="text" id="editedPassword" value="${userDetails.pass}" readonly><br><br></div>
 
-    <label for="editedName">Name:</label><br>
-    <input style="width:50%" type="text" id="editedName" value="${userDetails.name}" ><br><br>
+   <div style="text-align:right"><label for="editedName">Name:</label>
+    <input style="width:10%" type="text" id="editedName" value="${userDetails.name}" ><br><br></div>
 
-    <label for="editedAddress">Address:</label><br>
-    <input style="width:50%" type="text" id="editedAddress" value="${userDetails.address}"><br><br>
+    <div style="text-align:right"><label for="editedAddress">Address:</label>
+    <input style="width:10%" type="text" id="editedAddress" value="${userDetails.address}"><br><br></div>
 
-    <label for="editedPhone">Phone:</label><br>
-    <input style="width:50%" type="text" id="editedPhone" value="${userDetails.phone}"><br><br>
+    <div style="text-align:right"><label for="editedPhone">Phone:</label>
+    <input style="width:10%" type="text" id="editedPhone" value="${userDetails.phone}"><br><br></div>
 
-    <button style="width:50%" onclick="updateUserDetails('${username}')">Update</button>
+    <div style="text-align:right"><button style="width:15%" onclick="updateUserDetails('${username}')">Update</button></div>
   `;
   // Append the form to the details box
 document.getElementById(`${username}-edit`).appendChild(form);

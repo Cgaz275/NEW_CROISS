@@ -49,10 +49,15 @@ let generateShop = () => {
                 // Generate HTML for each order
                 let orderHTML = orders
                   .map((order) => {
+                    
+                    let search = shopItemsData.find((x) => x.id === order.id) || [];
+                    console.log(order.id);
+                    console.log(search.name);
                     return `
-                      <div class="order-details">
-                        
-                        <p>ID: ${order.id}</p>
+                      <div style ="display:flex;justify-content: space-between;align-items:center"class="order-details">
+                        <img style="width:10%" src="${search.img}"></img>
+                        <p>${search.name}</p>
+                        <p>$ ${search.price}</p>
                         <h4>Quantity: ${order.quantity}</h4>
                       </div>
                     `;
@@ -68,25 +73,65 @@ let generateShop = () => {
                 let orderTimestamp = orders.length > 0 ? orders[0].timestamp || '' : '';
 
                 return `
-                      <div class="details">
-                          <div class = "history">
-
-                            <span>Bill ID: ${orderID}<span> 
-                            <span>User Name: ${uniqueUsername}</span>
-                            <span>Address: ${uniqueAddress}</span>
-                            <span>Payment Method: ${uniquePaymentMethod}</span>
-                            <span>Shipped: ${uniqueShippingStatus ? "Yes" : "No"}</span>
-                            <span>Order Timestamp: ${orderTimestamp}</span>
-
-                            ${orderHTML}
-                          </div>
+                      
+                  <div class = "edit">
+                  <div id="confirmationBox" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); z-index: 999; display: none;">
+                  <button style="float: right" onclick="cancelDelete()">No</button><br>
+                  <div style="text-align: center"><h2 >Item Detail</h2></div>
+                  <div>${orderHTML}</div>
+                 
+                  
+                  </div>
+                      <div id="${orderID}-details" class="details">
+                      <div class = "colum"><p>${orderID}</p></div>
+                      <div class = "colum"><p>${uniqueUsername}</p></div>
+                      <div class = "colum"><p>${uniqueAddress}</p></div>
+                      <div class = "colum"><p>${uniquePaymentMethod}</p></div>
+                      <div class = "colum"><p>${uniqueShippingStatus ? "Yes" : "No"}</p></div>
+                      <div class = "colum"><p>${orderTimestamp}</p> </div>
+                      <div class = "colum"><button onclick="removeProductConfirmation()">i</button></div>
                       </div>
+                     
                 `;
               })
               .join("")
           );
 };
+function cancelDelete() {
+  const confirmationBox = document.getElementById('confirmationBox');
+  confirmationBox.style.display = 'none';
+}
 
+function confirmDelete(orderID) {
+  removeProduct(orderID);
+  const confirmationBox = document.getElementById('confirmationBox');
+  confirmationBox.style.display = 'none';
+}
+
+function removeProductConfirmation() {
+  const confirmationBox = document.getElementById('confirmationBox');
+  confirmationBox.style.display = 'block';
+  // Chuyển hàm confirmDelete(id) và cancelDelete() ra khỏi hàm này để có thể truy cập từ bất kỳ nơi nào trong mã của bạn
+}
+// onclick="editProduct('${orderID}')"
+// onclick="removeProductConfirmation('${orderID}')
+let TotalAmount = () => {
+  if (basket.length !== 0) {
+    let amount = orderList
+      .map((x) => {
+        let { item, id } = x;
+        let search = newshopItemsData.find((y) => y.id === order.id) || [];
+        
+        return item * search.price;
+      })
+      .reduce((x, y) => x + y, 0);
+    // console.log(amount);
+    label.innerHTML = `
+    <h2 id="total-head" >Total Bill : $ ${amount}</h2>
+    `;
+  } else return;
+};
+TotalAmount();
 generateShop();
 
 function checkLogIn(){

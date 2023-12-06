@@ -4,7 +4,7 @@ let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let orderList  = JSON.parse(localStorage.getItem("orderList")) || [];
 
-let newshopItemsData  = JSON.parse(localStorage.getItem("shopItemsData")) || [];
+let shopItemsData  = JSON.parse(localStorage.getItem("shopItemsData")) || [];
 
 let orderListID = new Set();
 
@@ -39,13 +39,17 @@ let generateShop = () => {
                 let itemsInOrder = basket.filter((item) => item.orderid === orderID);
 
                 // Generate HTML for each order
+                
                 let orderHTML = orders
                   .map((order) => {
+                    let search = shopItemsData.find((x) => x.id === order.id) || [];
                     return `
-                      <div class="order-details">
-                        <p>id: ${order.id} </p>
-                        <p>Quantity: ${order.quantity}</p>
-                      </div>
+                    <div style ="display:flex;justify-content: space-between;align-items:center"class="order-details">
+                    <img style="width:10%" src="${search.img}"></img>
+                    <p>${search.name}</p>
+                    <p>$ ${search.price}</p>
+                    <h4>Quantity: ${order.quantity}</h4>
+                  </div>
                     `;
                   })
                   .join("");
@@ -59,16 +63,30 @@ let generateShop = () => {
                  let orderTimestamp = orders.length > 0 ? orders[0].timestamp || '' : '';
 
                 return `
+                <div class = "edit">
+                <div id="confirmationBox" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); z-index: 999; display: none;">
+                <button style="float: right" onclick="cancelDelete()">No</button><br>
+                <div style="text-align: center"><h2 >Item Detail</h2></div>
+                <div>${orderHTML}</div>
+               
+                
+                </div>
                   <div class="details">
-                    <h3>Bill ID: ${orderID}</h3>
-                    <p>User Name: ${uniqueUsername}</p>
-                    <p>Address: ${uniqueAddress}</p>
-                    <p>Payment Method: ${uniquePaymentMethod}</p>
-                    <p>Shipped: ${uniqueShippingStatus ? "Yes" : "No"}</p>
-                    <p>Order Timestamp: ${orderTimestamp}</p><br>
-                    <h2>Ordered food</h2>
-                    ${orderHTML}
-                    <button onclick="editShippingStatus('${orderID}')">Change Shipping Status</button>
+                  <table cellspacing="0" cellpadding="0">
+                  <tr>
+                  <td style="width:16%"><p>${orderID}</p></td>
+                  <td style="width:16%"><p>${uniqueUsername}</p></td>
+                  <td style="width:16%"><p>${uniqueAddress}</p></td>
+                  <td style="width:16%"><p>${uniquePaymentMethod}</p></td>
+                  <td style="width:16%"><p>${uniqueShippingStatus ? "Yes" : "No"}</p></td>
+                  <td style="width:16%"> <p>${orderTimestamp}</p></td>
+                  <td style="width:2%">  <button onclick="removeProductConfirmation('${orderID}')">i</button><br></td>
+                  </tr>
+                  </table>
+                    
+                   
+                   
+                    
                                                 </div>
                       <div id="ordersContainer" style="display: none;"></div>
 
@@ -78,6 +96,22 @@ let generateShop = () => {
               .join("")
           );
 };
+function cancelDelete() {
+  const confirmationBox = document.getElementById('confirmationBox');
+  confirmationBox.style.display = 'none';
+}
+
+function confirmDelete(orderID) {
+  removeProduct(orderID);
+  const confirmationBox = document.getElementById('confirmationBox');
+  confirmationBox.style.display = 'none';
+}
+
+function removeProductConfirmation(orderID) {
+  const confirmationBox = document.getElementById('confirmationBox');
+  confirmationBox.style.display = 'block';
+  // Chuyển hàm confirmDelete(id) và cancelDelete() ra khỏi hàm này để có thể truy cập từ bất kỳ nơi nào trong mã của bạn
+}
 
 generateShop();
 

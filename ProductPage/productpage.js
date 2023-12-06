@@ -22,9 +22,11 @@ let generateShop = (currentPage) => {
               let { id, name, price, desc, img } = x;
               let search = basket.find((x) => x.id === id) || [];
               return `
-            <a onclick="chooseProduct(${id})" href="ProductDetail.html">
+           
               <div id=product-id-${id} class="item">
+              <a onclick="chooseProduct(${id})" href="ProductDetail.html">
               <img width="220" src=${img} alt="">
+              </a> 
               <div class="details">
                 <h3>${name}</h3>
                 <p>${desc}</p>
@@ -40,7 +42,7 @@ let generateShop = (currentPage) => {
                 </div>
               </div>
             </div>
-            </a>    
+               
               `;
           })
           .join(""));
@@ -54,9 +56,11 @@ let generateShop = (currentPage) => {
           let { id, name, price, desc, img } = x;
           let search = basket.find((x) => x.id === id) || [];
           return `
-          <a onclick="chooseProduct(${id})" href="ProductDetail.html" >
+          
           <div id=product-id-${id} class="item">
+          <a onclick="chooseProduct(${id})" href="ProductDetail.html" >
           <img width="220" src=${img} alt="">
+          </a>
           <div class="details">
             <h3>${name}</h3>
             <p>${desc}</p>
@@ -72,7 +76,7 @@ let generateShop = (currentPage) => {
             </div>
           </div>
         </div>
-        </a>
+        
           `;
       })
       .join(""));
@@ -283,6 +287,7 @@ let chooseProduct = (id) => {
     name: search.name,
     price: search.price,
     desc: search.desc,
+    detail: search.detail,
     category: search.category,
     img: search.img,
   };

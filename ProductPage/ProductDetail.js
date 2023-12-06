@@ -11,14 +11,14 @@ function generateProduct(){
   let price = document.getElementById('product-price');
 
 
-  let desc = document.getElementById('product-detail');
-
+  let desc = document.getElementById('product-desc');
+  let detail = document.getElementById('product-detail');
   let image = document.getElementById('product-image');
 
   image.src = currentProduct.img;
 
 
-
+  detail.innerHTML = currentProduct.detail;
   desc.innerHTML = currentProduct.desc;
   price.innerHTML = currentProduct.price;
   name.innerHTML = currentProduct.name;

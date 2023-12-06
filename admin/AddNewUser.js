@@ -13,33 +13,6 @@ if(newshopUsersData.length == 0){
 
 console.log(newshopUsersData);
 
-
-let generateUser = () => {
-
-  return (shop.innerHTML = newshopUsersData
-    .map((x) => {
-      let { username, pass, name, address, phone } = x;
-      let search = basket.find((x) => x.id === id) || [];
-      return `
-
-        <div class="details">
-          <div class = "colum"><p>${username}</p></div>
-          <div class = "colum"><p>${pass}</p></div>
-          <div class = "colum"><p>${name}</p></div>
-          <div class = "colum"><p>${address}</p></div>
-          <div class = "colum"><p>${phone}</p></div>
-             <div class = "colum"><button onclick="editUser('${username}')" ><i class="fa fa-pencil-square-o"></i></button>
-             <button onclick="removeUser('${username}')"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
-        </div>
-         <div id="${username}-edit" class="edit-details">
-
-    `;
-    })
-
-    .join(""));
-};
-
-generateUser();
 // Define a new product object
 
 function toggleDetails(username) {
@@ -48,6 +21,7 @@ function toggleDetails(username) {
 }
 
 function addUsers(){
+  alert("Account Successfully Added");
 /*add product*/
 const Username = document.getElementById('Username').value;
  const Pass = document.getElementById('Pass').value;
@@ -74,7 +48,7 @@ const Username = document.getElementById('Username').value;
   localStorage.setItem('data', JSON.stringify(basket));
   localStorage.setItem('shopUsersData', JSON.stringify(newshopUsersData));
 
-  generateUser();
+
 
 }
 
@@ -83,7 +57,7 @@ function generateUniqueId() {
   return '_' + Math.random().toString(36).substr(2, 9);
 /*add product*/
 }
-generateUser();
+
 
 function editUser(username) {   isInEditMode = true;
 
@@ -141,8 +115,6 @@ function updateUserDetails(username) {
     form.remove();
   }
 }
-
-generateUser();
 
 function removeUser(username) {
   // Find the index of the user in the array
