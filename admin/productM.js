@@ -19,6 +19,13 @@ let generateShop = () => {
       let { id, name, price, desc, category, img } = x;
       let search = basket.find((x) => x.id === id) || [];
       return `
+
+      <div id="confirmationBox" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); z-index: 999; display: none;">
+        <p>Are you sure that you want to delete this item?</p>
+        <button onclick="cancelDelete()">No</button>
+        <button onclick="confirmDelete('${id}')">Yes</button>
+        </div>
+        
             <div class = "edit">
             <div id="${id}-details" class="details">
             <div class = "colum"><p>${id}</p></div>
@@ -28,7 +35,8 @@ let generateShop = () => {
              <div class = "colum"><p>${category}</p></div>
              <div class = "colum"><img width="50%" src=${img}></div>
                 <div class = "colum"><button class="astext" onclick="editProduct('${id}')" ><i class="fa fa-pencil-square-o"></i></button><br><br>
-                    <button class="astext" onclick="removeProduct('${id}')"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
+                <button class="astext" onclick="removeProductConfirmation('${id}')">
+                <i class="fa fa-trash" aria-hidden="true"></i></button></div>              
              </div>
              <div id="${id}-edit" class="edit-details">
              </div>
@@ -38,6 +46,8 @@ let generateShop = () => {
 
     .join(""));
 };
+
+//<i class="fa fa-trash" aria-hidden="true"></i>
 
 generateShop();
 // Define a new product object
@@ -176,6 +186,28 @@ function removeProduct(id) {
          generateShop();
      }
  }
+
+ //-----------------------------------------------chatgpt--------------------------------------
+
+    // Đưa các hàm xác nhận xóa ra khỏi hàm removeProductConfirmation
+    function cancelDelete() {
+    const confirmationBox = document.getElementById('confirmationBox');
+    confirmationBox.style.display = 'none';
+  }
+  
+  function confirmDelete(id) {
+    removeProduct(id);
+    const confirmationBox = document.getElementById('confirmationBox');
+    confirmationBox.style.display = 'none';
+  }
+  
+  function removeProductConfirmation(id) {
+    const confirmationBox = document.getElementById('confirmationBox');
+    confirmationBox.style.display = 'block';
+    // Chuyển hàm confirmDelete(id) và cancelDelete() ra khỏi hàm này để có thể truy cập từ bất kỳ nơi nào trong mã của bạn
+  }
+ //-----------------------------------------------chatgpt--------------------------------------
+
 
  // SIDEBAR TOGGLE //
  var sidebarOpen = false;

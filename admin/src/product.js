@@ -60,7 +60,7 @@ let shopItemsData = [
     name: "Cream Cake",
     price: 1,
     desc: "A light and fluffy cake topped with creamy goodness.",
-    category: "Bread",
+    category: "Cake",
     img: ".././Images/Products/8.png",
   },
   {
@@ -127,21 +127,6 @@ let shopItemsData = [
     category: "Bread",
     img: ".././Images/Products/16.png",
   },
-   {
-      id: "ioytrhndcv",
-      name: "Office Shirt",
-      price: 100,
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-      category: "Cake",
-      img: ".././Images/Products/3.png",
-    },
-     {
-        id: "ioytrhndcv",
-        name: "Office Shirt",
-        price: 100,
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-        category: "Cake",
-        img: ".././Images/Products/4.png",
-      },
+
 ];
 

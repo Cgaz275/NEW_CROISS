@@ -28,8 +28,8 @@ let generateUser = () => {
           <div class = "colum"><p>${name}</p></div>
           <div class = "colum"><p>${address}</p></div>
           <div class = "colum"><p>${phone}</p></div>
-             <div class = "colum"><button class="astext" onclick="editUser('${username}')" ><i class="fa fa-pencil-square-o"></i></button>
-             <button class="astext" onclick="removeUser('${username}')"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
+             <div class = "colum"><button class="astext" onclick="editUser('${username}')" ><i class="fa fa-pencil-square-o"></i></button></div>
+            
         </div>
          <div id="${username}-edit" class="edit-details">
          </div>
@@ -39,6 +39,8 @@ let generateUser = () => {
 
     .join(""));
 };
+
+//  <button class="astext" onclick="removeUser('${username}')"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
 
 generateUser();
 // Define a new product object
@@ -145,21 +147,21 @@ function updateUserDetails(username) {
 
 generateUser();
 
-function removeUser(username) {
-  // Find the index of the user in the array
-  let userIndex = newshopUsersData.findIndex((x) => x.username === username);
+// function removeUser(username) {
+//   // Find the index of the user in the array
+//   let userIndex = newshopUsersData.findIndex((x) => x.username === username);
 
-  // If the user is found, remove it from the array
-  if (userIndex !== -1) {
-    newshopUsersData.splice(userIndex, 1);
+//   // If the user is found, remove it from the array
+//   if (userIndex !== -1) {
+//     newshopUsersData.splice(userIndex, 1);
 
-    // Update local storage
-    localStorage.setItem('shopUsersData', JSON.stringify(newshopUsersData));
+//     // Update local storage
+//     localStorage.setItem('shopUsersData', JSON.stringify(newshopUsersData));
 
-    // Re-generate the user list in the UI
-    generateUser();
-  }
-}
+//     // Re-generate the user list in the UI
+//     generateUser();
+//   }
+// }
 // SIDEBAR TOGGLE //
 var sidebarOpen = false;
 var sidebar = document.getElementById("sidebar");

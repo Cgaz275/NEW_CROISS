@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../About-us/about-us.css">
     <link rel="icon" href="../Images/Homepage/Nav-bar/logo.png">
     <link rel="stylesheet" href="../navbar_footer/navbar-footer.css"> 
-    <script src="../index.js"></script>
+    <!-- <script src="../index.js"></script> -->
 
     <!-- font-family : 'Montserrat', sans-serif; -->
 
@@ -29,7 +29,7 @@
             <li><a href="About-us/about-us.html">About Us</a></li>
             <li><a onclick="checkLogInC()" href="../Cart/cart.html">Cart</a></li>
             <li><a onclick="checkLogIn()" href="../Login/sign-in.html">Login</a></li>
-            <li><a onclick="logOut()" href="../index.html">Logout</a></li>
+            <!-- <li><a onclick="logOut()" href="../index.html">Logout</a></li> -->
         </ul>
     </div>
 
@@ -45,8 +45,8 @@
                     alt="Cart"></a>
         <a onclick="checkLogIn()" class="nav-bar-icon-button" ><img id="nav-bar-login" src="../Images/Homepage/Nav-bar/login.png"
                     alt="Login"></a>
-        <a onclick="logOut()" class="nav-bar-icon-button" ><img id="nav-bar-logout" src="../Images/Homepage/Nav-bar/logout.png"
-                    alt="Log out"></a>        
+        <!-- <a onclick="logOut()" class="nav-bar-icon-button" ><img id="nav-bar-logout" src="../Images/Homepage/Nav-bar/logout.png"
+                    alt="Log out"></a>         -->
         
         <!--Three bars-->
         <div class="three-bars">
@@ -127,6 +127,34 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function checkLogIn(){
+
+    let currentUser = localStorage.getItem("currentUser");
+    console.log(currentUser);
+    if(currentUser){
+    location.assign("../User/User.html");
+    }else{
+    location.assign("../Login/sign-in.html");
+    }
+    }
+    function checkLogInC(){
+
+    let currentUser = localStorage.getItem("currentUser");
+    console.log(currentUser);
+    if(currentUser){
+    location.assign("../Cart/cart.html");
+    }else{
+    location.assign("../Login/sign-in.html");
+    }
+    }
+
+    function logOut(){
+    localStorage.removeItem("currentUser");
+    location.assign("../Login/sign-in.html");
+    }
+    </script>
 
 </body>
 

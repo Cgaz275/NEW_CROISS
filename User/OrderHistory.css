@@ -158,3 +158,9 @@ nav li a.current {
     align-items: center;
   }
 }
+
+/*---------------------------*/
+
+#nav-bar-logout {
+  display: block;
+}
