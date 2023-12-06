@@ -48,14 +48,31 @@ let generateShop = (currentPage) => {
 generateShop(1);
 
 // You may need additional logic to handle pagination controls and switch between pages.
+function reset () { 
+  localStorage.removeItem('searchResult');
+}
+
+let showPage = () => {
+    const searchResult = JSON.parse(localStorage.getItem('searchResult')) || [];
+
+    if (searchResult.length > 0) {
+        generateShop(currentPage);
+        updatePaginationButtons();
+        return;
+    }
+
+    generateShop(currentPage);
+    updatePaginationButtons();
+};
+
 let currentPage = 1;
 
 // Hàm hiển thị sản phẩm dựa trên trang hiện tại
-let showPage = () => {
-  generateShop(currentPage);
-    updatePaginationButtons();
+// let showPage = () => {
+//   generateShop(currentPage);
+//     updatePaginationButtons();
 
-};
+// };
 
 // Hàm cập nhật trạng thái của nút phân trang
 let updatePaginationButtons = () => {
