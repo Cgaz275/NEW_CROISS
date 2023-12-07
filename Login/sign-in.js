@@ -97,6 +97,6 @@ function checkLogIn(){
  
  function logOut(){
    localStorage.removeItem("currentUser");
-   location.assign("/Login/sign-in.html");
+   location.assign("../Login/sign-in.html");
  }
  
