@@ -41,7 +41,7 @@
             </li>
             <li class="sidebar-list-item">
                 <a href="productM.html" >
-                    <span class="material-icons-outlined">bakery_dining</span> Foods
+                    <span class="material-icons-outlined">bakery_dining</span> Products
                 </a>
             </li>
             <li class="sidebar-list-item">
@@ -56,29 +56,40 @@
             </li>
         </ul>
     </aside>
-    <div class = "main-container">
-        <h2>Add Users</h2>
-
-        <form id="addUsersForm">
+    <div class="main-container" style=" display: flex; flex-direction: column; gap: 20px; max-width: 350px; background-color: #fff; padding: 20px; position: relative;">
+        <div style="font-size: 28px; color: #2f1f20; font-weight: 600; letter-spacing: -1px; position: relative; display: flex; align-items: center; justify-content: center;">
+            Add Users
+        </div>
+    
+        <div style="color: rgba(88, 87, 87, 0.822); font-size: 14px;">
             <label for="Username">Username:</label><br>
-            <input style="width:50%" type="text" id="Username" required><br><br>
-
+            <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="text" id="Username" required>
+        </div>
+    
+        <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px;">
             <label for="Pass">Password:</label><br>
-            <input style="width:50%" type="password" id="Pass" required><br><br>
-
+            <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="password" id="Pass" required>
+        </div>
+    
+        <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px;">
             <label for="Name">Name:</label><br>
-            <input style="width:50%" type="text" id="Name" required><br><br>
-
+            <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="text" id="Name" required>
+        </div>
+    
+        <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px;">
             <label for="Address">Address:</label><br>
-            <input style="width:50%" type="text" id="Address" required><br><br>
-
+            <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="text" id="Address" required>
+        </div>
+    
+        <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px;">
             <label for="Phone">Phone:</label><br>
-            <input style="width:50%" type="tel" id="Phone" required><br><br>
-
-            <button style="width:50%" type="button" onclick="addUsers()">Add User</button>
-        </form>
-
-
+            <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="tel" id="Phone" required>
+        </div>
+    
+        <div class="flex" style="display: flex; width: 100%; gap: 6px; justify-content: center; align-items: center;">
+            <button class="submit" style="border: none; outline: none; background-color: #2f1f20; padding: 10px; border-radius: 10px; color: #fff; font-size: 16px; transform: .3s ease; width: 100%;"
+                type="button" onclick="addUsers()">Add User</button>
+        </div>
     </div>
 </div>
 
