@@ -366,5 +366,25 @@ a {
   font-weight: bold;
 }
 
+/*-----------------------filter name----------------------------*/
+
+.filter-name {
+  color: #2f1f20;
+  font-size: 2em;
+  /* padding-top: 2em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.catergory-name {
+  padding-top: 1em;
+  display: none;
+}
+
+
+
+
 
 

@@ -95,10 +95,36 @@
     <!------------------------------------>
 
     <div class="item-filter">
-        <button data-category="Bread">Bread</button>
-        <button data-category="Cake">Cake</button>
-        <button data-category="Muffin">Muffin</button>
+        <button onclick="displayCategory(event)" data-category="Bread">Bread</button>
+        <button onclick="displayCategory(event)" data-category="Cake">Cake</button>
+        <button onclick="displayCategory(event)" data-category="Muffin">Muffin</button>
     </div>
+    
+    <div class="filter-name">
+        <h2 id="name-bread" class="catergory-name">BREAD</h2>
+        <h2 id="name-cake" class="catergory-name">CAKE</h2>
+        <h2 id="name-muffin" class="catergory-name">MUFFIN</h2>
+    </div>
+    
+    <script>
+        function displayCategory(event) {
+            let category = event.target.getAttribute('data-category');
+            let categoryName = category.toUpperCase();
+            let categoryElementId = `name-${category.toLowerCase()}`;
+            let categoryElement = document.getElementById(categoryElementId);
+    
+            // Hide all filter-name elements initially
+            let allFilterNames = document.querySelectorAll('.filter-name h2');
+            allFilterNames.forEach(element => {
+                element.style.display = 'none';
+            });
+    
+            if (categoryElement) {
+                categoryElement.textContent = categoryName;
+                categoryElement.style.display = 'block'; // Display only the selected category
+            }
+        }
+    </script>
 
     <!------------------------------------>
 

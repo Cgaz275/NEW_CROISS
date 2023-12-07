@@ -72,24 +72,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /**----------------------------------------------------------------- */
 
-    function displayFilteredProducts() {
-        const filteredData = arguments.length > 0 ? arguments[0] : shopItemsData;
-        const allProducts = document.querySelectorAll('.item');
+    // function displayFilteredProducts() {
+    //     const filteredData = arguments.length > 0 ? arguments[0] : shopItemsData;
+    //     const allProducts = document.querySelectorAll('.item');
       
-        // Ẩn tất cả sản phẩm
-        allProducts.forEach(product => {
-          product.style.display = 'none';
-        });
+    //     // Ẩn tất cả sản phẩm
+    //     allProducts.forEach(product => {
+    //       product.style.display = 'none';
+    //     });
       
-        // Hiển thị sản phẩm phù hợp dựa trên category
-        filteredData.forEach(product => {
-          const productId = `product-id-${product.id}`;
-          const productToShow = document.getElementById(productId);
-          if (productToShow) {
-            productToShow.style.display = 'block';
-          }
-        });
-      }
+    //     // Hiển thị sản phẩm phù hợp dựa trên category
+    //     filteredData.forEach(product => {
+    //       const productId = `product-id-${product.id}`;
+    //       const productToShow = document.getElementById(productId);
+    //       if (productToShow) {
+    //         productToShow.style.display = 'block';
+    //       }
+    //     });
+    //   }
+    
       filterButtons.forEach(button => {
         button.addEventListener('click', function() {
             const category = this.getAttribute('data-category').toLowerCase();
@@ -106,8 +107,13 @@ document.addEventListener('DOMContentLoaded', function() {
             currentPage = 1; // Đặt lại trang về trang đầu tiên sau khi lọc
             const totalPages = Math.ceil(matchedProducts.length / 6); // Tính toán lại số trang mới
             updatePagination(currentPage, totalPages);
+
+            //khi click thi thay doi kich thuoc button de hien thi 
         });
     });
+
+
+  
 
     function updatePagination(currentPage, totalPages) {
         updatePaginationButtons(totalPages);
