@@ -35,10 +35,10 @@
 </div>
 
 <div class="nav-bar">
-    <a href="#"><img id="nav-bar-logo" src="Images/Homepage/Nav-bar/logo.png" alt="Croiss'Bakery logo"></a>
+    <a href="index.html"><img id="nav-bar-logo" src="Images/Homepage/Nav-bar/logo.png" alt="Croiss'Bakery logo"></a>
     <a id="nav-bar-name1" href="#"><img id="nav-bar-name" src="Images/Homepage/Nav-bar/name.png"
             alt="Croiss'bakery"></a>
-    <a id="present-page" class="nav-bar-text-button" href="#">Home</a>
+            <a id="present-page" class="nav-bar-text-button" onclick="reloadPage()">Home</a>
     <a onclick="generateCart()" class="nav-bar-text-button" href="ProductPage/product.html">Products</a>
     <a class="nav-bar-text-button" href="About-us/about-us.html">About Us</a>
     <a onclick="checkLogInC()"class="nav-bar-icon-button"><img id="nav-bar-cart" src="Images/Homepage/Nav-bar/cart.png"
@@ -62,6 +62,11 @@
 <!----------------Navbar script for responsive---------------->
 
 <script>
+
+function reloadPage() {
+    window.location.reload();
+  }
+  
     function showSidebar() {
         var sidebar = document.querySelector('.sidebar');
         sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block'; 
