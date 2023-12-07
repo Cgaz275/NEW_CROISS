@@ -1,3 +1,4 @@
+let newshopItemsData = JSON.parse(localStorage.getItem("shopItemsData")) || [];
 
 function checkLogIn(){
 
@@ -23,4 +24,13 @@ function checkLogInC(){
 function logOut(){
    localStorage.removeItem("currentUser");
    location.assign("./Login/sign-in.html");
+}
+
+function generateCart(){
+ 
+   if (newshopItemsData.length == 0) {
+      newshopItemsData = shopItemsData;
+   }
+   localStorage.setItem('shopItemsData', JSON.stringify(newshopItemsData));
+
 }

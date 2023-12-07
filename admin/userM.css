@@ -1,4 +1,11 @@
-.details .colum .astext {
+table {border: none;}
+#editForm{
+    padding-right: 1%;
+
+}
+
+.details .astext {
+    
     background:none;
     border:none;
     margin:0;
@@ -24,6 +31,7 @@ width:50%;
 .details  .colum{
     padding-left: 2%;
  width:15%;
+ align-items: center;
 text-align: center;
 word-wrap: break-word;
 }
@@ -35,8 +43,8 @@ word-wrap: break-word;
   display : flex;
 }
 .detailss  .colum{
-    padding-left: 2%;
- width:15%;
+ 
+ width:12%;
 text-align: center;
 word-wrap: break-word;
 }
@@ -370,12 +378,14 @@ text-decoration: none !important;
 table {
     border-collapse: collapse;
     width: 100%;
+    word-wrap: break-word;
 }
 
 td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+    text-align: center;
+   
+    word-wrap: break-word;
+
 }
 
 /*tr:nth-child(even) {*/
@@ -484,3 +494,99 @@ td, th {
 {
 display:flex;
 }
+/* ----------------------------------button */
+.toggler {
+    width: 72px;
+  
+  }
+  
+  .toggler input {
+    display: none;
+  }
+  
+  .toggler label {
+    display: block;
+    position: relative;
+    width: 72px;
+    height: 36px;
+    border: 1px solid #d6d6d6;
+    border-radius: 36px;
+    background: #e4e8e8;
+    cursor: pointer;
+  }
+  
+  .toggler label::after {
+    display: block;
+    border-radius: 100%;
+    background-color: #50ac5d;
+    content: '';
+    animation-name: toggler-size;
+    animation-duration: 0.15s;
+    animation-timing-function: ease-out;
+    animation-direction: forwards;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+  }
+  
+  .toggler label::after, .toggler label .toggler-on, .toggler label .toggler-off {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 26px;
+    height: 26px;
+    transform: translateY(-50%) translateX(-50%);
+    transition: left 0.15s ease-in-out, background-color 0.2s ease-out, width 0.15s ease-in-out, height 0.15s ease-in-out, opacity 0.15s ease-in-out;
+  }
+  
+  .toggler input:checked + label::after, .toggler input:checked + label .toggler-on, .toggler input:checked + label .toggler-off {
+    left: 75%;
+  }
+  
+  .toggler input:checked + label::after {
+    background-color:#d7062a;
+    animation-name: toggler-size2;
+  }
+  
+  .toggler .toggler-on, .toggler .toggler-off {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .toggler input:checked + label .toggler-off, .toggler input:not(:checked) + label .toggler-on {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  
+  .toggler .path {
+    fill: none;
+    stroke: #fefefe;
+    stroke-width: 7px;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+  }
+  
+  @keyframes toggler-size {
+    0%, 100% {
+      width: 10%;
+      height: 10%;
+    }
+  
+    50% {
+      width: 10%;
+      height: 10%;
+    }
+  }
+  
+  @keyframes toggler-size2 {
+    0%, 100% {
+      width: 10%;
+      height: 10%;
+    }
+  
+    50% {
+      width: 10%;
+      height: 10%;
+    }
+  }
+   

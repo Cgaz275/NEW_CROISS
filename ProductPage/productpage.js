@@ -357,6 +357,7 @@ let chooseProduct = (id) => {
     name: search.name,
     price: search.price,
     desc: search.desc,
+    detail: search.detail,
     category: search.category,
     img: search.img,
   };

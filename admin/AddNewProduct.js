@@ -54,6 +54,7 @@ let update = (id) => {
 };
 
 function addProduct(){
+    alert("Account Sucessfully Added");
 /*add product*/
  const productName = document.getElementById('productName').value;
   const productPrice =  document.getElementById('productPrice').value;
@@ -82,6 +83,7 @@ function addProduct(){
   localStorage.setItem('shopItemsData', JSON.stringify(newshopItemsData));
 
     generateShop();
+
 }
 
 // Function to generate a unique ID

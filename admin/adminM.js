@@ -22,10 +22,7 @@ let generateAdmin = () => {
       let search = basket.find((x) => x.id === id) || [];
       return `
         <div class="details">
-        <h1>Admin Information</h1>
-         <h3> username : ${username}</h3>
-          <h3>Password : ${pass}</h3>
-          <p>Name : ${name}</p>
+        <h1>Hi, ${name}</h1>
           <p>Address : ${address}</p>
           <p>Phone number : ${phone}</p>
         </div>
