@@ -65,7 +65,7 @@ let generateShop = () => {
                 return `
                 <div class = "edit">
                 <div id="confirmationBox" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); z-index: 999; display: none;">
-                <button style="float: right" onclick="cancelDelete()">No</button><br>
+                <button style="float: right;" onclick="cancelDelete()">X</button><br>
                 <div style="text-align: center"><h2 >Item Detail</h2></div>
                 <div>${orderHTML}</div>
                

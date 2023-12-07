@@ -41,7 +41,7 @@
             </li>
             <li class="sidebar-list-item">
                 <a href="productM.html" >
-                    <span class="material-icons-outlined">bakery_dining</span> Foods
+                    <span class="material-icons-outlined">bakery_dining</span> Products
                 </a>
             </li>
             <li class="sidebar-list-item">
@@ -56,36 +56,60 @@
             </li>
         </ul>
     </aside>
-    <div class = "main-container">
-
+    <div class="main-container" style="display:flex; flex-direction: column; gap: 20px; max-width: 350px; background-color: #fff; padding: 20px; position: relative;">
         <div class="form">
-            <form id="addProductForm">
-            <label for="productName">Product Name:</label><br>
-            <input style="width:50%" type="text" id="productName" required><br><br>
+            <form id="addProductForm" style="padding-bottom: 2em;">
+    
+                <div style="color: #2f1f20; font-size: 28px; font-weight: 600; letter-spacing: -1px; text-align: center;">
+                    Add Product
+                </div>
+    
+                <div style="padding-bottom: 1em;">
 
-                <label for="productPrice">Product Price:</label><br>
-            <input style="width:50%" type="text" id="productPrice" required><br><br>
 
-                    <label for="productDesc">Product Description:</label><br>
-            <input style="width:50%" type="text" id="productDesc" required></textarea><br><br>
-
+                    <div style="color: rgba(88, 87, 87, 0.822); font-size: 14px; padding-top:2em; padding-bottom: 2em;">
+                        <label for="productName">Product Name:</label><br>
+                        <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="text" id="productName" required>
+                    </div>
+        
+                    <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px;padding-top:2em; padding-bottom: 2em">
+                        <label for="productPrice">Product Price:</label><br>
+                        <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="text" id="productPrice" required>
+                    </div>
+        
+                    <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px;padding-top:2em; padding-bottom: 2em">
+                        <label for="productDesc">Product Description:</label><br>
+                        <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="text" id="productDesc" required>
+                    </div>
+        
+                    <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px; padding-top:2em; padding-bottom: 2em">
                         <label for="productCategory">Choose a category:</label><br>
-           <div style ="display: flex;gap:2%"><select style="width:20%" name="category" id="productCategory">
-                <option value="Cookies">Cookies</option>
-                <option value="Bread">Bread</option>
-                <option value="Cake">Cake</option>
-            </select><br><br>
+                        <select style="width: 100%; border: none; border-bottom: 1px solid #ccc;" name="category" id="productCategory">
+                            <option value="Cookies">Cookies</option>
+                            <option value="Bread">Bread</option>
+                            <option value="Cake">Cake</option>
+                        </select>
+                    </div>
+        
 
-            <form action="/action_page.php">
-                <input type="file" id="myFile" name="filename">
-              </form></div>
+                </div>
 
-           <button style="width:50%" type="button" onclick="addProduct()">Add Product</button><br><br>
 
-        </form>
+
+                <div class="message signin" style="color: rgba(88, 87, 87, 0.822); font-size: 14px; text-align: center;">
+                    <form action="/action_page.php">
+                        <input type="file" id="myFile" name="filename">
+                    </form>
+                </div>
+    
+                <div class="flex" style="display: flex; width: 100%; gap: 6px; justify-content: center; align-items: center;">
+                    <button class="submit" style="border: none; outline: none; background-color: #2f1f20; padding: 10px; border-radius: 10px; color: #fff; font-size: 16px; transform: .3s ease; width: 100%;"
+                        type="button" onclick="addProduct()">Add Product</button>
+                </div>
+    
+            </form>
         </div>
     </div>
-</div>
 
 </body>
 <script src="../admin/src/product.js"></script>

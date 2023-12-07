@@ -1,10 +1,10 @@
 let shopAdminData = [
   {
     username: "admin",
-    pass: "tu1den9",
-    name: "Chau Gia Anh",
+    pass: "123456789",
+    name: "Nhom 9",
     address: "Truong Dai Hoc Sai Gon",
-    phone: "0799999999"
+    phone: "0703617242",
   },
 ];
 

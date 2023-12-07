@@ -114,19 +114,44 @@ function editUser(username) {
   let form = document.createElement('div');
   form.id = 'editForm';
   form.innerHTML = `
-  <div style="text-align:right"><label for="editedPassword">Password:</label>
-   <input style="width:10%" type="text" id="editedPassword" value="${userDetails.pass}" readonly><br><br></div>
+  <div class="form" style="display: flex; flex-direction: column; gap: 20px; max-width: 350px; background-color: #fff; padding: 20px; border-radius: 20px; position: relative;">
+    <div style="font-size: 28px; color: #2f1f20; font-weight: 600; letter-spacing: -1px; position: relative; display: flex; align-items: center; justify-content: center;">
+        Edit information
+    </div>
 
-   <div style="text-align:right"><label for="editedName">Name:</label>
-    <input style="width:10%" type="text" id="editedName" value="${userDetails.name}" ><br><br></div>
+    <div style="color: rgba(88, 87, 87, 0.822); font-size: 14px;"> <!-- Phần Password -->
+    <label for="editedPassword" style="margin-bottom: 10px;">Password:</label>
+    <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px; width: 100%;">
+        <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="password" id="editedPassword" value="${userDetails.pass}" readonly>
+    </div>
+</div>
 
-    <div style="text-align:right"><label for="editedAddress">Address:</label>
-    <input style="width:10%" type="text" id="editedAddress" value="${userDetails.address}"><br><br></div>
+    <div style="color: rgba(88, 87, 87, 0.822); font-size: 14px;"> <!-- Phần Name -->
+        <label for="editedName" style="margin-bottom: 10px;">Name:</label>
+        <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px; width: 100%;">
+            <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="text" id="editedName" value="${userDetails.name}">
+        </div>
+    </div>
 
-    <div style="text-align:right"><label for="editedPhone">Phone:</label>
-    <input style="width:10%" type="text" id="editedPhone" value="${userDetails.phone}"><br><br></div>
+    <div style="color: rgba(88, 87, 87, 0.822); font-size: 14px;"> <!-- Phần Address -->
+        <label for="editedAddress" style="margin-bottom: 10px;">Address:</label>
+        <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px; width: 100%;">
+            <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="text" id="editedAddress" value="${userDetails.address}">
+        </div>
+    </div>
 
-    <div style="text-align:right"><button style="width:15%" onclick="updateUserDetails('${username}')">Update</button></div>
+    <div style="color: rgba(88, 87, 87, 0.822); font-size: 14px;"> <!-- Phần Phone -->
+        <label for="editedPhone" style="margin-bottom: 10px;">Phone:</label>
+        <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px; width: 100%;">
+            <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="text" id="editedPhone" value="${userDetails.phone}">
+        </div>
+    </div>
+
+    <div class="flex" style="display: flex; width: 100%; gap: 6px; justify-content: center; align-items: center;">
+        <button class="submit" style="border: none; outline: none; background-color: #2f1f20; padding: 10px; border-radius: 10px; color: #fff; font-size: 16px; transform: .3s ease;"
+            onclick="updateUserDetails('${username}')">Update</button>
+    </div>
+</div>
   `;
   // Append the form to the details box
 document.getElementById(`${username}-edit`).appendChild(form);

@@ -22,8 +22,12 @@ let generateShop = () => {
 
       <div id="confirmationBox" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); z-index: 999; display: none;">
         <p>Are you sure that you want to delete this item?</p>
-        <button onclick="cancelDelete()">No</button>
-        <button onclick="confirmDelete('${id}')">Yes</button>
+
+        <div style=" display:flex; flex-direction:row; gap: 1em">
+        <button style="padding:1em; margin-bottom: 1em; background-color: #2f1f20;border:none; color:white; cursor:pointer;" onclick="cancelDelete()">No</button>
+        <button style="padding:1em; margin-bottom: 1em; background-color: #2f1f20; border:none; color:white; cursor:pointer;"  onclick="confirmDelete('${id}')">Yes</button>
+        </div>
+
         </div>
         
             <div class = "edit">
@@ -109,29 +113,53 @@ function editProduct(id) {
     let form = document.createElement('div');
     form.id = 'editForm';
     form.innerHTML = `
-    <div style="text-align:right"><label  for="editedName">Name:</label>
-                <input style="width:10%" type="text" id="editedName" value="${productDetails.name}" ><br><br></div>
+    <div class="form" style="display: flex; flex-direction: column; gap: 20px; max-width: 350px; background-color: #fff; padding: 20px; border-radius: 20px; position: relative;">
+    <div style="font-size: 28px; color: #2f1f20; font-weight: 600; letter-spacing: -1px; position: relative; display: flex; align-items: center; justify-content: center;">
+        Update
+    </div>
 
-                <div style="text-align:right"><label for="editedPrice">Price:</label>
-                <input style="width:10%" type="number" id="editedPrice" value="${productDetails.price}" ><br><br></div>
-
-                <div style="text-align:right"><label for="editedDesc">Description:</label>
-                <input style="width:10%" type="text" id="editedDesc" value="${productDetails.desc}"><br><br></div>
-
-
-                <div style="text-align:right"><label for="editedCategory">Choose a category:</label>
-                   <select style="width:10%" name="category" id="editedCategory">
-                   <option value="Cookies">Cookies</option>
-                   <option value="Bread">Bread</option>
-                   <option value="Cake">Cake</option>
-                   </select><br><br></div>
-                   <div style="text-align:right"><form action="/action_page.php">
-                   <input type="file" id="myFile" name="filename">
-                 </form></div>
-                   <div style="display:none"><label for="editedImg">Image:</label>
-                <input style="width:10%" type="text" id="editedImg" value="${productDetails.img}"><br><br></div>
-
-                <div style="text-align:right"><button style="width:20%" onclick="updateProductDetails('${id}')">Update</button></div>
+    <div style="color: rgba(88, 87, 87, 0.822); font-size: 14px;"> <!-- Phần name đẩy xuống dưới -->
+        <label for="editedName" style="margin-bottom: 10px;">Name:</label>
+        <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px; width: 100%;">
+            <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="text" id="editedName" value="${productDetails.name}">
+        </div>
+    </div>
+  
+    <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px;">
+        <label for="editedPrice">Price:</label>
+        <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="number" id="editedPrice" value="${productDetails.price}">
+    </div>
+  
+    <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px;">
+        <label for="editedDesc">Description:</label>
+        <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="text" id="editedDesc" value="${productDetails.desc}">
+    </div>
+  
+    <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px;">
+        <label for="editedCategory">Choose a category:</label>
+        <select style="width: 100%; border: none; border-bottom: 1px solid #ccc;" name="category" id="editedCategory">
+            <option value="Muffin">Cookies</option>
+            <option value="Bread">Bread</option>
+            <option value="Cake">Cake</option>
+        </select>
+    </div>
+  
+    <div class="message signin" style="color: rgba(88, 87, 87, 0.822); font-size: 14px; text-align: center;">
+        <form action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+        </form>
+    </div>
+  
+    <div class="message" style="color: rgba(88, 87, 87, 0.822); font-size: 14px; display: none;">
+        <label for="editedImg">Image:</label>
+        <input style="width: 100%; border: none; border-bottom: 1px solid #ccc;" type="text" id="editedImg" value="${productDetails.img}">
+    </div>
+  
+    <div class="flex" style="display: flex; width: 100%; gap: 6px; justify-content: center; align-items: center;">
+        <button class="submit" style="border: none; outline: none; background-color: #2f1f20; padding: 10px; border-radius: 10px; color: #fff; font-size: 16px; transform: .3s ease;"
+            onclick="updateProductDetails('${id}')">Update</button>
+    </div>
+</div>
     `;
     // Append the form to the details box
     document.getElementById(`${id}-edit`).appendChild(form);
