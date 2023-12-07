@@ -1,4 +1,14 @@
-let newshopItemsData = JSON.parse(localStorage.getItem("shopItemsData")) || [];
+let newshopItemsData  = JSON.parse(localStorage.getItem("shopItemsData")) || [];
+
+console.log(newshopItemsData);
+
+function generateProduct() {
+   if(newshopItemsData.length == 0){
+      newshopItemsData = shopItemsData;
+      console.log("check");
+}
+
+}
 
 function checkLogIn(){
 
