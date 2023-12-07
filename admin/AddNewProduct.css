@@ -485,3 +485,8 @@ td, th {
 {
 display:flex;
 }
+
+.flex button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}

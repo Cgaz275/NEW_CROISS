@@ -54,13 +54,13 @@ let update = (id) => {
 };
 
 function addProduct(){
-    alert("Account Sucessfully Added");
+    alert("Product Sucessfully Added");
 /*add product*/
  const productName = document.getElementById('productName').value;
   const productPrice =  document.getElementById('productPrice').value;
   const productDesc = document.getElementById('productDesc').value;
   const productCategory = document.getElementById('productCategory').value;
-  const productImg = document.getElementById('productImg').value;
+//   const productImg = document.getElementById('productImg').value;
 
   // Validate input (you can add more validation as needed)
 
@@ -71,7 +71,7 @@ function addProduct(){
     price: productPrice,
     desc: productDesc,
     category: productCategory,
-    img: productImg,
+    // img: productImg,
   };
 
   // Add the new product to the array
@@ -133,7 +133,7 @@ function updateProductDetails(id) {
     const editedPrice = parseFloat(document.getElementById('editedPrice').value);
     const editedDesc = document.getElementById('editedDesc').value;
     const editedCategory = document.getElementById('editedCategory').value;
-    const editedImg = document.getElementById('editedImg').value;
+    // const editedImg = document.getElementById('editedImg').value;
 
     // Input validation
     if (!editedName || isNaN(editedPrice)) {
@@ -147,7 +147,7 @@ function updateProductDetails(id) {
     newshopItemsData[updatedProductIndex].price = editedPrice;
     newshopItemsData[updatedProductIndex].desc = editedDesc;
     newshopItemsData[updatedProductIndex].category = editedCategory;
-    newshopItemsData[updatedProductIndex].img = editedImg;
+    // newshopItemsData[updatedProductIndex].img = editedImg;
 
     // Update local storage
     localStorage.setItem('shopItemsData', JSON.stringify(newshopItemsData));
