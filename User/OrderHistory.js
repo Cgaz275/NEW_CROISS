@@ -76,8 +76,10 @@ let generateShop = () => {
                       
                   <div class = "edit">
                   <div id="confirmationBox" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); z-index: 999; display: none;">
-                  <button style="float: right" onclick="cancelDelete()">No</button><br>
-                  <div style="text-align: center"><h2 >Item Detail</h2></div>
+                  <button class = "astext" style="float:right" onclick="cancelDelete()"><span class="material-symbols-outlined">
+                  cancel
+                  </span></button><br>
+                  <div style="text-align: center;font-size:125%"><h2>Item Detail</h2></div>
                   <div>${orderHTML}</div>
                  
                   
@@ -89,7 +91,9 @@ let generateShop = () => {
                       <div class = "colum"><p>${uniquePaymentMethod}</p></div>
                       <div class = "colum"><p>${uniqueShippingStatus ? "Yes" : "No"}</p></div>
                       <div class = "colum"><p>${orderTimestamp}</p> </div>
-                      <div class = "colum"><button onclick="removeProductConfirmation()">i</button></div>
+                      <div class = "colum"><button  class = "astext" onclick="removeProductConfirmation()"><span class="material-symbols-outlined">
+                      feature_search
+                      </span></button></div>
                       </div>
                      
                 `;

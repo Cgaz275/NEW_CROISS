@@ -1,5 +1,12 @@
 let newshopUsersData  = JSON.parse(localStorage.getItem("shopUsersData")) || [];
 
+console.log(newshopUsersData);
+
+if(newshopUsersData.length == 0){
+    newshopUsersData = shopUsersData;
+    console.log("check");
+}
+
             const u = document.getElementById("username");
             const a = document.getElementById("address");
             const p = document.getElementById("phone");
@@ -159,29 +166,29 @@ function addUsers(){
 
 }
 
-// function checkLogIn(){
+function checkLogIn(){
 
-//     let currentUser = localStorage.getItem("currentUser");
-//     console.log(currentUser);
-//     if(currentUser){
-//        location.assign("/User/User.html");
-//     }else{
-//        location.assign("/Login/sign-in.html");
-//     }
-//  }
-//  function checkLogInC(){
+    let currentUser = localStorage.getItem("currentUser");
+    console.log(currentUser);
+    if(currentUser){
+       location.assign("/User/User.html");
+    }else{
+       location.assign("/Login/sign-in.html");
+    }
+ }
+ function checkLogInC(){
  
-//    let currentUser = localStorage.getItem("currentUser");
-//    console.log(currentUser);
-//    if(currentUser){
-//       location.assign("/Cart/cart.html");
-//    }else{
-//       location.assign("/Login/sign-in.html");
-//    }
-//  }
+   let currentUser = localStorage.getItem("currentUser");
+   console.log(currentUser);
+   if(currentUser){
+      location.assign("/Cart/cart.html");
+   }else{
+      location.assign("/Login/sign-in.html");
+   }
+ }
  
-//  function logOut(){
-//    localStorage.removeItem("currentUser");
-//    location.assign("/Login/sign-in.html");
-//  }
+ function logOut(){
+   localStorage.removeItem("currentUser");
+   location.assign("/Login/sign-in.html");
+ }
  

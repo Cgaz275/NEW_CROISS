@@ -518,7 +518,7 @@ display:flex;
   .toggler label::after {
     display: block;
     border-radius: 100%;
-    background-color: #d7062a;
+    background-color: #50ac5d;
     content: '';
     animation-name: toggler-size;
     animation-duration: 0.15s;
@@ -543,7 +543,7 @@ display:flex;
   }
   
   .toggler input:checked + label::after {
-    background-color: #50ac5d;
+    background-color:#d7062a;
     animation-name: toggler-size2;
   }
   

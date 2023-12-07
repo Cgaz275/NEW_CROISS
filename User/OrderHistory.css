@@ -5,24 +5,7 @@
 
 
 /*------------------------------------ MIDDDDDDD------------------------------------ */
-.res_detail button {
-  align-self: center;
-  width: 20%;
-  height: 3em;
-  border-radius: 10px;
-  background-color: white;
-  font-size: larger;
-  font-weight: 200;
-  color: #2f1f20;
-  box-shadow: none;
-  font-weight: bold;
-}
-.res_detail button:hover {
-  background-color: #2f1f20;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
-}
+
 
 .mid {
   min-height:40em;
@@ -186,6 +169,13 @@ background-color:white;
 width:15%;
 text-align: center;
 word-wrap: break-word;
+}
+.details .colum .astext{
+  background:none;
+  border:none;
+  margin:0;
+  padding:0;
+  cursor: pointer;
 }
 .detailss {
 
