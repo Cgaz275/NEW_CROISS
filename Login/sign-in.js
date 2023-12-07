@@ -81,7 +81,7 @@ function checkLogIn(){
     if(currentUser){
        location.assign("../User/User.html");
     }else{
-       location.assign("../Login/sign-in.html");
+      window.location.reload ();
     }
  }
  function checkLogInC(){
