@@ -224,6 +224,7 @@ a {
 }
 
 .paging button:hover {
+  cursor: pointer;
   background-color: white;
   color: #2f1f20;
   font-weight: bold;
@@ -336,9 +337,54 @@ a {
 }
 
 .item-filter button:hover {
+  cursor: pointer;
   background-color: white;
   border: #2f1f20 solid 2px;
   font-weight:bold;
   color: #2f1f20;
 }
+
+/*--------------------------more detail-----------------------------*/
+
+.more-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 4em;
+  background-color: #2f1f20;
+  border-radius: 4px;
+}
+
+.more-detail:hover {
+  background-color: white;
+  border: #2f1f20 solid 2px;
+}
+
+.more-detail:hover a {
+  color: #2f1f20;
+  font-weight: bold;
+}
+
+/*-----------------------filter name----------------------------*/
+
+.filter-name {
+  color: #2f1f20;
+  font-size: 2em;
+  /* padding-top: 2em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.catergory-name {
+  padding-top: 1em;
+  display: none;
+}
+
+
+
+
+
 
