@@ -177,7 +177,7 @@ nav li a.current {
 }
 
 .nav-bar {
-  z-index: 100;
+  z-index: 1000;
 }
 
 /*---------------------------*/
