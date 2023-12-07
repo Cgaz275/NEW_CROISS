@@ -2,6 +2,7 @@
 let shop = document.getElementById("shop");
 let basket = JSON.parse(localStorage.getItem("cart")) || [];
 let newshopItemsData = JSON.parse(localStorage.getItem("shopItemsData")) || [];
+// localStorage.setItem('bigItemList', JSON.stringify(shopItemsData));
 
 if (newshopItemsData.length == 0) {
     newshopItemsData = shopItemsData;
@@ -22,14 +23,18 @@ let generateShop = (currentPage) => {
               let { id, name, price, desc, img } = x;
               let search = basket.find((x) => x.id === id) || [];
               return `
-              <div id=product-id-${id} class="item">
+             
+            <div id=product-id-${id} class="item">
               <img width="220" src=${img} alt="">
+
               <div class="details">
+
                 <h3>${name}</h3>
                 <p>${desc}</p>
+
                 <div class="price-quantity">
                   <h2>$ ${price} </h2>
-                  <div class="buttons">
+                  <div class="buttons" style="display: none">
                     <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
                     <div id=${id} class="quantity">
                       ${search.item === undefined ? 0 : search.item}
@@ -37,8 +42,14 @@ let generateShop = (currentPage) => {
                     <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
                   </div>
                 </div>
+
+                <div class="more-detail">
+                <a onclick="chooseProduct(${id})" href="ProductDetail.html">More Details</a>
+                </div>
+
               </div>
-            </div>
+
+            </div>   
               `;
           })
           .join(""));
@@ -52,14 +63,90 @@ let generateShop = (currentPage) => {
           let { id, name, price, desc, img } = x;
           let search = basket.find((x) => x.id === id) || [];
           return `
-          <div id=product-id-${id} class="item">
+
+        <div id=product-id-${id} class="item">
           <img width="220" src=${img} alt="">
+
           <div class="details">
             <h3>${name}</h3>
             <p>${desc}</p>
+
             <div class="price-quantity">
               <h2>$ ${price} </h2>
-              <div class="buttons">
+
+              <div class="buttons" style="display: none">
+                <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+                <div id=${id} class="quantity">
+                  ${search.item === undefined ? 0 : search.item}
+                </div>
+                <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+              </div>
+
+            </div>
+
+            <div class="more-detail">
+              <a onclick="chooseProduct(${id})" href="ProductDetail.html">More Details</a>
+            </div>
+
+          </div>
+
+        </div>
+          `;
+      })
+      .join(""));
+};
+// function for clicking outside the more detail a 
+
+
+// You may need additional logic to handle pagination controls and switch between pages.
+function reset () { 
+  localStorage.removeItem('searchResult');
+}
+
+let currentPage = 1;
+
+let updatePaginationButtons = (totalPages) => {
+  // Cập nhật nút previous
+  document.getElementById('prevPage').disabled = currentPage === 1;
+
+  // Cập nhật nút next
+  document.getElementById('nextPage').disabled = currentPage === totalPages;
+
+  // Cập nhật hiển thị trang
+  document.getElementById('currentPage').innerText = currentPage;
+  document.getElementById('totalPages').innerText = totalPages;
+};
+
+
+let showPage = () => {
+  const searchResult = JSON.parse(localStorage.getItem('searchResult')) || [];
+  const itemsPerPage = 6;
+
+  let dataToDisplay = searchResult.length > 0 ? searchResult : newshopItemsData;
+
+  const totalPages = Math.ceil(dataToDisplay.length / itemsPerPage);
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  shop.innerHTML = dataToDisplay
+      .slice(startIndex, endIndex)
+      .map((x) => {
+          // Tạo HTML cho sản phẩm từ kết quả tìm kiếm hoặc dữ liệu được lọc
+          let { id, name, price, desc, img } = x;
+          let search = basket.find((x) => x.id === id) || [];
+          return `
+          <div id=product-id-${id} class="item">
+          <img width="220" src=${img} alt="">
+
+          <div class="details">
+
+            <h3>${name}</h3>
+            <p>${desc}</p>
+
+            <div class="price-quantity">
+              <h2>$ ${price} </h2>
+              <div class="buttons" style="display: none">
                 <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
                 <div id=${id} class="quantity">
                   ${search.item === undefined ? 0 : search.item}
@@ -67,63 +154,55 @@ let generateShop = (currentPage) => {
                 <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
               </div>
             </div>
+
+           <div class="more-detail">
+              <a onclick="chooseProduct(${id})" href="ProductDetail.html">More Details</a>
+            </div>
+
           </div>
-        </div>
-          `;
+
+        </div>   
+              `;
       })
-      .join(""));
+    
+      .join('');
+
+  updatePaginationButtons(totalPages);
 };
 
 
-function reset () {
-  
-  localStorage.removeItem('searchResult');
-}
+// Hàm hiển thị sản phẩm dựa trên trang hiện tại
+// let showPage = () => {
+//   generateShop(currentPage);
+//     updatePaginationButtons();
 
-let showPage = () => {
-    const searchResult = JSON.parse(localStorage.getItem('searchResult')) || [];
+// };
 
-    if (searchResult.length > 0) {
-        generateShop(currentPage);
-        updatePaginationButtons();
-        return;
-    }
+// Hàm cập nhật trạng thái của nút phân trang
 
-    generateShop(currentPage);
-    updatePaginationButtons();
-};
-
-let currentPage = 1;
-
-let updatePaginationButtons = () => {
-    const totalPages = Math.ceil(newshopItemsData.length / 6);
-
-    // Cập nhật nút previous
-    document.getElementById("prevPage").disabled = currentPage === 1;
-
-    // Cập nhật nút next
-    document.getElementById("nextPage").disabled = currentPage === totalPages;
-
-    // Cập nhật hiển thị trang
-    document.getElementById("currentPage").innerText = currentPage;
-    document.getElementById("totalPages").innerText = totalPages;
-};
 
 let goToPreviousPage = () => {
-    if (currentPage > 1) {
-        currentPage--;
-        showPage();
-        updatePaginationButtons();
-    }
+  currentPage = currentPage || 1;
+
+  if (currentPage > 1) {
+      currentPage--;
+      const totalPages = Math.ceil(newshopItemsData.length / 6); // tính toán totalPages mới
+      showPage();
+      updatePaginationButtons(totalPages);
+      handleFilterButtonClick(); // Gọi lại xử lý filterButton sau khi chuyển trang
+  }
 };
 
 let goToNextPage = () => {
-    const totalPages = Math.ceil(newshopItemsData.length / 6);
-    if (currentPage < totalPages) {
-        currentPage++;
-        showPage();
-        updatePaginationButtons();
-    }
+  currentPage = currentPage || 1;
+  const totalPages = Math.ceil(newshopItemsData.length / 6);
+
+  if (currentPage < totalPages) {
+      currentPage++;
+      showPage();
+      updatePaginationButtons(totalPages);
+      handleFilterButtonClick(); // Gọi lại xử lý filterButton sau khi chuyển trang
+  }
 };
 
 // Khi người dùng thực hiện tìm kiếm, lưu kết quả vào localStorage và hiển thị kết quả
@@ -266,3 +345,24 @@ function logOut(){
  localStorage.removeItem("currentUser");
  location.assign("../Login/sign-in.html");
 }
+
+
+let chooseProduct = (id) => {
+
+  let selectedItem = id;
+  let search = newshopItemsData.find((x) => x.id === selectedItem.id);
+  
+  const currentProduct = {
+    id: search.id,
+    name: search.name,
+    price: search.price,
+    desc: search.desc,
+    category: search.category,
+    img: search.img,
+  };
+
+  localStorage.setItem('currentProduct', JSON.stringify(currentProduct));
+
+  };
+
+
